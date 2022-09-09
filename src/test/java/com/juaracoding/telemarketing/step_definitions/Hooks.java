@@ -64,7 +64,7 @@ static void delay(int detik) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
-	}
+}
 
 static void scroll(int vertical) {
 	JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
