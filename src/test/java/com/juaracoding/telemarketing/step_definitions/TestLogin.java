@@ -4,7 +4,7 @@ import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.WebDriver;
 
-import com.juaracoding.telemarketing.pages.LoginDev;
+import com.juaracoding.telemarketing.pages.LoginAgent;
 import com.juaracoding.telemarketing.utils.Constants;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
@@ -17,7 +17,7 @@ public class TestLogin {
 	
 	public static WebDriver driver;
 	public static ExtentTest extentTest;
-	private LoginDev loginDeveloper = new LoginDev();
+	private LoginAgent loginAgent = new LoginAgent();
 	
 	public TestLogin() {
 		driver = Hooks.driver;
@@ -31,51 +31,96 @@ public class TestLogin {
 		extentTest.log(LogStatus.PASS, "User go to Web Telemarketing");
 	}
 	
-	@And("User enter username password invalid")
-	public void user_enter_username_password_invalid() {
-		loginDeveloper.login("devEl0Per", "23");
+	@And("User enter username invalid")
+	public void user_enter_username_invalid() {
+		loginAgent.login("agent001", "1");
 		delay(2);
 		extentTest.log(LogStatus.PASS, "User enter username password invalid");
 	}
 	
+	@And("User enter password invalid")
+	public void user_enter_password_invalid() {
+		loginAgent.clickBtnClose();
+		loginAgent.deleteLogin();
+		loginAgent.login("agent1", "23");
+		delay(2);
+		extentTest.log(LogStatus.PASS, "User enter username password invalid");
+	}
+	
+	@And("User enter username null")
+	public void user_enter_username_null() {
+		loginAgent.clickBtnClose();
+		loginAgent.deleteLogin();
+		loginAgent.login("", "23");
+		delay(2);
+		extentTest.log(LogStatus.PASS, "User enter username password invalid");
+	}
+	
+	@And("User enter password null")
+	public void user_enter_password_null() {
+		loginAgent.clickBtnClose();
+		loginAgent.deleteLogin();
+		loginAgent.login("agent1", "");
+		delay(2);
+		extentTest.log(LogStatus.PASS, "User enter username password invalid");
+	}
+	
+	
 	@And("User click button sign in")
 	public void user_click_button_sign_in() {
-		loginDeveloper.clickBtnSignin();
+		loginAgent.clickBtnSignin();
 		extentTest.log(LogStatus.PASS, "User click button sign in");
 	}
 	
-	@Then("User invalid credentials")
-	public void user_invalid_credentilas() {
-		String actual = loginDeveloper.msgSuccess();
-		assertTrue(actual.contains("Username atau password tidak ditemukan atau akun anda tidak aktif"));
-		delay(2);
-		loginDeveloper.clickBtnClose();
-		extentTest.log(LogStatus.PASS, "User invalid credentials");
-	}
+	
+//	@Then("User invalid credentials")
+//	public void user_invalid_credentilas() {
+////		String actual = loginAgent.msgError();
+////		assertTrue(actual.contains("Username atau password tidak ditemukan atau akun anda tidak aktif"));
+//		delay(2);
+//		loginAgent.clickBtnClose();
+//		delay(2);
+//		
+//		extentTest.log(LogStatus.PASS, "User invalid credentials");
+//	}
+//	
+//	@Then("User valid credentials")
+//	public void user_valid_credentilas() {
+////		String actual = loginAgent.msgSuccess();
+////		assertTrue(actual.contains(""));
+//		delay(2);
+//		loginAgent.clickBtnClose();
+//		loginAgent.developerProfile();
+//		extentTest.log(LogStatus.PASS, "User valid credentials");
+//	}
+	
 	
 	
 	
 //	valid
 	@When("User enter username password valid")
 	public void user_enter_username_password_valid() {
-		loginDeveloper.login("developer", "23");
+		loginAgent.clickBtnClose();
+		loginAgent.deleteLogin();
+		loginAgent.login("agent01", "1");
 		extentTest.log(LogStatus.PASS, "User enter username password valid");
 	}
 	
-	@And("User click button sign in valid")
-	public void user_click_button_sign_in_valid() {
-		loginDeveloper.clickBtnSignin();
-		extentTest.log(LogStatus.PASS, "User click button sign in valid");
+	@And("User click button ok")
+	public void user_click_button_ok() {
+		delay(3);
+		loginAgent.clickBtnOkeValid();
+		extentTest.log(LogStatus.PASS, "User click button ok");
 	}
 	
-	@Then("User valid credentials")
-	public void user_valid_credentilas() {
-		String actual = loginDeveloper.msgSuccess();
-		assertTrue(actual.contains("Welcome to Tele Kita"));
-		loginDeveloper.clickBtnClose();
-		loginDeveloper.developerProfile();
-		extentTest.log(LogStatus.PASS, "User valid credentials");
+	@And("User click profile")
+	public void user_click_profile() {
+		loginAgent.clickProfile();
+		delay(3);
+		extentTest.log(LogStatus.PASS, "User click profile");
 	}
+	
+
 	
 	static void delay(int detik) {
 		try {
