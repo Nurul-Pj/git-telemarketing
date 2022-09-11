@@ -5,6 +5,7 @@ import static org.testng.Assert.assertTrue;
 import org.openqa.selenium.WebDriver;
 
 import com.juaracoding.telemarketing.pages.LoginDev;
+import com.juaracoding.telemarketing.pages.UploadData;
 import com.juaracoding.telemarketing.utils.Constants;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
@@ -18,6 +19,7 @@ public class TestLogin {
 	public static WebDriver driver;
 	public static ExtentTest extentTest;
 	private LoginDev loginDeveloper = new LoginDev();
+	private UploadData uploadData = new UploadData();
 	
 	public TestLogin() {
 		driver = Hooks.driver;
@@ -100,10 +102,69 @@ public class TestLogin {
 		assertTrue(actual.contains("Welcome to Tele Kita"));
 		delay(2);
 		loginDeveloper.clickBtnOkevalid();
-		delay(2);
-		loginDeveloper.developerProfile();
-		loginDeveloper.clickBtnYa();
+//		delay(2);
+//		loginDeveloper.developerProfile();
+//		loginDeveloper.clickBtnYa();
 		extentTest.log(LogStatus.PASS, "User valid credentials");
+	}
+
+	//UploadData 
+	//UploadData invalid
+	@When("Pilih menu data")
+	public void pilih_menu_data() {
+		delay(2);
+		uploadData.btnData();
+		extentTest.log(LogStatus.PASS, "Pilih menu data");
+	}
+			
+	@And("User click upload data invalid")
+	public void user_click_upload_data_invalid() {
+		delay(2);
+		uploadData.btnUploadData();
+		extentTest.log(LogStatus.PASS, "User click upload data invalid");
+	}
+			
+	@And("User click choose file invalid")
+	public void user_click_choose_file_invalid() {
+		delay(2);
+		uploadData.btnChooseFileInvalid();
+		delay(1);
+		extentTest.log(LogStatus.PASS, "User click choose file invalid");
+	}
+			
+	@And("User click button upload invalid")
+	public void user_click_button_upload_invalid() {
+		delay(2);
+		uploadData.btnUploadFile();
+		delay(2);
+		uploadData.clickBtnClose();
+		extentTest.log(LogStatus.PASS, "User click button upload invalid");
+	}
+			
+	//UploadData valid
+	@And("User click choose file valid")
+	public void user_click_choose_file_valid() {
+		delay(2);
+		uploadData.btnChooseFileValid();
+		extentTest.log(LogStatus.PASS, "User click choose file valid");
+	}
+			
+	@And("User click button upload valid")
+	public void user_click_button_upload_valid() {
+		delay(2);
+		uploadData.btnUploadFile();
+		extentTest.log(LogStatus.PASS, "User click button upload valid");
+	}
+			
+	@Then("User click Simpan valid")
+	public void user_click_simpan_valid() {
+		delay(2);
+		uploadData.btnSimpanFile();
+		delay(2);
+		uploadData.btnSimpanFileBaru();
+		delay(2);
+		uploadData.clickBtnClose();
+		extentTest.log(LogStatus.PASS, "User click Simpan valid");
 	}
 	
 
