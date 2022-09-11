@@ -1,11 +1,16 @@
 package com.juaracoding.telemarketing.pages;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+//import org.openqa.selenium.support.ui.ExpectedConditions;
+//import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.juaracoding.telemarketing.drivers.DriverSingleton;
+
+//import io.cucumber.messages.types.Duration;
 
 public class LoginDev {
 	
@@ -31,25 +36,26 @@ public class LoginDev {
 	@FindBy(xpath = "//*[@id=\"nikita-form-dialog\"]")
 	private WebElement logout;
 	
-	@FindBy(xpath = "//span[normalize-space()='YA']")
+	@FindBy(xpath = "/html/body/div[8]/div[3]/div/button[2]")
 	private WebElement btnYa;
 
 	@FindBy(xpath = "//div[@class='ui-dialog-buttonset']")
-	private WebElement btnOke;
+	private WebElement btnOkeInvalid;
+	
+	@FindBy(xpath = "//div[@class='ui-dialog-buttonset']")
+	private WebElement btnOkeValid;
 	
 	@FindBy(css = "#nikita-form-dialog")
-	private WebElement popupPeringatan;
+	private WebElement welcomePopup;
 	
-	@FindBy(css = "#nikita-form-dialog")
-	private WebElement welcome;
+	@FindBy(xpath = "//*[@id='nikita-form-dialog']")
+	private WebElement errorPopup;
 
 
-//	@FindBy(xpath = "//*[@id=\"nikita-form-dialog\"")
-//	private WebElement msgError;
-//	/button[@type="button"]
 	
 	public void login(String username,String password) {
 		this.username.sendKeys(username);
+		delay(2);
 		this.password.sendKeys(password);
 	}
 	
@@ -57,27 +63,50 @@ public class LoginDev {
 		btnSignin.click();
 	}
 	
-	public void clickBtnClose() {
-		btnOke.click();
+	public void clickBtnOkeInvalid() {
+		delay(2);
+		btnOkeInvalid.click();
+	}
+	
+	public void clickBtnOkevalid() {
+		btnOkeValid.click();
+	}
+	
+	public String msgSucces() {
+		return welcomePopup.getText();
 	}
 	
 	public String msgError() {
-		return popupPeringatan.getText();
+		return errorPopup.getText();
 	}
 	
-	public String msgSuccess() {
-		return welcome.getText();
+	public String logoutPopup() {
+		return logout.getText();
 	}
 	
 	public void developerProfile() {
 		developerProfile.click();
-		btnOke.click();
-		btnYa.click();
-		
 	}
 	
-//	public String msgError() {
-//		return msgError.getText();
-//	}
+	public void clickBtnYa() {
+		delay(2);
+		btnYa.click();
+	}
+	
+	public void updateData(String username, String password){
+		this.username.sendKeys(Keys.CONTROL,"A");
+		this.username.sendKeys(Keys.BACK_SPACE);
+		this.password.sendKeys(Keys.CONTROL,"A");
+		this.password.sendKeys(Keys.BACK_SPACE);
+	}
+	
+	static void delay(int seconds) {
+		try {
+			Thread.sleep(seconds*1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 
 }
