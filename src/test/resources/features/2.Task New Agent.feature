@@ -1,37 +1,37 @@
-Feature: Login Agent
+Feature: Task New Agent
 
 
-  Scenario: User username password invalid
-  
+  Scenario: Halaman dashboard telemarketing
   	When User go to Web Telemarketing
+  	And User enter username ignore letter case and password valid
+    And User click button sign in
+    And User click button ok
+    And User click task
+    And User click new
+    
+  Scenario: Input field search  
+   	When User search valid
+   	
+  Scenario: Click activity 	
+    When User click data
+    
+  Scenario: Input field request phone
+    When User click dropdown phone
+    When User click add phone
+    And User input request phone
+    And User click save phone
+    And User click konfirmasi Ok
+    
+  Scenario: Input field wa valid
+  	When User input WA valid
   	
-    And User enter username invalid
-    And User click button sign in
+  Scenario: Input field wa 
+  	When User input WA valid
+  	And User input WA invalid
     
-    And User enter password invalid
-    And User click button sign in
-    
-    And User enter username null
-    And User click button sign in
-    
-    And User enter password null
-    And User click button sign in
   
-  #And User enter "agent1" as username and "1" as password
- 
-  Scenario: User valid login
-  
-  	And User enter username and password valid
-    And User click button sign in
-    And User click button ok
-    And User click profile
-    
-   	And User enter username ignore letter case and password valid
-    And User click button sign in
-    And User click button ok
-    And User click profile
-    
-    And User enter username uppercase and password valid
-    And User click button sign in
-    And User click button ok
-    And User click profile
+  Scenario: Mengisi data detail 
+    When User input data valid
+    And User click submit
+ 		
+ 		
