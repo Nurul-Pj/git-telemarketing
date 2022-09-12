@@ -30,32 +30,32 @@ public class LoginDev {
 	@FindBy(xpath = "//*[@id=\"51552_query\"]")
 	private WebElement btnSignin;
 	
-	@FindBy(xpath = "//span[normalize-space()='DEVELOPER']")
-	private WebElement developerProfile;
-	
 	@FindBy(xpath = "//*[@id=\"nikita-form-dialog\"]")
 	private WebElement logout;
 	
-	@FindBy(xpath = "/html/body/div[8]/div[3]/div/button[2]")
+	@FindBy(xpath = "//span[normalize-space()='YA']")
 	private WebElement btnYa;
 
-	@FindBy(xpath = "//div[@class='ui-dialog-buttonset']")
-	private WebElement btnOkeInvalid;
-	
-	@FindBy(xpath = "//div[@class='ui-dialog-buttonset']")
+	@FindBy(xpath = "/html/body/div[8]/div[3]/div/button")
 	private WebElement btnOkeValid;
 	
-	@FindBy(css = "#nikita-form-dialog")
-	private WebElement welcomePopup;
+	@FindBy(xpath = "//div[@class='ui-dialog-buttonset']")
+	private WebElement btnOkInvalid;
 	
-	@FindBy(xpath = "//*[@id='nikita-form-dialog']")
-	private WebElement errorPopup;
+	@FindBy(css = "#nikita-form-dialog")
+	private WebElement popupPeringatan;
 
 
+	@FindBy(xpath = "//*[@id=\"nikita-form-dialog\"]")
+	private WebElement welcome;
+	
+	@FindBy(xpath = "//span[normalize-space()='DEVELOPER']")
+	private WebElement developerProfile;
+	
+	
 	
 	public void login(String username,String password) {
 		this.username.sendKeys(username);
-		delay(2);
 		this.password.sendKeys(password);
 	}
 	
@@ -63,42 +63,36 @@ public class LoginDev {
 		btnSignin.click();
 	}
 	
-	public void clickBtnOkeInvalid() {
-		delay(2);
-		btnOkeInvalid.click();
-	}
-	
-	public void clickBtnOkevalid() {
-		btnOkeValid.click();
-	}
-	
-	public String msgSucces() {
-		return welcomePopup.getText();
+	public void clickBtnClose() {
+		btnOkInvalid.click();
 	}
 	
 	public String msgError() {
-		return errorPopup.getText();
+		return popupPeringatan.getText();
 	}
 	
-	public String logoutPopup() {
-		return logout.getText();
+	public String msgSuccess() {
+		return welcome.getText();
+	}
+	
+	public void deleteLogin() {
+		username.sendKeys(Keys.CONTROL+"A");
+		username.sendKeys(Keys.BACK_SPACE);
+		password.sendKeys(Keys.CONTROL+"A");
+		password.sendKeys(Keys.BACK_SPACE);
+	}
+	
+	public void clickBtnOkeValid() {
+		btnOkeValid.click();
 	}
 	
 	public void developerProfile() {
 		developerProfile.click();
-	}
-	
-	public void clickBtnYa() {
 		delay(2);
 		btnYa.click();
+		
 	}
 	
-	public void updateData(String username, String password){
-		this.username.sendKeys(Keys.CONTROL,"A");
-		this.username.sendKeys(Keys.BACK_SPACE);
-		this.password.sendKeys(Keys.CONTROL,"A");
-		this.password.sendKeys(Keys.BACK_SPACE);
-	}
 	
 	static void delay(int seconds) {
 		try {

@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="1" failed="5" skipped="0">
+<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-09-10T18:51:44 WIB" name="Default suite" finished-at="2022-09-10T18:52:09 WIB" duration-ms="24417">
+  <suite started-at="2022-09-12T23:03:23 WIB" name="Default suite" finished-at="2022-09-12T23:04:31 WIB" duration-ms="67525">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.telemarketing.step_definitions.TestRunner@384ad17b]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2022-09-10T18:51:44 WIB" name="Default test" finished-at="2022-09-10T18:52:09 WIB" duration-ms="24417">
+    <test started-at="2022-09-12T23:03:23 WIB" name="Default test" finished-at="2022-09-12T23:04:31 WIB" duration-ms="67525">
       <class name="com.juaracoding.telemarketing.step_definitions.TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.juaracoding.telemarketing.step_definitions.TestRunner@384ad17b]" started-at="2022-09-10T18:51:44 WIB" name="setUpClass" finished-at="2022-09-10T18:51:45 WIB" duration-ms="372" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.juaracoding.telemarketing.step_definitions.TestRunner@384ad17b]" started-at="2022-09-12T23:03:23 WIB" name="setUpClass" finished-at="2022-09-12T23:03:23 WIB" duration-ms="383" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@2fdf17dc]]>
+                <![CDATA[org.testng.TestRunner@1084ac45]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.telemarketing.step_definitions.TestRunner@384ad17b]" started-at="2022-09-10T18:51:45 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-09-10T18:51:58 WIB" duration-ms="13039" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.telemarketing.step_definitions.TestRunner@384ad17b]" started-at="2022-09-12T23:03:23 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-09-12T23:03:35 WIB" duration-ms="11417" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Input invalid login"]]>
+                <![CDATA["User username password invalid"]]>
               </value>
             </param>
             <param index="1">
@@ -37,38 +37,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.telemarketing.step_definitions.TestRunner@384ad17b]" started-at="2022-09-10T18:51:58 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-09-10T18:52:02 WIB" duration-ms="4755" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Input null login"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Login Developer"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertTrue(Assert.java:45)
-at org.testng.Assert.assertTrue(Assert.java:55)
-at com.juaracoding.telemarketing.step_definitions.TestLogin.user_invalid_credentilas(TestLogin.java:60)
-at ✽.User invalid credentials(file:///C:/Users/HP.DESKTOP-IER1J9F/eclipse-workspace/git-telemarketing/src/test/resources/features/Login.feature:14)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.telemarketing.step_definitions.TestRunner@384ad17b]" started-at="2022-09-10T18:52:02 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-09-10T18:52:06 WIB" duration-ms="3687" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.telemarketing.step_definitions.TestRunner@384ad17b]" started-at="2022-09-12T23:03:35 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-09-12T23:04:01 WIB" duration-ms="26155" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -81,131 +50,122 @@ at ✽.User invalid credentials(file:///C:/Users/HP.DESKTOP-IER1J9F/eclipse-work
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
-            <message>
-              <![CDATA[element click intercepted: Element <button class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" style="margin-top:2px;margin-bottom:2px;margin-top:29px;float:right;" onclick="sendaction('tl_login-1','tl_login-1-51552','click')" id="51552_query" role="button">...</button> is not clickable at point (906, 422). Other element would receive the click: <div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix">...</div>
-  (Session info: chrome=105.0.5195.102)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-IER1J9F', ip: '192.168.100.8', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\HP0738~1.DES\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:50387}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: e20a4442248dfac14893b71e6c514008]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" style="margin-top:2px;margin-bottom:2px;margin-top:29px;float:right;" onclick="sendaction('tl_login-1','tl_login-1-51552','click')" id="51552_query" role="button">...</button> is not clickable at point (906, 422). Other element would receive the click: <div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix">...</div>
-  (Session info: chrome=105.0.5195.102)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-IER1J9F', ip: '192.168.100.8', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\HP0738~1.DES\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:50387}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: e20a4442248dfac14893b71e6c514008
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at jdk.proxy2/jdk.proxy2.$Proxy27.click(Unknown Source)
-at com.juaracoding.telemarketing.pages.LoginDev.clickBtnSignin(LoginDev.java:63)
-at com.juaracoding.telemarketing.step_definitions.TestLogin.user_click_button_sign_in(TestLogin.java:53)
-at ✽.User click button sign in(file:///C:/Users/HP.DESKTOP-IER1J9F/eclipse-workspace/git-telemarketing/src/test/resources/features/Login.feature:20)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.telemarketing.step_definitions.TestRunner@384ad17b]" started-at="2022-09-10T18:52:06 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-09-10T18:52:06 WIB" duration-ms="91" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.telemarketing.step_definitions.TestRunner@384ad17b]" started-at="2022-09-12T23:04:01 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-09-12T23:04:01 WIB" duration-ms="317" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["User valid login ignore lettercase"]]>
+                <![CDATA["Dashboard user management"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Login Developer"]]>
+                <![CDATA["User Management"]]>
               </value>
             </param>
           </params>
-          <exception class="java.lang.ArrayIndexOutOfBoundsException">
-            <message>
-              <![CDATA[Index 3 out of bounds for length 3]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
-at com.juaracoding.telemarketing.step_definitions.Hooks.setUp(Hooks.java:33)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.ArrayIndexOutOfBoundsException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.telemarketing.step_definitions.TestRunner@384ad17b]" started-at="2022-09-10T18:52:06 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-09-10T18:52:06 WIB" duration-ms="94" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.telemarketing.step_definitions.TestRunner@384ad17b]" started-at="2022-09-12T23:04:01 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-09-12T23:04:04 WIB" duration-ms="2335" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["User valid login uppercase"]]>
+                <![CDATA["Search user"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Login Developer"]]>
+                <![CDATA["User Management"]]>
               </value>
             </param>
           </params>
-          <exception class="java.lang.ArrayIndexOutOfBoundsException">
-            <message>
-              <![CDATA[Index 3 out of bounds for length 3]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
-at com.juaracoding.telemarketing.step_definitions.Hooks.setUp(Hooks.java:33)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.ArrayIndexOutOfBoundsException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.telemarketing.step_definitions.TestRunner@384ad17b]" started-at="2022-09-10T18:52:06 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-09-10T18:52:06 WIB" duration-ms="83" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.telemarketing.step_definitions.TestRunner@384ad17b]" started-at="2022-09-12T23:04:04 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-09-12T23:04:06 WIB" duration-ms="2763" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Logout user"]]>
+                <![CDATA["Add user"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Login Developer"]]>
+                <![CDATA["User Management"]]>
               </value>
             </param>
           </params>
-          <exception class="java.lang.ArrayIndexOutOfBoundsException">
-            <message>
-              <![CDATA[Index 3 out of bounds for length 3]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
-at com.juaracoding.telemarketing.step_definitions.Hooks.setUp(Hooks.java:33)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.ArrayIndexOutOfBoundsException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.juaracoding.telemarketing.step_definitions.TestRunner@384ad17b]" started-at="2022-09-10T18:52:06 WIB" name="tearDownClass" finished-at="2022-09-10T18:52:09 WIB" duration-ms="2269" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.telemarketing.step_definitions.TestRunner@384ad17b]" started-at="2022-09-12T23:04:06 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-09-12T23:04:10 WIB" duration-ms="3783" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Reset Password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User Management"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.telemarketing.step_definitions.TestRunner@384ad17b]" started-at="2022-09-12T23:04:10 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-09-12T23:04:18 WIB" duration-ms="7455" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Update Form"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User Management"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.telemarketing.step_definitions.TestRunner@384ad17b]" started-at="2022-09-12T23:04:18 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-09-12T23:04:25 WIB" duration-ms="7444" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Update Password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User Management"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.telemarketing.step_definitions.TestRunner@384ad17b]" started-at="2022-09-12T23:04:25 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-09-12T23:04:28 WIB" duration-ms="3169" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Remove User"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User Management"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.juaracoding.telemarketing.step_definitions.TestRunner@384ad17b]" started-at="2022-09-12T23:04:28 WIB" name="tearDownClass" finished-at="2022-09-12T23:04:31 WIB" duration-ms="2259" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
