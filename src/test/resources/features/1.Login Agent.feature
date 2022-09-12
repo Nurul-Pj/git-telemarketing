@@ -1,5 +1,6 @@
 Feature: Login Agent
 
+
   Scenario: User username password invalid
   
   	When User go to Web Telemarketing
@@ -16,9 +17,21 @@ Feature: Login Agent
     And User enter password null
     And User click button sign in
   
-  
+  #And User enter "agent1" as username and "1" as password
+ 
   Scenario: User valid login
-    When User enter username password valid
+  
+  	And User enter username and password valid
+    And User click button sign in
+    And User click button ok
+    And User click profile
+    
+   	And User enter username ignore letter case and password valid
+    And User click button sign in
+    And User click button ok
+    And User click profile
+    
+    And User enter username uppercase and password valid
     And User click button sign in
     And User click button ok
     And User click profile

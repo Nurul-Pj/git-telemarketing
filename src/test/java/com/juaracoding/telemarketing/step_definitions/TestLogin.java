@@ -3,6 +3,7 @@ package com.juaracoding.telemarketing.step_definitions;
 import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.WebDriver;
+import org.w3c.dom.UserDataHandler;
 
 import com.juaracoding.telemarketing.pages.LoginAgent;
 import com.juaracoding.telemarketing.utils.Constants;
@@ -94,18 +95,35 @@ public class TestLogin {
 //		extentTest.log(LogStatus.PASS, "User valid credentials");
 //	}
 	
+//	@And("User enter {string} as username and {string} as password")
+//	public void fillForm(String username, String password) {
+//		loginAgent.login(username, password);		
+//	}
 	
 	
-	
-//	valid
-	@When("User enter username password valid")
-	public void user_enter_username_password_valid() {
+	@And("User enter username and password valid" )
+	public void user_enter_username_and_password_valid() {
 		loginAgent.clickBtnClose();
-		loginAgent.deleteLogin();
+		loginAgent.deleteLogin();		
 		loginAgent.login("agent01", "1");
 		extentTest.log(LogStatus.PASS, "User enter username password valid");
 	}
 	
+	@And("User enter username ignore letter case and password valid" )
+	public void user_enter_username_ignorelettercase_and_password_valid() {	
+		loginAgent.login("aGeNT01", "1");
+		delay(3);
+		extentTest.log(LogStatus.PASS, "User enter username password valid");
+	}
+	
+	@And("User enter username uppercase and password valid" )
+	public void user_enter_username_uppercase_and_password_valid() {		
+		loginAgent.login("AGENT01", "1");
+		delay(3);
+		extentTest.log(LogStatus.PASS, "User enter username password valid");
+	}
+	
+
 	@And("User click button ok")
 	public void user_click_button_ok() {
 		delay(3);
