@@ -62,7 +62,7 @@ public class NewAgent {
 	@FindBy(xpath = "/html/body/div[8]/div[3]/div/button")
 	private WebElement btnKonfirmasiOk;
 
-	@FindBy(xpath = "//*[@id=\"tl_user_activity--53057_text\"]")
+	@FindBy(xpath = "/html/body/div[9]/div[2]/div/div[1]/table/tbody/tr[1]/td[1]/div/div[7]/table/tbody/tr/td[2]/div/select")
 	private WebElement dropDownPhone;
 	
 	@FindBy(xpath = "//*[@id=\"tl_user_activity--53073_text\"]")
@@ -77,8 +77,9 @@ public class NewAgent {
 	
 	
 	public void clickListPhone() {
+		delay(2);
 		Select phoneSelect = new Select(dropDownPhone);
-		phoneSelect.selectByIndex(3);
+		phoneSelect.selectByValue("081906753073");
 		delay(2);
 	}
 	
@@ -136,7 +137,7 @@ public class NewAgent {
 	
 	
 	
-	public void inputData() {
+	public void inputDataValid() {
 		Select statusSelect = new Select(dropDownStatus);
 		statusSelect.selectByValue("Tersambung");
 		delay(2);
@@ -155,6 +156,14 @@ public class NewAgent {
 		
 	}
 
+	
+
+	public void inputDataInvalid() {
+		Select statusSelect = new Select(dropDownStatus);
+		statusSelect.selectByValue("Tersambung");
+		delay(2);
+	}
+	
 	
 	
 	

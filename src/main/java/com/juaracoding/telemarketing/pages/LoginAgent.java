@@ -44,19 +44,10 @@ public class LoginAgent {
 	@FindBy(css = "#nikita-form-dialog")
 	private WebElement popupPeringatan;
 	
-//	@FindBy(id = "nikita-form-dialog-tag")
-//	private WebElement welcome;
-
 	@FindBy(xpath = "//*[@id=\"nikita-form-dialog\"]")
-	private WebElement welcome;
+	private WebElement popupDashboard;
 	
-	
-	
-	
-	
-//	@FindBy(xpath = "//*[@id=\"nikita-form-dialog\"")
-//	private WebElement msgError;
-//	/button[@type="button"]
+
 	
 	public void login(String username,String password) {
 		this.username.sendKeys(username);
@@ -72,11 +63,11 @@ public class LoginAgent {
 	}
 	
 	public String msgError() {
-		return popupPeringatan.getText();
+		return this.popupPeringatan.getText();
 	}
 	
 	public String msgSuccess() {
-		return welcome.getText();
+		return this.popupDashboard.getText();
 	}
 	
 	public void deleteLogin() {

@@ -15,8 +15,17 @@ Feature: Task New Agent
   Scenario: Click activity 	
     When User click data
     
+    
+ 	Scenario: Mengisi data detail
+ 		When User input data invalid 
+ 		And User click submit
+    When User input data valid
+    And User click submit
+    
+    
+    
   Scenario: Input field request phone
-    When User click dropdown phone
+    And User click list phone
     When User click add phone
     And User input request phone
     And User click save phone
@@ -30,8 +39,6 @@ Feature: Task New Agent
   	And User input WA invalid
     
   
-  Scenario: Mengisi data detail 
-    When User input data valid
-    And User click submit
- 		
+  
+ 
  		

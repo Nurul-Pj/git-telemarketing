@@ -22,7 +22,7 @@ public class TestNew {
 	}
 	
 	
-	@When("User click list phone")
+	@And("User click list phone")
 	public void user_click_list_phone() {		
 		newAgent.clickListPhone();
 		extentTest.log(LogStatus.PASS, "User click list phone");
@@ -91,9 +91,16 @@ public class TestNew {
 	
 	@When("User input data valid" )
 	public void user_input_data_valid() {		
-		newAgent.inputData();
+		newAgent.inputDataValid();
 		extentTest.log(LogStatus.PASS, "User input data valid");
 	}
+	
+	@When("User input data invalid" )
+	public void user_input_data_valinid() {		
+		newAgent.inputDataInvalid();
+		extentTest.log(LogStatus.PASS, "User input data valid");
+	}
+	
 	
 	
 	@And("User click submit" )

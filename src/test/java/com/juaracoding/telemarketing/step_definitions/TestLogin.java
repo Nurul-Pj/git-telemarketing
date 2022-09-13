@@ -12,6 +12,7 @@ import com.relevantcodes.extentreports.LogStatus;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.Then.Thens;
 import io.cucumber.java.en.When;
 
 public class TestLogin {
@@ -71,6 +72,7 @@ public class TestLogin {
 	public void user_click_button_sign_in() {
 		loginAgent.clickBtnSignin();
 		extentTest.log(LogStatus.PASS, "User click button sign in");
+		delay(2);
 	}
 	
 	
@@ -85,15 +87,13 @@ public class TestLogin {
 //		extentTest.log(LogStatus.PASS, "User invalid credentials");
 //	}
 //	
-//	@Then("User valid credentials")
-//	public void user_valid_credentilas() {
-////		String actual = loginAgent.msgSuccess();
-////		assertTrue(actual.contains(""));
-//		delay(2);
-//		loginAgent.clickBtnClose();
-//		loginAgent.developerProfile();
-//		extentTest.log(LogStatus.PASS, "User valid credentials");
-//	}
+	@Then("User valid credentials")
+	public void user_valid_credentilas() {
+		String actual = loginAgent.msgSuccess();
+		assertTrue(actual.contains("Welcome"));
+		extentTest.log(LogStatus.PASS, "User valid credentials");
+		delay(2);
+	}
 	
 //	@And("User enter {string} as username and {string} as password")
 //	public void fillForm(String username, String password) {
@@ -107,26 +107,27 @@ public class TestLogin {
 		loginAgent.deleteLogin();		
 		loginAgent.login("agent01", "1");
 		extentTest.log(LogStatus.PASS, "User enter username password valid");
+		delay(2);
 	}
 	
 	@And("User enter username ignore letter case and password valid" )
 	public void user_enter_username_ignorelettercase_and_password_valid() {	
 		loginAgent.login("aGeNT01", "1");
-		delay(3);
+		delay(2);
 		extentTest.log(LogStatus.PASS, "User enter username password valid");
 	}
 	
 	@And("User enter username uppercase and password valid" )
 	public void user_enter_username_uppercase_and_password_valid() {		
 		loginAgent.login("AGENT01", "1");
-		delay(3);
+		delay(2);
 		extentTest.log(LogStatus.PASS, "User enter username password valid");
 	}
 	
 
 	@And("User click button ok")
 	public void user_click_button_ok() {
-		delay(3);
+		delay(2);
 		loginAgent.clickBtnOkeValid();
 		extentTest.log(LogStatus.PASS, "User click button ok");
 	}
@@ -134,7 +135,7 @@ public class TestLogin {
 	@And("User click profile")
 	public void user_click_profile() {
 		loginAgent.clickProfile();
-		delay(3);
+		delay(2);
 		extentTest.log(LogStatus.PASS, "User click profile");
 	}
 	
