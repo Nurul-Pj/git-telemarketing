@@ -1,47 +1,34 @@
 Feature: Login Developer
 
 @tag1
-  Scenario: Input invalid login
-    When User go to Web Telemarketing
-    And User enter username password invalid
-    And User click button sign in
-    And User invalid credentials
-    Then Click oke
+  Scenario: User username password invalid
+  
+  	When User go to Web Telemarketing
+    And User enter username invalid
+    Then User click button sign in
     
-  Scenario: Input null login
-    When User enter username password null
-    And User click button sign in
-    And User invalid credentials
-    Then Click oke
+    And User enter password invalid
+    Then User click button sign in
+    
+    And User enter username null
+    Then User click button sign in
+    
+    And User enter password null
+    Then User click button sign in
+
  
   Scenario: User valid login
-    When User enter username password valid
-    And User click button sign in
-    Then User valid credentials
-    
-  Scenario: User valid login ignore lettercase
-    When User enter username password ignore lettercase
-    And User click button sign in
-    Then User valid credentials
-    
-  Scenario: User valid login uppercase
-    When User enter username password uppercase
-    And User click button sign in
-    Then User valid credentials
-    
-   Scenario: Upload data invalid
-  	When Pilih menu data
-  	And User click upload data invalid
-  	And User click choose file invalid
-  	And User click button upload invalid
   
-  Scenario: Upload data valid
-  	And User click choose file valid
-  	And User click button upload valid
-  	Then User click Simpan valid  
+  	When User enter username and password valid
+    Then User click button sign in
+    And User click button ok
+    Then User click profile
+
+   	When User enter username ignore letter case and password valid
+    Then User click button sign in
+    And User click button ok
+    And User click profile
     
-  Scenario: Logout user
-  	When User click profile and logout
-  	Then User logout
-  	
-    
+    When User enter username uppercase and password valid
+    Then User click button sign in
+    And User click button ok

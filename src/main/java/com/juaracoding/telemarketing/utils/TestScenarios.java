@@ -9,7 +9,8 @@ public enum TestScenarios {
 	T5("User valid login uppercase"),
 	T6("Upload data invalid"),
 	T7("Upload data valid"),
-	T8("Logout user");
+	T8("User task agree"),
+	T9("Logout user");
 
 	private String testName;
 	

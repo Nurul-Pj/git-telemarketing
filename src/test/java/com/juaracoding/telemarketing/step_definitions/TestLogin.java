@@ -5,6 +5,7 @@ import static org.testng.Assert.assertTrue;
 import org.openqa.selenium.WebDriver;
 
 import com.juaracoding.telemarketing.pages.LoginDev;
+import com.juaracoding.telemarketing.pages.TaskAgreeDev;
 import com.juaracoding.telemarketing.pages.UploadData;
 import com.juaracoding.telemarketing.utils.Constants;
 import com.relevantcodes.extentreports.ExtentTest;
@@ -20,92 +21,90 @@ public class TestLogin {
 	public static ExtentTest extentTest;
 	private LoginDev loginDeveloper = new LoginDev();
 	private UploadData uploadData = new UploadData();
+	private TaskAgreeDev taskAgreeDev = new TaskAgreeDev();
 	
 	public TestLogin() {
 		driver = Hooks.driver;
 		extentTest = Hooks.extentTest;
 	}
 	
-//	Invalid Login
+	//Invalid Login
 	@When("User go to Web Telemarketing")
 	public void user_go_to_web_telemarketing() {
 		driver.get(Constants.URL);
 		extentTest.log(LogStatus.PASS, "User go to Web Telemarketing");
 	}
 	
-	@And("User enter username password invalid")
-	public void user_enter_username_password_invalid() {
-		loginDeveloper.login("devEl0Per", "23");
+	@And("User enter username invalid")
+	public void user_enter_username_invalid() {
+		loginDeveloper.login("developer1", "1");
 		delay(2);
 		extentTest.log(LogStatus.PASS, "User enter username password invalid");
 	}
 	
-//	Invalid Null
-	@When("User enter username password null")
-	public void user_enter_username_password_null() {
-		loginDeveloper.updateData("","");
-		delay(1);
-		loginDeveloper.login("","");
-		delay(1);
-		extentTest.log(LogStatus.PASS, "User enter username password null");
+	@And("User enter password invalid")
+	public void user_enter_password_invalid() {
+		loginDeveloper.clickBtnClose();
+		loginDeveloper.deleteLogin();
+		loginDeveloper.login("develope", "23");
+		delay(2);
+		extentTest.log(LogStatus.PASS, "User enter password invalid");
 	}
 	
-	@And("User click button sign in")
+	@And("User enter username null")
+	public void user_enter_username_null() {
+		loginDeveloper.clickBtnClose();
+		loginDeveloper.deleteLogin();
+		loginDeveloper.login("", "23");
+		delay(2);
+		extentTest.log(LogStatus.PASS, "User enter username null");
+	}
+	
+	@And("User enter password null")
+	public void user_enter_password_null() {
+		loginDeveloper.clickBtnClose();
+		loginDeveloper.deleteLogin();
+		loginDeveloper.login("developer", "");
+		delay(2);
+		extentTest.log(LogStatus.PASS, "User enter password null");
+	}
+	
+	
+	@Then("User click button sign in")
 	public void user_click_button_sign_in() {
 		loginDeveloper.clickBtnSignin();
 		extentTest.log(LogStatus.PASS, "User click button sign in");
 	}
 	
-	@And("User invalid credentials")
-	public void user_invalid_credentilas() {
-		String actual = loginDeveloper.msgError();
-		assertTrue(actual.contains("Username atau password tidak ditemukan atau akun anda tidak aktif"));
-		delay(2);
-	}
-	
-	@Then("Click oke")
-	public void click_oke() {
-		delay(2);
-		loginDeveloper.clickBtnOkeInvalid();
-		extentTest.log(LogStatus.PASS, "Click oke");
-	}
-	
-	
-//	valid
-	
-	@When("User enter username password valid")
-	public void user_enter_username_password_valid() {
-		loginDeveloper.updateData("", "");
+//	Valid
+	@When("User enter username and password valid" )
+	public void user_enter_username_and_password_valid() {
+		loginDeveloper.clickBtnClose();
+		loginDeveloper.deleteLogin();		
 		loginDeveloper.login("developer", "23");
 		extentTest.log(LogStatus.PASS, "User enter username password valid");
 	}
 	
-	@When("User enter username password ignore lettercase")
-	public void user_enter_username_password_ignore_lettercase() {
-		loginDeveloper.updateData("", "");
-		loginDeveloper.login("DeVeloPer", "23");
-		extentTest.log(LogStatus.PASS, "User enter username password ignore lettercase");
+	@When("User enter username ignore letter case and password valid" )
+	public void user_enter_username_ignorelettercase_and_password_valid() {	
+		loginDeveloper.login("DeveLopeR", "23");
+		delay(3);
+		extentTest.log(LogStatus.PASS, "User enter username password valid");
 	}
 	
-	@When("User enter username password uppercase")
-	public void user_enter_username_password_uppercase() {
-		loginDeveloper.updateData("", "");
-		loginDeveloper.login("DeVeloPer", "23");
-		extentTest.log(LogStatus.PASS, "User enter username password uppercase");
+	@When("User enter username uppercase and password valid" )
+	public void user_enter_username_uppercase_and_password_valid() {		
+		loginDeveloper.login("DEVELOPER", "23");
+		delay(3);
+		extentTest.log(LogStatus.PASS, "User enter username password valid");
 	}
 	
-	
-	@Then("User valid credentials")
-	public void user_valid_credentilas() {
-		driver.navigate().to("https://sqa.peluangkerjaku.com/tele/");
-		String actual = loginDeveloper.msgSucces();
-		assertTrue(actual.contains("Welcome to Tele Kita"));
-		delay(2);
-		loginDeveloper.clickBtnOkevalid();
-//		delay(2);
-//		loginDeveloper.developerProfile();
-//		loginDeveloper.clickBtnYa();
-		extentTest.log(LogStatus.PASS, "User valid credentials");
+
+	@And("User click button ok")
+	public void user_click_button_ok() {
+		delay(3);
+		loginDeveloper.clickBtnOkeValid();
+		extentTest.log(LogStatus.PASS, "User click button ok");
 	}
 
 	//UploadData 
@@ -167,21 +166,70 @@ public class TestLogin {
 		extentTest.log(LogStatus.PASS, "User click Simpan valid");
 	}
 	
-
-//	Logout
-	@When("User click profile and logout")
-	public void user_click_profile_and_logout() {
-		loginDeveloper.developerProfile();
-		extentTest.log(LogStatus.PASS, "User click profile and logout");
+	//Task Agree Dev
+	@When("Pilih menu task")
+	public void pilih_menu_task() {
+		delay(2);
+		taskAgreeDev.btnTask();
+		extentTest.log(LogStatus.PASS, "Pilih menu data");
+	}
+			
+	@And("User click agree")
+	public void user_click_agree() {
+		delay(2);
+		taskAgreeDev.btnTaskAgree();
+		extentTest.log(LogStatus.PASS, "User click agree");
+	}
+			
+	@And("User click search")
+	public void user_click_search() {
+		delay(2);
+		taskAgreeDev.search("somaybohay");
+		extentTest.log(LogStatus.PASS, "User click search");
+	}
+			
+	@And("User click button search")
+	public void user_click_button_search() {
+		delay(2);
+		taskAgreeDev.btnSearch();
+		extentTest.log(LogStatus.PASS, "User click button search");
 	}
 	
-	@Then("User logout")
-	public void user_logout() {
-		String actual = loginDeveloper.logoutPopup();
-		assertTrue(actual.contains("Apa Yakin Keluar ?"));
-		loginDeveloper.clickBtnYa();
-		driver.navigate().refresh();
-		extentTest.log(LogStatus.PASS, "User click profile and logout");
+	@And("User click file")
+	public void user_click_file() {
+		delay(2);
+		taskAgreeDev.btnChooseFile();
+		extentTest.log(LogStatus.PASS, "User click file");
+	}
+	
+	@And("User isi link")
+	public void user_isi_link() {
+		delay(2);
+		taskAgreeDev.isiLink("somaybohay");
+		extentTest.log(LogStatus.PASS, "User isi link");
+	}
+	
+	@And("User click simpan")
+	public void user_click_simpan() {
+		delay(2);
+		taskAgreeDev.btnSimpan();
+		extentTest.log(LogStatus.PASS, "User click simpan");
+	}
+	
+	@And("User click button oke")
+	public void user_click_button_oke() {
+		delay(2);
+		taskAgreeDev.clickBtnClose();
+		extentTest.log(LogStatus.PASS, "User click button oke");
+	}
+	
+
+//	Logout
+	@Then("User click profile")
+	public void user_click_profile() {
+		loginDeveloper.developerProfile();
+		delay(3);
+		extentTest.log(LogStatus.PASS, "User click profile");
 	}
 	
 
