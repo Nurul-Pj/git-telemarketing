@@ -27,7 +27,7 @@ Feature: User Management
     	And click button update password
     	And input new password
   
-   
+  
    Scenario: Remove User
     	When click button remove
     	Then remove user done

@@ -4,8 +4,7 @@ package com.juaracoding.telemarketing.step_definitions;
 
 import org.openqa.selenium.WebDriver;
 
-//import com.juaracoding.telemarketing.pages.LoginDev;
-import com.juaracoding.telemarketing.pages.usermanagement.user;
+import com.juaracoding.telemarketing.pages.user;
 //import com.juaracoding.telemarketing.utils.Constants;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
@@ -18,7 +17,6 @@ public class TestUser {
 	
 	public static WebDriver driver;
 	public static ExtentTest extentTest;
-//	private LoginDev loginDeveloper = new LoginDev();
 	private user userPage = new user();
 	
 	public TestUser() {

@@ -6,11 +6,10 @@ import org.openqa.selenium.WebDriver;
 import com.juaracoding.telemarketing.pages.LoginDev;
 import com.juaracoding.telemarketing.utils.Constants;
 import com.relevantcodes.extentreports.ExtentTest;
-//import com.relevantcodes.extentreports.LogStatus;
 import com.relevantcodes.extentreports.LogStatus;
 
 import io.cucumber.java.en.And;
-//import io.cucumber.java.en.Then;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class TestLogin {
@@ -66,13 +65,14 @@ public class TestLogin {
 	}
 	
 	
-	@And("User click button sign in")
+	@Then("User click button sign in")
 	public void user_click_button_sign_in() {
 		loginDeveloper.clickBtnSignin();
 		extentTest.log(LogStatus.PASS, "User click button sign in");
 	}
 	
-	@And("User enter username and password valid" )
+//	Valid
+	@When("User enter username and password valid" )
 	public void user_enter_username_and_password_valid() {
 		loginDeveloper.clickBtnClose();
 		loginDeveloper.deleteLogin();		
@@ -80,14 +80,14 @@ public class TestLogin {
 		extentTest.log(LogStatus.PASS, "User enter username password valid");
 	}
 	
-	@And("User enter username ignore letter case and password valid" )
+	@When("User enter username ignore letter case and password valid" )
 	public void user_enter_username_ignorelettercase_and_password_valid() {	
 		loginDeveloper.login("DeveLopeR", "23");
 		delay(3);
 		extentTest.log(LogStatus.PASS, "User enter username password valid");
 	}
 	
-	@And("User enter username uppercase and password valid" )
+	@When("User enter username uppercase and password valid" )
 	public void user_enter_username_uppercase_and_password_valid() {		
 		loginDeveloper.login("DEVELOPER", "23");
 		delay(3);
@@ -102,7 +102,7 @@ public class TestLogin {
 		extentTest.log(LogStatus.PASS, "User click button ok");
 	}
 	
-	@And("User click profile")
+	@Then("User click profile")
 	public void user_click_profile() {
 		loginDeveloper.developerProfile();
 		delay(3);
