@@ -47,6 +47,7 @@ public class TestApprovePhone {
 //	approve phone
 	@When("click phone number")
 	public void click_phone_number() {
+		delay(2);
 		approvePhone.userCheckbox();
 		extentTest.log(LogStatus.PASS, "click phone number");
 	}

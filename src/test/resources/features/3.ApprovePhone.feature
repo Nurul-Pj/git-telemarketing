@@ -5,7 +5,7 @@ Feature: Approve Phone
     	Then click menu approve phone
     		
    Scenario: show page
-  	When click showPage		
+  	When click show page		
     		
   Scenario: search name user
   	When: input user name

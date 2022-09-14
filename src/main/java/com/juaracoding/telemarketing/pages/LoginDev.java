@@ -31,27 +31,24 @@ public class LoginDev {
 	private WebElement btnSignin;
 	
 	@FindBy(xpath = "//*[@id=\"nikita-form-dialog\"]")
+	private WebElement popUp;
+
+	@FindBy(xpath = "//div[@class='ui-dialog-buttonset']")
+	private WebElement btnOke;
+
+//	Logout
+	@FindBy(xpath = "/html/body/div[8]/div[1]")
 	private WebElement logout;
 	
-	@FindBy(xpath = "//span[normalize-space()='YA']")
-	private WebElement btnYa;
-
-	@FindBy(xpath = "/html/body/div[8]/div[3]/div/button")
-	private WebElement btnOkeValid;
-	
-	@FindBy(xpath = "//div[@class='ui-dialog-buttonset']")
-	private WebElement btnOkInvalid;
-	
-	@FindBy(css = "#nikita-form-dialog")
-	private WebElement popupPeringatan;
-
-
-	@FindBy(xpath = "//*[@id=\"nikita-form-dialog\"]")
-	private WebElement welcome;
-	
+	//*[@id="nikita-form-dialog"]/p
 	@FindBy(xpath = "//span[normalize-space()='DEVELOPER']")
 	private WebElement developerProfile;
 	
+	@FindBy(xpath = "/html/body/div[8]/div[3]/div/button[2]")
+	private WebElement btnYa;
+	
+	@FindBy(xpath = "/html/body/div[8]/div[3]/div/button[1]")
+	private WebElement btnTidak;
 	
 	
 	public void login(String username,String password) {
@@ -63,16 +60,9 @@ public class LoginDev {
 		btnSignin.click();
 	}
 	
-	public void clickBtnClose() {
-		btnOkInvalid.click();
-	}
 	
-	public String msgError() {
-		return popupPeringatan.getText();
-	}
-	
-	public String msgSuccess() {
-		return welcome.getText();
+	public String appearGreeting() {
+		return popUp.getText();
 	}
 	
 	public void deleteLogin() {
@@ -82,16 +72,30 @@ public class LoginDev {
 		password.sendKeys(Keys.BACK_SPACE);
 	}
 	
-	public void clickBtnOkeValid() {
-		btnOkeValid.click();
+	public void clickBtnOke() {
+		btnOke.click();
+		delay(1);
 	}
 	
-	public void developerProfile() {
+//	Logout
+	public void logout() {
 		developerProfile.click();
-		delay(2);
+	}
+	
+	public String appearLogout() {
+		return logout.getText();
+	}
+	
+	public void clickBtnYa() {
 		btnYa.click();
+	}
+	
+	public void clickBtnTidak() {
+		btnTidak.click();
 		
 	}
+	
+
 	
 	
 	static void delay(int seconds) {
