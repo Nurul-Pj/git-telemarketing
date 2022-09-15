@@ -11,17 +11,20 @@ public enum TestScenarios {
 	T7("Logout user"),
 	T8("User valid login"),
 	T9("Dashboard user management"),
-	T10("Search user"),
-	T11("Add user"),
-	T12("Reset Password"),
-	T13("Update Form"),
-	T14("Update Password"),
-	T15("Remove User"),
-	T16("Dashboard user managemsent"),
-	T17("show page"),
-	T18("search name user"),
-	T19("Approve Phone"),
-	T20("Reject Phone");
+	T10("Add user supervisior"),
+	T11("Search user"),
+	T12("Add user agent"),
+	T13("Add user admin"),
+	T14("Remove User"),
+	T15("Add user null"),
+	T16("Reset Password"),
+	T17("Update Password"),
+	T18("Update form"),
+	T19("Dashboard user managemsent"),
+	T20("show page"),
+	T21("search name user"),
+	T22("Approve Phone"),
+	T23("Reject Phone");
 
 	private String testName;
 	

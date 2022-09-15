@@ -6,7 +6,7 @@
       <class name="com.juaracoding.telemarketing.step_definitions.TestRunner">
         <methods>
           <include name="setUpClass"/>
-          <include name="runScenario" invocation-numbers="0"/>
+          <include name="runScenario" invocation-numbers="5 6 10"/>
           <include name="tearDownClass"/>
         </methods>
       </class> <!-- com.juaracoding.telemarketing.step_definitions.TestRunner -->

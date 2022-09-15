@@ -1,5 +1,8 @@
 package com.juaracoding.telemarketing.pages;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -68,22 +71,36 @@ public class user {
 	private WebElement btnYes;
 	
 //	Reset Password
-	@FindBy(xpath = "/html/body/div[2]/div[2]/div[1]/div[2]/table/tbody/tr[1]/td[2]/div/div[1]/div[3]/div/div[6]/table/tbody/tr[7]/td[1]")
+	@FindBy(xpath = "/html/body/div[2]/div[2]/div[1]/div[2]/table/tbody/tr[1]/td[2]/div/div[1]/div[3]/div/div[6]/table/tbody/tr/td[1]/input")
 	private WebElement checkbox;
 	
 	@FindBy(xpath = "/html/body/div[8]/div[3]/div/button/span")
 	private WebElement btnDone;
 	
 //	Update form
-	@FindBy(xpath = "/html/body/div[2]/div[2]/div[1]/div[2]/table/tbody/tr[1]/td[2]/div/div[1]/div[3]/div/div[6]/table/tbody/tr[7]/td[12]/div/table/tbody/tr[1]/td[1]/div")
+	@FindBy(xpath = "/html/body/div[2]/div[2]/div[1]/div[2]/table/tbody/tr[1]/td[2]/div/div[1]/div[3]/div/div[6]/table/tbody/tr/td[12]/div/table/tbody/tr[1]/td[1]/div/img")
 	private WebElement edit;
+	
+	@FindBy(xpath = "//*[@id=\"tl_agent_editable-21-51730_text\"]")
+	private WebElement FullName;
+	
+	@FindBy(xpath = "//*[@id=\"tl_agent_editable-21-51736_text\"]")
+	private WebElement Telephone;
+	
+	@FindBy(xpath = "//*[@id=\"tl_agent_editable-21-51738_text\"]")
+	private WebElement UserActive;
+	
+	@FindBy(xpath = "//*[@id=\"tl_agent_editable-21-51746_text\"]")
+	private WebElement Extension;
 	
 	@FindBy(xpath = "//*[@id=\"tl_agent_editable-21-51740_text\"]")
 	private WebElement Username;
 	
+	@FindBy(xpath = "//*[@id=\"tl_agent_editable-21-51740_text\"]")
+	private WebElement Password;
+	
 	
 	@FindBy(xpath = "//*[@id=\"51743_query\"]")
-	//*[@id="51753_query"]/span
 	private WebElement btnUpdateOne;
 
 //	Update Password
@@ -99,13 +116,23 @@ public class user {
 	@FindBy(xpath = "/html/body/div[9]/div[1]/div/button/span[1]")
 	private WebElement close;
 	
+	@FindBy(xpath = "/html/body/div[9]/div[1]/span")
+	private WebElement txtAgentEditable;
 	
 //	remove user
-	@FindBy(xpath = "/html/body/div[2]/div[2]/div[1]/div[2]/table/tbody/tr[1]/td[2]/div/div[1]/div[3]/div/div[6]/table/tbody/tr[7]/td[12]/div/table/tbody/tr[1]/td[2]/div")
+	@FindBy(xpath = "/html/body/div[2]/div[2]/div[1]/div[2]/table/tbody/tr[1]/td[2]/div/div[1]/div[3]/div/div[6]/table/tbody/tr/td[12]/div/table/tbody/tr[1]/td[2]/div/img")
 	private WebElement remove;
 	
 	@FindBy(xpath = "/html/body/div[8]/div[3]/div/button[2]")
 	private WebElement btnYa;
+	
+	@FindBy(id="tl_user_management--51688_table")
+	private WebElement tableUser;
+	
+	@FindBy(id="//td[@id='tl_user_management--51688-cell-6-2']")
+	private WebElement table;
+	
+	//*[@id="tl_user_management--51688_table"]/tbody/tr[7]
 	
 	
 //	open dashboard
@@ -119,7 +146,7 @@ public class user {
 	
 //	search user
 	public String search() {
-		this.searchUser.sendKeys("DEVELOPER");
+		this.searchUser.sendKeys("PJ");
 		delay(2);
 		btnSearch.click();
 		return searchUser.getText();
@@ -135,22 +162,48 @@ public class user {
 	}
 	
 //	form add
-	public void formAdd() {
-		this.fullName.sendKeys("DEVELOPER");
-		Select privilages = new Select(selectPrivilages);
-		privilages.selectByValue("Supervisor");
-		Select supervisor = new Select(selectSupervisor);
-		supervisor.selectByValue("DEVELOPER");
-		this.telephone.sendKeys("12345678");
-		this.extension.sendKeys("2022");
-		this.username.sendKeys("PJ");
-		this.password.sendKeys("20");
+	public void formAdd(String privilages, String supervisior) {
+		fullName.sendKeys("DEVELOPER");
+		choosePrivileges(privilages);
+		chooseSupervisior(supervisior);
+		telephone.sendKeys("12345678");
+		extension.sendKeys("2022");
+		username.sendKeys("PJ");
+		password.sendKeys("20");
+	}
+	
+	
+	public void choosePrivileges(String privileges) {
+		Select privilagesField = new Select(selectPrivilages);
+		if(privileges.equalsIgnoreCase("Agent")){
+			privilagesField.selectByIndex(1);
+		}
+		else if(privileges.equalsIgnoreCase("Admin")){
+			privilagesField.selectByIndex(2);
+		}
+		else if(privileges.equalsIgnoreCase("Supervisior")){
+			privilagesField.selectByIndex(3);
+		}
+		else if(privileges.equalsIgnoreCase("null")){
+			privilagesField.selectByIndex(0);
+		}
+	}
+
+
+	
+	public void chooseSupervisior(String supervisior) {
+		Select supervisiorField = new Select(selectSupervisor);
+		if(supervisior.equalsIgnoreCase("DEVELOPER")){
+			supervisiorField.selectByIndex(1);
+		}
+		else if(supervisior.equalsIgnoreCase("null")){
+			supervisiorField.selectByIndex(0);
+		}
 	}
 	
 	public void clickBtnSave() {
+		delay(1);
 		btnSave.click();
-		delay(2);
-		btnYes.click();
 	}
 	
 	public void clickBtnYes() {
@@ -167,22 +220,33 @@ public class user {
 		btnDone.click();
 	}
 	
+	public String getTxtAgentEdit() {
+		return txtAgentEditable.getText();
+	}
+	
 	
 //	Form Update
 	public void edit() {
-		delay(3);
+		delay(1);
 		edit.click();
 	}
 	
-	public void deleteForm() {
+	public void nullForm() {
+		FullName.sendKeys(Keys.CONTROL+"A");
+		FullName.sendKeys(Keys.BACK_SPACE);
+		Telephone.sendKeys(Keys.CONTROL+"A");
+		Telephone.sendKeys(Keys.BACK_SPACE);
+		UserActive.sendKeys(Keys.CONTROL+"A");
+		UserActive.sendKeys(Keys.BACK_SPACE);
+		Extension.sendKeys(Keys.CONTROL+"A");
+		Extension.sendKeys(Keys.BACK_SPACE);
 		Username.sendKeys(Keys.CONTROL+"A");
 		Username.sendKeys(Keys.BACK_SPACE);
+		Password.sendKeys(Keys.CONTROL+"A");
+		Password.sendKeys(Keys.BACK_SPACE);
+		
 	}
 	
-	public void formUpdate() {
-		delay(1);
-		this.Username.sendKeys("NURUL");
-	}
 	
 	public void clickBtnUpdate() {
 		btnUpdateOne.click();
@@ -208,6 +272,8 @@ public class user {
 		close.click();
 	}
 	
+	
+	
 //	remove user
 	public void remove() {
 		remove.click();
@@ -215,6 +281,34 @@ public class user {
 	
 	public void clickBtnYa() {
 		btnYa.click();
+	}
+	
+	public void tableAdded() {
+		tableUser.findElement(By.xpath("//td[@id='tl_user_management--51688-cell-6-2']"));
+	}
+	
+	public boolean validateUser() {
+		int temp = 0;
+		
+		List<WebElement> totalRows =tableUser.findElements(By.tagName("tr"));
+		int rowsCount = totalRows.size();
+		
+		for (int row=0; row<rowsCount;row++) {
+			List<WebElement> columns_row = totalRows.get(row).findElements(By.tagName("td"));
+			int columns_count = columns_row.size();
+             
+			for (int column=0; column<columns_count; column++){
+            	 String celtext = columns_row.get(column).getText();
+                 if (celtext.equalsIgnoreCase("PJ")) {
+                	 temp++;
+                 }
+             }
+		}
+		
+		if (temp>0) {
+			return true;
+		} else {return false;}
+		
 	}
 	
 	
@@ -226,4 +320,6 @@ public class user {
 			e.printStackTrace();
 		}
 	}
+	
+	
 }

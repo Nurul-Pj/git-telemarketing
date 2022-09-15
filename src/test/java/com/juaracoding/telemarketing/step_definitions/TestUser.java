@@ -1,5 +1,8 @@
 package com.juaracoding.telemarketing.step_definitions;
 
+import static org.testng.Assert.assertEquals;
+
+//import static org.testng.Assert.assertEquals;
 //import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.WebDriver;
@@ -39,14 +42,6 @@ public class TestUser {
 		
 	}
 	
-//	search user
-	@When("input user")
-	public void input_user() {
-		userPage.search();
-		delay(2);
-		extentTest.log(LogStatus.PASS, "input user");
-	}
-	
 //	add user
 	@When("click button add")
 	public void click_button_add() {
@@ -54,30 +49,57 @@ public class TestUser {
 		extentTest.log(LogStatus.PASS, "click button add");
 	}
 	
-	@And("input field add user")
-	public void input_field_add_user() {
-		userPage.formAdd();
-		extentTest.log(LogStatus.PASS, "input field add user");
+	@And("input field add user and select {string} as previlages and {string} as supervisior")
+	public void input_field_add_user_and_select_as_previlages_and_as_supervisior(String privilages, String supervisior) {
+		delay(1);
+		userPage.formAdd(privilages, supervisior);
 	}
 	
-	@Then("save user")
+	@And("edit field add user and select {string} as previlages and {string} as supervisior")
+	public void edit_field_add_user_and_select_as_previlages_and_as_supervisior(String Privilages, String Supervisior) {
+		delay(1);
+		userPage.formAdd(Privilages, Supervisior);
+	}
+
+
+	
+	@And("save user")
 	public void save_user() {
+		delay(1);
 		userPage.clickBtnSave();
-		extentTest.log(LogStatus.PASS, "save user");
-		
+		delay(1);
+		userPage.clickBtnYes();
+		extentTest.log(LogStatus.PASS, "save user");	
+	}
+	
+//	@Then("added table")
+//	public void added_table() {
+//		assertTrue(userPage.validateUser());
+//		delay(1);
+////		extentTest.log(LogStatus.PASS, "added table");	
+//	}
+	
+	
+//	search user
+	@When("input user")
+	public void input_user() {
+		delay(1);
+		userPage.search();
+		extentTest.log(LogStatus.PASS, "input user");
 	}
 	
 //	reset password
 	@When("click checkbox pada user")
 	public void click_checkbox_pada_user() {
+		delay(1);
 		userPage.userCheckbox();
 		extentTest.log(LogStatus.PASS, "click checkbox pada user");
 	}
 	
 	@And("click button reset pass")
 	public void click_button_reset_pass() {
-		userPage.clickResetPassword();
 		delay(1);
+		userPage.clickResetPassword();
 		userPage.clickBtnYes();
 		extentTest.log(LogStatus.PASS, "click button reset pass");
 	}
@@ -89,35 +111,13 @@ public class TestUser {
 		extentTest.log(LogStatus.PASS, "reset pass done");
 	}
 	
-	
-//	Update form
-	@When("click button edit")
-	public void click_button_edit() {
-		userPage.edit();
-		extentTest.log(LogStatus.PASS, "click button edit");
-	}
-	
-	@And("edit form")
-	public void edit_form() {
-		userPage.deleteForm();
-		delay(1);
-		userPage.formUpdate();
-		extentTest.log(LogStatus.PASS, "edit form");
-	}
-	
-	@Then("click button update")
-	public void click_button_update() {
-		userPage.clickBtnUpdate();
-		extentTest.log(LogStatus.PASS, "edit formclick button update");
-		
-	}
-	
 //	Update password
-	
 	@And("click button update password")
 	public void click_button_update_password() {
 		userPage.clickBtnUpdatePass();
 		delay(1);
+		userPage.getTxtAgentEdit();
+		assertEquals(userPage.getTxtAgentEdit(), "[d] Agent Editable");
 		extentTest.log(LogStatus.PASS, "click button update password");
 	}
 	
@@ -125,14 +125,41 @@ public class TestUser {
 	public void input_new_password() {
 		userPage.updatePass();
 		delay(1);
+		userPage.close();
 		extentTest.log(LogStatus.PASS, "input new password");
+	}
+	
+	
+//	Update form
+	@When("click button edit")
+	public void click_button_edit() {
+		delay(1);
+		userPage.edit();
+		extentTest.log(LogStatus.PASS, "click button edit");
+	}
+	
+	@And("edit form")
+	public void edit_form() {
+		delay(1);
+		userPage.nullForm();
+		extentTest.log(LogStatus.PASS, "edit form");
+	}
+	
+	@Then("click button update")
+	public void click_button_update() {
+		userPage.clickBtnUpdate();
+		delay(1);
+		userPage.validateUser();
+		delay(1);
+		extentTest.log(LogStatus.PASS, "edit formclick button update");
+		
 	}
 	
 	
 //	Remove user
 	@When("click button remove")
 	public void click_button_remove() {
-		delay(2);
+		delay(1);
 		userPage.remove();
 		extentTest.log(LogStatus.PASS, "click button remove");
 	}
@@ -145,7 +172,6 @@ public class TestUser {
 	}
 	
 
-	
 
 	static void delay(int detik) {
 		try {

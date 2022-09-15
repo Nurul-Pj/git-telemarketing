@@ -1,156 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="8" passed="7" failed="1" skipped="0">
+<testng-results ignored="0" total="11" passed="11" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-09-14T11:04:27 WIB" name="Default suite" finished-at="2022-09-14T11:05:00 WIB" duration-ms="33445">
+  <suite started-at="2022-09-15T17:37:12 WIB" name="Default suite" finished-at="2022-09-15T17:38:23 WIB" duration-ms="71018">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.telemarketing.step_definitions.TestRunner@384ad17b]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2022-09-14T11:04:27 WIB" name="Default test" finished-at="2022-09-14T11:05:00 WIB" duration-ms="33445">
+    <test started-at="2022-09-15T17:37:12 WIB" name="Default test" finished-at="2022-09-15T17:38:23 WIB" duration-ms="71018">
       <class name="com.juaracoding.telemarketing.step_definitions.TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.juaracoding.telemarketing.step_definitions.TestRunner@384ad17b]" started-at="2022-09-14T11:04:27 WIB" name="setUpClass" finished-at="2022-09-14T11:04:27 WIB" duration-ms="393" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.juaracoding.telemarketing.step_definitions.TestRunner@384ad17b]" started-at="2022-09-15T17:37:12 WIB" name="setUpClass" finished-at="2022-09-15T17:37:13 WIB" duration-ms="395" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@40729f01]]>
+                <![CDATA[org.testng.TestRunner@2a50b32d]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.telemarketing.step_definitions.TestRunner@384ad17b]" started-at="2022-09-14T11:04:27 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-09-14T11:04:29 WIB" duration-ms="2556" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["URL Invalid"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Login Developer"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [https://sqa.peluangkerjaku.com/tele/] but found [https://google.com/]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [https://sqa.peluangkerjaku.com/tele/] but found [https://google.com/]
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-at org.testng.Assert.assertEquals(Assert.java:122)
-at org.testng.Assert.assertEquals(Assert.java:629)
-at org.testng.Assert.assertEquals(Assert.java:639)
-at com.juaracoding.telemarketing.step_definitions.TestLogin.user_go_to_invalid_web_telemarketing(TestLogin.java:34)
-at ✽.User go to invalid Web Telemarketing(file:///C:/Users/HP.DESKTOP-IER1J9F/eclipse-workspace/git-telemarketing/src/test/resources/features/1.Login.feature:4)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.telemarketing.step_definitions.TestRunner@384ad17b]" started-at="2022-09-14T11:04:29 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-09-14T11:04:30 WIB" duration-ms="946" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["URL valid"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Login Developer"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.telemarketing.step_definitions.TestRunner@384ad17b]" started-at="2022-09-14T11:04:30 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-09-14T11:04:35 WIB" duration-ms="4421" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Input username password invalid"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Login Developer"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.telemarketing.step_definitions.TestRunner@384ad17b]" started-at="2022-09-14T11:04:35 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-09-14T11:04:40 WIB" duration-ms="4683" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Input username password null"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Login Developer"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.telemarketing.step_definitions.TestRunner@384ad17b]" started-at="2022-09-14T11:04:40 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-09-14T11:04:47 WIB" duration-ms="7028" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Input valid login ignore lettercase"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Login Developer"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.telemarketing.step_definitions.TestRunner@384ad17b]" started-at="2022-09-14T11:04:47 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-09-14T11:04:51 WIB" duration-ms="4073" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Input valid login uppercase"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Login Developer"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.telemarketing.step_definitions.TestRunner@384ad17b]" started-at="2022-09-14T11:04:51 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-09-14T11:04:54 WIB" duration-ms="3230" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Logout user"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Login Developer"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.telemarketing.step_definitions.TestRunner@384ad17b]" started-at="2022-09-14T11:04:54 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-09-14T11:04:58 WIB" duration-ms="3888" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.telemarketing.step_definitions.TestRunner@384ad17b]" started-at="2022-09-15T17:37:13 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-09-15T17:37:19 WIB" duration-ms="5775" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -159,14 +30,174 @@ at ✽.User go to invalid Web Telemarketing(file:///C:/Users/HP.DESKTOP-IER1J9F/
             </param>
             <param index="1">
               <value>
-                <![CDATA["Login Developer"]]>
+                <![CDATA["User Management"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.juaracoding.telemarketing.step_definitions.TestRunner@384ad17b]" started-at="2022-09-14T11:04:58 WIB" name="tearDownClass" finished-at="2022-09-14T11:05:00 WIB" duration-ms="2197" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.telemarketing.step_definitions.TestRunner@384ad17b]" started-at="2022-09-15T17:37:19 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-09-15T17:37:19 WIB" duration-ms="159" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Dashboard user management"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User Management"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.telemarketing.step_definitions.TestRunner@384ad17b]" started-at="2022-09-15T17:37:19 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-09-15T17:37:25 WIB" duration-ms="5915" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Add user supervisior"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User Management"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.telemarketing.step_definitions.TestRunner@384ad17b]" started-at="2022-09-15T17:37:25 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-09-15T17:37:30 WIB" duration-ms="5351" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Search user"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User Management"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.telemarketing.step_definitions.TestRunner@384ad17b]" started-at="2022-09-15T17:37:30 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-09-15T17:37:38 WIB" duration-ms="7966" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Add user agent"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User Management"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.telemarketing.step_definitions.TestRunner@384ad17b]" started-at="2022-09-15T17:37:38 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-09-15T17:37:44 WIB" duration-ms="5931" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Add user admin"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User Management"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.telemarketing.step_definitions.TestRunner@384ad17b]" started-at="2022-09-15T17:37:44 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-09-15T17:37:46 WIB" duration-ms="2190" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Remove User"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User Management"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.telemarketing.step_definitions.TestRunner@384ad17b]" started-at="2022-09-15T17:37:46 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-09-15T17:37:52 WIB" duration-ms="5877" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Add user null"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User Management"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.telemarketing.step_definitions.TestRunner@384ad17b]" started-at="2022-09-15T17:37:52 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-09-15T17:37:56 WIB" duration-ms="4301" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Reset Password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User Management"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.telemarketing.step_definitions.TestRunner@384ad17b]" started-at="2022-09-15T17:37:56 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-09-15T17:38:03 WIB" duration-ms="6742" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Update Password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User Management"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.telemarketing.step_definitions.TestRunner@384ad17b]" started-at="2022-09-15T17:38:03 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-09-15T17:38:21 WIB" duration-ms="18058" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Update form"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User Management"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.juaracoding.telemarketing.step_definitions.TestRunner@384ad17b]" started-at="2022-09-15T17:38:21 WIB" name="tearDownClass" finished-at="2022-09-15T17:38:23 WIB" duration-ms="2327" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
