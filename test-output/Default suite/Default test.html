@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>4/4/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>4/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Sep 12 00:19:06 WIB 2022</td>
+<td>Started on:</td><td>Thu Sep 15 20:43:24 WIB 2022</td>
 </tr>
-<tr><td>Total time:</td><td>60 seconds (60004 ms)</td>
+<tr><td>Total time:</td><td>105 seconds (105640 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,14 +75,16 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.juaracoding.telemarketing.step_definitions.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.telemarketing.step_definitions.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User valid login ignore lettercase", "Login Developer"</td>
-<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button class=&quot;ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only&quot; style=&quot;margin-top:2px;margin-bottom:2px;margin-top:29px;float:right;&quot; onclick=&quot;sendaction(&apos;tl_login-1&apos;,&apos;tl_login-1-51552&apos;,&apos;click&apos;)&quot; id=&quot;51552_query&quot; role=&quot;button&quot;&gt;...&lt;/button&gt; is not clickable at point (821, 381). Other element would receive the click: &lt;div class=&quot;ui-dialog-buttonpane ui-widget-content ui-helper-clearfix&quot;&gt;...&lt;/div&gt;
+<td title='com.juaracoding.telemarketing.step_definitions.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.telemarketing.step_definitions.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User task agree", "Task Agree Dev"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;tl_agree--52774_table&quot;]/tbody/tr&quot;}
   (Session info: chrome=105.0.5195.102)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;LAPTOP-QBTCVFMP&apos;, ip: &apos;192.168.1.6&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3&apos;
+System info: host: &apos;LAPTOP-QBTCVFMP&apos;, ip: &apos;192.168.1.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\HP\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:50719}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 12c40ed875d0c195c3ff68af271c3d71
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\HP\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:51106}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f707d93dfa1c4d7c4d4c3e9683ad2774
+*** Element info: {Using=xpath, value=//*[@id=&quot;tl_agree--52774_table&quot;]/tbody/tr}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -94,25 +96,26 @@ Session ID: 12c40ed875d0c195c3ff68af271c3d71
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 	at jdk.proxy2/jdk.proxy2.$Proxy27.click(Unknown Source)
-	at com.juaracoding.telemarketing.pages.LoginDev.clickBtnSignin(LoginDev.java:63)
-	at com.juaracoding.telemarketing.step_definitions.TestLogin.user_click_button_sign_in(TestLogin.java:55)
-	at ✽.User click button sign in(file:///C:/Users/HP/git/git-telemarketing/src/test/resources/features/Login.feature:24)
-</pre></div><a href='#' onClick='toggleBox("stack-trace809260538", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace809260538'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button class=&quot;ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only&quot; style=&quot;margin-top:2px;margin-bottom:2px;margin-top:29px;float:right;&quot; onclick=&quot;sendaction(&apos;tl_login-1&apos;,&apos;tl_login-1-51552&apos;,&apos;click&apos;)&quot; id=&quot;51552_query&quot; role=&quot;button&quot;&gt;...&lt;/button&gt; is not clickable at point (821, 381). Other element would receive the click: &lt;div class=&quot;ui-dialog-buttonpane ui-widget-content ui-helper-clearfix&quot;&gt;...&lt;/div&gt;
+	at com.juaracoding.telemarketing.pages.TaskAgree.btnChooseFile(TaskAgree.java:62)
+	at com.juaracoding.telemarketing.step_definitions.TestTaskAgree.user_click_file(TestTaskAgree.java:58)
+	at ✽.User click file(file:///C:/Users/HP/git/git-telemarketing/src/test/resources/features/3.%20TaskAgree.feature:8)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1391067753", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1391067753'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;tl_agree--52774_table&quot;]/tbody/tr&quot;}
   (Session info: chrome=105.0.5195.102)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;LAPTOP-QBTCVFMP&apos;, ip: &apos;192.168.1.6&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3&apos;
+System info: host: &apos;LAPTOP-QBTCVFMP&apos;, ip: &apos;192.168.1.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\HP\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:50719}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 12c40ed875d0c195c3ff68af271c3d71
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\HP\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:51106}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f707d93dfa1c4d7c4d4c3e9683ad2774
+*** Element info: {Using=xpath, value=//*[@id=&quot;tl_agree--52774_table&quot;]/tbody/tr}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -124,49 +127,30 @@ Session ID: 12c40ed875d0c195c3ff68af271c3d71
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 	at jdk.proxy2/jdk.proxy2.$Proxy27.click(Unknown Source)
-	at com.juaracoding.telemarketing.pages.LoginDev.clickBtnSignin(LoginDev.java:63)
-	at com.juaracoding.telemarketing.step_definitions.TestLogin.user_click_button_sign_in(TestLogin.java:55)
-	at ✽.User click button sign in(file:///C:/Users/HP/git/git-telemarketing/src/test/resources/features/Login.feature:24)
+	at com.juaracoding.telemarketing.pages.TaskAgree.btnChooseFile(TaskAgree.java:62)
+	at com.juaracoding.telemarketing.step_definitions.TestTaskAgree.user_click_file(TestTaskAgree.java:58)
+	at ✽.User click file(file:///C:/Users/HP/git/git-telemarketing/src/test/resources/features/3.%20TaskAgree.feature:8)
 </pre></div></td>
-<td>3</td>
+<td>20</td>
 <td>com.juaracoding.telemarketing.step_definitions.TestRunner@4f2b503c</td></tr>
 <tr>
-<td title='com.juaracoding.telemarketing.step_definitions.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.telemarketing.step_definitions.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Logout user", "Login Developer"</td>
-<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:99)
-	at org.testng.Assert.failNotEquals(Assert.java:1037)
-	at org.testng.Assert.assertTrue(Assert.java:45)
-	at org.testng.Assert.assertTrue(Assert.java:55)
-	at com.juaracoding.telemarketing.step_definitions.TestLogin.user_logout(TestLogin.java:204)
-	at ✽.User logout(file:///C:/Users/HP/git/git-telemarketing/src/test/resources/features/Login.feature:45)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1692036285", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1692036285'><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:99)
-	at org.testng.Assert.failNotEquals(Assert.java:1037)
-	at org.testng.Assert.assertTrue(Assert.java:45)
-	at org.testng.Assert.assertTrue(Assert.java:55)
-	at com.juaracoding.telemarketing.step_definitions.TestLogin.user_logout(TestLogin.java:204)
-	at ✽.User logout(file:///C:/Users/HP/git/git-telemarketing/src/test/resources/features/Login.feature:45)
-</pre></div></td>
-<td>0</td>
-<td>com.juaracoding.telemarketing.step_definitions.TestRunner@4f2b503c</td></tr>
-<tr>
-<td title='com.juaracoding.telemarketing.step_definitions.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.telemarketing.step_definitions.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User valid login", "Login Developer"</td>
-<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button class=&quot;ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only&quot; style=&quot;margin-top:2px;margin-bottom:2px;margin-top:29px;float:right;&quot; onclick=&quot;sendaction(&apos;tl_login-1&apos;,&apos;tl_login-1-51552&apos;,&apos;click&apos;)&quot; id=&quot;51552_query&quot; role=&quot;button&quot;&gt;...&lt;/button&gt; is not clickable at point (821, 381). Other element would receive the click: &lt;div class=&quot;ui-dialog-buttonpane ui-widget-content ui-helper-clearfix&quot;&gt;...&lt;/div&gt;
+<td title='com.juaracoding.telemarketing.step_definitions.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.telemarketing.step_definitions.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Title of your scenario", "Report Agree"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;ui-datepicker-div&quot;]/table/tbody/tr[3]/td[5]/a&quot;}
   (Session info: chrome=105.0.5195.102)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;LAPTOP-QBTCVFMP&apos;, ip: &apos;192.168.1.6&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3&apos;
+System info: host: &apos;LAPTOP-QBTCVFMP&apos;, ip: &apos;192.168.1.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\HP\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:50719}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 12c40ed875d0c195c3ff68af271c3d71
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\HP\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:51106}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f707d93dfa1c4d7c4d4c3e9683ad2774
+*** Element info: {Using=xpath, value=//*[@id=&quot;ui-datepicker-div&quot;]/table/tbody/tr[3]/td[5]/a}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -178,25 +162,26 @@ Session ID: 12c40ed875d0c195c3ff68af271c3d71
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 	at jdk.proxy2/jdk.proxy2.$Proxy27.click(Unknown Source)
-	at com.juaracoding.telemarketing.pages.LoginDev.clickBtnSignin(LoginDev.java:63)
-	at com.juaracoding.telemarketing.step_definitions.TestLogin.user_click_button_sign_in(TestLogin.java:55)
-	at ✽.User click button sign in(file:///C:/Users/HP/git/git-telemarketing/src/test/resources/features/Login.feature:19)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1465146431", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1465146431'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button class=&quot;ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only&quot; style=&quot;margin-top:2px;margin-bottom:2px;margin-top:29px;float:right;&quot; onclick=&quot;sendaction(&apos;tl_login-1&apos;,&apos;tl_login-1-51552&apos;,&apos;click&apos;)&quot; id=&quot;51552_query&quot; role=&quot;button&quot;&gt;...&lt;/button&gt; is not clickable at point (821, 381). Other element would receive the click: &lt;div class=&quot;ui-dialog-buttonpane ui-widget-content ui-helper-clearfix&quot;&gt;...&lt;/div&gt;
+	at com.juaracoding.telemarketing.pages.ReportAgree.pilihTanggal1(ReportAgree.java:53)
+	at com.juaracoding.telemarketing.step_definitions.TestReportAgree.user_choose_date_agree(TestReportAgree.java:44)
+	at ✽.User choose date agree(file:///C:/Users/HP/git/git-telemarketing/src/test/resources/features/4.%20ReportAgree.feature:7)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1806434229", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1806434229'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;ui-datepicker-div&quot;]/table/tbody/tr[3]/td[5]/a&quot;}
   (Session info: chrome=105.0.5195.102)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;LAPTOP-QBTCVFMP&apos;, ip: &apos;192.168.1.6&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3&apos;
+System info: host: &apos;LAPTOP-QBTCVFMP&apos;, ip: &apos;192.168.1.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\HP\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:50719}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 12c40ed875d0c195c3ff68af271c3d71
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\HP\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:51106}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f707d93dfa1c4d7c4d4c3e9683ad2774
+*** Element info: {Using=xpath, value=//*[@id=&quot;ui-datepicker-div&quot;]/table/tbody/tr[3]/td[5]/a}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -208,39 +193,18 @@ Session ID: 12c40ed875d0c195c3ff68af271c3d71
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 	at jdk.proxy2/jdk.proxy2.$Proxy27.click(Unknown Source)
-	at com.juaracoding.telemarketing.pages.LoginDev.clickBtnSignin(LoginDev.java:63)
-	at com.juaracoding.telemarketing.step_definitions.TestLogin.user_click_button_sign_in(TestLogin.java:55)
-	at ✽.User click button sign in(file:///C:/Users/HP/git/git-telemarketing/src/test/resources/features/Login.feature:19)
+	at com.juaracoding.telemarketing.pages.ReportAgree.pilihTanggal1(ReportAgree.java:53)
+	at com.juaracoding.telemarketing.step_definitions.TestReportAgree.user_choose_date_agree(TestReportAgree.java:44)
+	at ✽.User choose date agree(file:///C:/Users/HP/git/git-telemarketing/src/test/resources/features/4.%20ReportAgree.feature:7)
 </pre></div></td>
-<td>4</td>
-<td>com.juaracoding.telemarketing.step_definitions.TestRunner@4f2b503c</td></tr>
-<tr>
-<td title='com.juaracoding.telemarketing.step_definitions.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.telemarketing.step_definitions.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Input null login", "Login Developer"</td>
-<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:99)
-	at org.testng.Assert.failNotEquals(Assert.java:1037)
-	at org.testng.Assert.assertTrue(Assert.java:45)
-	at org.testng.Assert.assertTrue(Assert.java:55)
-	at com.juaracoding.telemarketing.step_definitions.TestLogin.user_invalid_credentilas(TestLogin.java:62)
-	at ✽.User invalid credentials(file:///C:/Users/HP/git/git-telemarketing/src/test/resources/features/Login.feature:14)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1454922150", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1454922150'><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:99)
-	at org.testng.Assert.failNotEquals(Assert.java:1037)
-	at org.testng.Assert.assertTrue(Assert.java:45)
-	at org.testng.Assert.assertTrue(Assert.java:55)
-	at com.juaracoding.telemarketing.step_definitions.TestLogin.user_invalid_credentilas(TestLogin.java:62)
-	at ✽.User invalid credentials(file:///C:/Users/HP/git/git-telemarketing/src/test/resources/features/Login.feature:14)
-</pre></div></td>
-<td>4</td>
+<td>16</td>
 <td>com.juaracoding.telemarketing.step_definitions.TestRunner@4f2b503c</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
@@ -253,22 +217,22 @@ Session ID: 12c40ed875d0c195c3ff68af271c3d71
 <tr>
 <td title='com.juaracoding.telemarketing.step_definitions.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.telemarketing.step_definitions.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Upload data valid", "Login Developer"</td>
 <td></td>
-<td>7</td>
-<td>com.juaracoding.telemarketing.step_definitions.TestRunner@4f2b503c</td></tr>
-<tr>
-<td title='com.juaracoding.telemarketing.step_definitions.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.telemarketing.step_definitions.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User valid login uppercase", "Login Developer"</td>
-<td></td>
-<td>7</td>
-<td>com.juaracoding.telemarketing.step_definitions.TestRunner@4f2b503c</td></tr>
-<tr>
-<td title='com.juaracoding.telemarketing.step_definitions.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.telemarketing.step_definitions.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Input invalid login", "Login Developer"</td>
-<td></td>
-<td>15</td>
+<td>10</td>
 <td>com.juaracoding.telemarketing.step_definitions.TestRunner@4f2b503c</td></tr>
 <tr>
 <td title='com.juaracoding.telemarketing.step_definitions.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.telemarketing.step_definitions.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Upload data invalid", "Login Developer"</td>
 <td></td>
 <td>11</td>
+<td>com.juaracoding.telemarketing.step_definitions.TestRunner@4f2b503c</td></tr>
+<tr>
+<td title='com.juaracoding.telemarketing.step_definitions.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.telemarketing.step_definitions.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User valid login", "Login Developer"</td>
+<td></td>
+<td>26</td>
+<td>com.juaracoding.telemarketing.step_definitions.TestRunner@4f2b503c</td></tr>
+<tr>
+<td title='com.juaracoding.telemarketing.step_definitions.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.telemarketing.step_definitions.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User username password invalid", "Login Developer"</td>
+<td></td>
+<td>16</td>
 <td>com.juaracoding.telemarketing.step_definitions.TestRunner@4f2b503c</td></tr>
 </table><p>
 </body>

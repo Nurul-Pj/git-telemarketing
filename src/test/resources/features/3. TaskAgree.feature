@@ -9,5 +9,4 @@ Scenario: User task agree
   	And User isi link
   	And User click simpan
   	And User click button oke
-  	Then User click profile
     

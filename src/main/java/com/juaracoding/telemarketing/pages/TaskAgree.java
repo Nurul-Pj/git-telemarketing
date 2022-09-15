@@ -7,11 +7,11 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.juaracoding.telemarketing.drivers.DriverSingleton;
 
-public class TaskAgreeDev {
+public class TaskAgree {
 
 	private WebDriver driver;
 	
-	public TaskAgreeDev() {
+	public TaskAgree() {
 		this.driver = DriverSingleton.getDriver();
 		PageFactory.initElements(driver, this);
 	}

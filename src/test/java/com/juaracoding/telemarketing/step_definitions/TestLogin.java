@@ -1,11 +1,11 @@
 package com.juaracoding.telemarketing.step_definitions;
 
-import static org.testng.Assert.assertTrue;
+//import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.WebDriver;
 
 import com.juaracoding.telemarketing.pages.LoginDev;
-import com.juaracoding.telemarketing.pages.TaskAgreeDev;
+//import com.juaracoding.telemarketing.pages.TaskAgree;
 import com.juaracoding.telemarketing.pages.UploadData;
 import com.juaracoding.telemarketing.utils.Constants;
 import com.relevantcodes.extentreports.ExtentTest;
@@ -21,7 +21,7 @@ public class TestLogin {
 	public static ExtentTest extentTest;
 	private LoginDev loginDeveloper = new LoginDev();
 	private UploadData uploadData = new UploadData();
-	private TaskAgreeDev taskAgreeDev = new TaskAgreeDev();
+//	private TaskAgree taskAgree = new TaskAgree();
 	
 	public TestLogin() {
 		driver = Hooks.driver;
@@ -165,73 +165,6 @@ public class TestLogin {
 		uploadData.clickBtnClose();
 		extentTest.log(LogStatus.PASS, "User click Simpan valid");
 	}
-	
-	//Task Agree Dev
-	@When("Pilih menu task")
-	public void pilih_menu_task() {
-		delay(2);
-		taskAgreeDev.btnTask();
-		extentTest.log(LogStatus.PASS, "Pilih menu data");
-	}
-			
-	@And("User click agree")
-	public void user_click_agree() {
-		delay(2);
-		taskAgreeDev.btnTaskAgree();
-		extentTest.log(LogStatus.PASS, "User click agree");
-	}
-			
-	@And("User click search")
-	public void user_click_search() {
-		delay(2);
-		taskAgreeDev.search("somaybohay");
-		extentTest.log(LogStatus.PASS, "User click search");
-	}
-			
-	@And("User click button search")
-	public void user_click_button_search() {
-		delay(2);
-		taskAgreeDev.btnSearch();
-		extentTest.log(LogStatus.PASS, "User click button search");
-	}
-	
-	@And("User click file")
-	public void user_click_file() {
-		delay(2);
-		taskAgreeDev.btnChooseFile();
-		extentTest.log(LogStatus.PASS, "User click file");
-	}
-	
-	@And("User isi link")
-	public void user_isi_link() {
-		delay(2);
-		taskAgreeDev.isiLink("somaybohay");
-		extentTest.log(LogStatus.PASS, "User isi link");
-	}
-	
-	@And("User click simpan")
-	public void user_click_simpan() {
-		delay(2);
-		taskAgreeDev.btnSimpan();
-		extentTest.log(LogStatus.PASS, "User click simpan");
-	}
-	
-	@And("User click button oke")
-	public void user_click_button_oke() {
-		delay(2);
-		taskAgreeDev.clickBtnClose();
-		extentTest.log(LogStatus.PASS, "User click button oke");
-	}
-	
-
-//	Logout
-	@Then("User click profile")
-	public void user_click_profile() {
-		loginDeveloper.developerProfile();
-		delay(3);
-		extentTest.log(LogStatus.PASS, "User click profile");
-	}
-	
 
 	static void delay(int detik) {
 		try {
