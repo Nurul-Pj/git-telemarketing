@@ -1,4 +1,4 @@
-package com.juaracoding.telemarketing.step_definitions;
+package com.juaracoding.telemarketing.step_definitions.agent;
 
 import static org.testng.Assert.assertTrue;
 
