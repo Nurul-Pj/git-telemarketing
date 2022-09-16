@@ -5,8 +5,6 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(tags = "", 
 features = {"src/test/resources/features/1. Login.feature",
-		"src/test/resources/features/2. UploadData.feature",
-		"src/test/resources/features/3. TaskAgree.feature",
 		"src/test/resources/features/4. ReportAgree.feature"},
 glue = "com.juaracoding.telemarketing.step_definitions",
 plugin = {"pretty", "html:target/cucumber-reports.html", "json:target/cucumber.json"})

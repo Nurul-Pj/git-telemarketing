@@ -55,10 +55,11 @@ public class TestReportAct {
 	@And("User choose date act")
 	public void user_choose_date_act() {
 		delay(2);
-		reportAct.btnExport();
+		reportAct.pilihTanggalAct1();
+		delay(1);
+		reportAct.pilihTanggalAct2();
 		extentTest.log(LogStatus.PASS, "User choose date");
 	}
-
 	
 	@And("User click button view act")
 	public void user_click_button_view_act() {
@@ -67,12 +68,12 @@ public class TestReportAct {
 		extentTest.log(LogStatus.PASS, "User click button view");
 	}
 	
-	@And("User click button export act")
-	public void user_click_button_export_act() {
-		delay(2);
-		reportAct.btnExport();
-		extentTest.log(LogStatus.PASS, "User click button export");
-	}
+//	@And("User click button export act")
+//	public void user_click_button_export_act() {
+//		delay(2);
+//		reportAct.btnExport();
+//		extentTest.log(LogStatus.PASS, "User click button export");
+//	}
 	
 	
 //	Logout

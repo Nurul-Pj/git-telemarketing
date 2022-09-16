@@ -3,19 +3,16 @@ package com.juaracoding.telemarketing.step_definitions;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
-import com.juaracoding.telemarketing.pages.LoginDev;
 import com.juaracoding.telemarketing.pages.ReportAgree;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class TestReportAgree {
 	public static WebDriver driver;
 	public static ExtentTest extentTest;
-	private LoginDev loginDeveloper = new LoginDev();
 	private ReportAgree reportAgree = new ReportAgree();
 	
 	public TestReportAgree() {
@@ -28,7 +25,7 @@ public class TestReportAgree {
 	public void pilih_menu_report1() {
 		delay(2);
 		reportAgree.btnReport();
-		extentTest.log(LogStatus.PASS, "Pilih menu report");
+		extentTest.log(LogStatus.PASS, "Pilih menu report1");
 	}
 			
 	@And("User click report agree")
@@ -38,21 +35,28 @@ public class TestReportAgree {
 		extentTest.log(LogStatus.PASS, "User click report agree");
 	}
 	
+	@And("User choose date agree invalid")
+	public void user_choose_date_agree_invalid() {
+		delay(2);
+		reportAgree.tableDateAgree1();
+		delay(2);
+		reportAgree.tableDateAgree2();
+		delay(2);
+		reportAgree.btnView();
+		extentTest.log(LogStatus.PASS, "User choose date agree invalid");
+	}
+	
 	@And("User choose date agree")
 	public void user_choose_date_agree() {
 		delay(2);
-		reportAgree.pilihTanggal1();
-		delay(1);
-		reportAgree.pilihTanggal2();
-		extentTest.log(LogStatus.PASS, "User choose date");
-	}
-	
-	@And("User click button show page")
-	public void user_click_button_show_page() {
+		reportAgree.tableDateAgree1();
 		delay(2);
-		reportAgree.btnShowPage();
-		scroll(300);
-		extentTest.log(LogStatus.PASS, "User click show page");
+		reportAgree.pilihTanggal1();
+		delay(2);
+		reportAgree.tableDateAgree2();
+		delay(2);
+		reportAgree.pilihTanggal2();
+		extentTest.log(LogStatus.PASS, "User choose date agree");
 	}
 	
 	@And("User click button view agree")
@@ -61,6 +65,30 @@ public class TestReportAgree {
 		reportAgree.btnView();
 		extentTest.log(LogStatus.PASS, "User click button view");
 	}
+	
+//	@And("User click button show page agree")
+//	public void user_click_button_show_page_agree() {
+//		delay(2);
+//		scroll(200);
+//		delay(2);
+//		reportAgree.btnShowPage();
+//		scroll(-200);
+//		delay(2);
+//		scroll(200);
+//		delay(2);
+//		reportAgree.btnShowPage10();
+//		scroll(-200);
+//		delay(2);
+//		scroll(200);
+//		delay(2);
+//		reportAgree.btnShowPage25();
+//		scroll(-500);
+//		delay(2);
+//		scroll(200);
+//		scroll(200);
+//		
+//		extentTest.log(LogStatus.PASS, "User click show page agree");
+//	}
 	
 //	@And("User click button export agree")
 //	public void user_click_button_export_agree() {

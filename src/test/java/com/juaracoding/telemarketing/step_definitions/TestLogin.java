@@ -20,9 +20,6 @@ public class TestLogin {
 	public static WebDriver driver;
 	public static ExtentTest extentTest;
 	private LoginDev loginDeveloper = new LoginDev();
-	private UploadData uploadData = new UploadData();
-//	private TaskAgree taskAgree = new TaskAgree();
-	
 	public TestLogin() {
 		driver = Hooks.driver;
 		extentTest = Hooks.extentTest;
@@ -105,65 +102,6 @@ public class TestLogin {
 		delay(3);
 		loginDeveloper.clickBtnOkeValid();
 		extentTest.log(LogStatus.PASS, "User click button ok");
-	}
-
-	//UploadData 
-	//UploadData invalid
-	@When("Pilih menu data")
-	public void pilih_menu_data() {
-		delay(2);
-		uploadData.btnData();
-		extentTest.log(LogStatus.PASS, "Pilih menu data");
-	}
-			
-	@And("User click upload data invalid")
-	public void user_click_upload_data_invalid() {
-		delay(2);
-		uploadData.btnUploadData();
-		extentTest.log(LogStatus.PASS, "User click upload data invalid");
-	}
-			
-	@And("User click choose file invalid")
-	public void user_click_choose_file_invalid() {
-		delay(2);
-		uploadData.btnChooseFileInvalid();
-		delay(1);
-		extentTest.log(LogStatus.PASS, "User click choose file invalid");
-	}
-			
-	@And("User click button upload invalid")
-	public void user_click_button_upload_invalid() {
-		delay(2);
-		uploadData.btnUploadFile();
-		delay(2);
-		uploadData.clickBtnClose();
-		extentTest.log(LogStatus.PASS, "User click button upload invalid");
-	}
-			
-	//UploadData valid
-	@And("User click choose file valid")
-	public void user_click_choose_file_valid() {
-		delay(2);
-		uploadData.btnChooseFileValid();
-		extentTest.log(LogStatus.PASS, "User click choose file valid");
-	}
-			
-	@And("User click button upload valid")
-	public void user_click_button_upload_valid() {
-		delay(2);
-		uploadData.btnUploadFile();
-		extentTest.log(LogStatus.PASS, "User click button upload valid");
-	}
-			
-	@Then("User click Simpan valid")
-	public void user_click_simpan_valid() {
-		delay(2);
-		uploadData.btnSimpanFile();
-		delay(2);
-		uploadData.btnSimpanFileBaru();
-		delay(2);
-		uploadData.clickBtnClose();
-		extentTest.log(LogStatus.PASS, "User click Simpan valid");
 	}
 
 	static void delay(int detik) {

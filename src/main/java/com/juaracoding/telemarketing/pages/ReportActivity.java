@@ -25,17 +25,23 @@ private WebDriver driver;
 	@FindBy(xpath = "//*[@id=\"52836_query\"]")
 	private WebElement btnReportActivity;
 	
-	@FindBy(xpath = "//*[@id=\"ddcl-tl_perform_report--51789_select\"]")
+	@FindBy(xpath = "//*[@id=\"ddcl-tl_perform_report--51789_select\"]/span")
 	private WebElement btnChooseAgent;
 	
-	@FindBy(xpath = "//*[@id=\"ddcl-tl_perform_report--51789_select-i1\"][@type=\"checkbox\"][@index=\"1\"]")
+	@FindBy(xpath = "//label[@for='ddcl-tl_perform_report--51789_select-i1']")
 	private WebElement btnAgent01;
 	
-	@FindBy(xpath = "//*[@id=\"tl_perform_report--51781_text\"]")
-	private WebElement DateFirst;
+	@FindBy(xpath = "//*[@id=\\\"ui-datepicker-div\\\"]/table/tbody/tr[3]/td[2]/a")
+	private WebElement DateFirst; //Tanggal 11
 	
-	@FindBy(xpath = "//*[@id=\"tl_perform_report--51788_text\"]")
-	private WebElement DateSecond;
+	@FindBy(xpath = "//*[@id=\"tl_perform_report--51781_text\"]")
+	private WebElement tableDate1;
+	
+	@FindBy(xpath = "//*[@id=\"tl_perform_report--51788\"]")
+	private WebElement tableDate2;
+	
+	@FindBy(xpath = "//*[@id=\"ui-datepicker-div\"]/table/tbody/tr[3]/td[5]/a")
+	private WebElement DateSecond; //Tanggal 16
 	
 	@FindBy(xpath = "//*[@id=\"51787_query\"]")
 	private WebElement clickView;
@@ -54,12 +60,15 @@ private WebDriver driver;
 	public void btnAgent() {
 		btnChooseAgent.click();
 		delay(2);
+		btnAgent01.click();
 		btnAgent01.sendKeys(Keys.ENTER);
 	}
 	
-	public void pilihTanggal() {
+	public void pilihTanggalAct1() {
 		DateFirst.click();
-		delay(2);
+	}
+
+	public void pilihTanggalAct2() {
 		DateSecond.click();
 	}
 	

@@ -22,12 +22,18 @@ public class ReportAgree {
 
 	@FindBy(xpath = "//*[@id=\"52828_query\"]")
 	private WebElement clickReportAgree;
+
+	@FindBy(xpath = "//*[@id=\"tl_report_setuju--51772_text\"]")
+	private WebElement tablekDate1;
 	
-	@FindBy(xpath = "//*[@id=\"ui-datepicker-div\"]/table/tbody/tr[3]/td[5]/a")
-	private WebElement clickDateFirst;
+	@FindBy(xpath = "//*[@id=\"ui-datepicker-div\"]/table/tbody/tr[3]/td[2]/a")
+	private WebElement clickDateFirst; //Tanggal 11
 	
-	@FindBy(xpath = "//*[@id=\"ui-id-11\"]")
-	private WebElement clickDateSecond;
+	@FindBy(xpath = "//*[@id=\"tl_report_setuju--51780_text\"]")
+	private WebElement tablekDate2;
+	
+	@FindBy(xpath = "//*[@id=\"ui-datepicker-div\"]/table/tbody/tr[3]/td[6]/a")
+	private WebElement clickDateSecond; //Tanggal 16
 	
 	@FindBy(xpath = "//*[@id=\"51778_query\"]")
 	private WebElement clickView;
@@ -35,8 +41,14 @@ public class ReportAgree {
 	@FindBy(xpath = "//*[@id=\"51797_query\"]")
 	private WebElement clickExport;
 	
-	@FindBy(xpath = "//*[@id=\"tl_report_setuju--51776_show_text\"]")
-	private WebElement showPage;
+//	@FindBy(xpath = "//*[@id=\"tl_report_setuju--51776_show_text\"]")
+//	private WebElement showPage;
+//	
+//	@FindBy(xpath = "//*[@id=\"tl_report_setuju--51776_show_text\"]/option[1]")
+//	private WebElement showPage10;
+//	
+//	@FindBy(xpath = "//*[@id=\"tl_report_setuju--51776_show_text\"]/option[2]")
+//	private WebElement showPage25;
 	
 	public void btnReport() {
 		btnReport.click();
@@ -46,14 +58,20 @@ public class ReportAgree {
 		clickReportAgree.click();
 	}
 	
+	public void tableDateAgree1() {
+		tablekDate1.click();
+	}
+	
+	public void tableDateAgree2() {
+		tablekDate2.click();
+	}
+	
 	public void pilihTanggal1() {
 		clickDateFirst.click();
-		clickDateFirst.sendKeys("12/09/2022");
 	}
 	
 	public void pilihTanggal2() {
 		clickDateSecond.click();
-		clickDateSecond.sendKeys("15/09/2022");
 	}
 	
 	public void btnView() {
@@ -64,9 +82,17 @@ public class ReportAgree {
 		clickExport.click();
 	}
 	
-	public void btnShowPage() {
-		showPage.click();
-	}
+//	public void btnShowPage() {
+//		showPage.click();
+//	}
+//	
+//	public void btnShowPage10() {
+//		showPage10.click();
+//	}
+//	
+//	public void btnShowPage25() {
+//		showPage25.click();
+//	}
 	
 	static void delay(int detik) {
 		try {
