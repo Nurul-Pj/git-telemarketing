@@ -26,26 +26,14 @@ public class NewAgent {
 	@FindBy(xpath = "//*[@id=\"52827_query\"]")
 	private WebElement btnNew;
 	
+	@FindBy(xpath = "//*[@id=\"52969_query\"]")
+	private WebElement btnSearch;
+
 	@FindBy(xpath = "//*[@id=\"tl_data_new--52963_text\"]")
 	private WebElement fieldSearch;
 	
-	@FindBy(xpath = "//*[@id=\"tl_data_new--52967-cell-0-4\"]")
+	@FindBy(xpath = "//*[@id=\"tl_data_new--52967-cell-0-1\"]")
 	private WebElement navigateToData;
-	
-	@FindBy(xpath = "//*[@id=\"tl_user_activity--53076_text\"]")
-	private WebElement dropDownChannel;
-	
-	@FindBy(xpath = "//*[@id=\"tl_user_activity--53050_text\"]")
-	private WebElement dropDownStatus;
-	
-	@FindBy(xpath = "//*[@id=\"tl_user_activity--53048_text\"]")
-	private WebElement dropDownStatusCall;
-	
-	@FindBy(xpath = "//*[@id=\"tl_user_activity--53051_text\"]")
-	private WebElement dropDownStatusResult;
-	
-	@FindBy(xpath = "//*[@id=\"tl_user_activity--53052_text\"]")
-	private WebElement dropDownReason;
 	
 	@FindBy(xpath = "//*[@id=\"53058_query\"]")
 	private WebElement btnSubmit;
@@ -69,107 +57,197 @@ public class NewAgent {
 	private WebElement fieldPhoneWA;
 
 	@FindBy(xpath = "//*[@id=\"tl_user_activity--53071_text\"]")
-	private WebElement fieldMsg;
+	private WebElement fieldMsgWa;
 	
 	@FindBy(xpath = "//*[@id=\"53072_query\"]")
 	private WebElement btnSendWA;
+
+	@FindBy(xpath = "//*[@id=\"tl_data_new--52967-header\"]/th[3]")
+	private WebElement pageNew;
 	
+	@FindBy(xpath = "//*[@id=\"tl_user_activity--53077\"]/table/tbody/tr/td[1]/label")
+	private WebElement pageActivity;
 	
+	@FindBy(xpath = "//*[@id=\"tl_data_new--52967-cell-0-1\"]")
+	private WebElement pageSearch;
 	
-	public void clickListPhone() {
-		delay(2);
-		Select phoneSelect = new Select(dropDownPhone);
-		phoneSelect.selectByValue("081906753073");
-		delay(2);
-	}
+	@FindBy(xpath = "//*[@id=\"nikita-form-dialog\"]/p")
+	private WebElement popUpKonfirmasiPhone;
+
+	@FindBy(xpath = "//*[@id=\"tl_data_new--52967_show_text\"]")
+	private WebElement showPage;
 	
-	public void phoneWA(String phoneWA, String msgWA) {
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,600)");
-		this.fieldPhoneWA.sendKeys(phoneWA);
-		this.fieldMsg.sendKeys(msgWA);
-		btnSendWA.click();
-		delay(2);
-	}
+	@FindBy(xpath = "/html/body/div[8]/div[3]/div/button[2]")
+	private WebElement btnKonfirmasiYES;
 	
+	@FindBy(xpath = "/html/body/div[8]/div[1]/button")
+	private WebElement btnClose;
+	
+	@FindBy(xpath = "//*[@id=\"tl_data_new--52967\"]/div[4]/ul/li[3]/a")
+	private WebElement nextPage;
+	
+	@FindBy(xpath = "//*[@id=\"tl_data_new--52967\"]/div[4]/ul/li[2]/a")
+	private WebElement prevPage;
+	
+	@FindBy(xpath = "//*[@id=\"tl_data_new--52967\"]/div[4]/ul/li[7]/a")
+	private WebElement lastPage;
+	
+	@FindBy(xpath = "//*[@id=\"tl_data_new--52967_page\"]")
+	private WebElement firstPage;
+
+	//-------------------------DASHBOARD---------------------------
 	public void clickBtnTask() {
 		btnTask.click();
-		delay(2);
+		delay(1);
 	}
-	
 	public void clickBtnNew() {
 		btnNew.click();
-		delay(2);
+		delay(1);
+	}
+	public String pageNew() {
+		return this.pageNew.getText();
 	}
 	
-
-	public void clickData() {
-		navigateToData.click();
-		delay(2);
+	
+	//-------------------------SEARCH--------------------------------
+	public void inputSearchData(String fieldSearch) {
+		this.fieldSearch.sendKeys(fieldSearch);
+		delay(1);
+	}
+	public void clickBtnSearch() {
+		btnSearch.click();
+		delay(1);
+	}
+	public String pageSearch() {
+		return this.pageSearch.getText();
 	}
 	
+	
+	//-------------------------PHONE--------------------------------
+	public void clickListPhone() {
+		Select phoneSelect = new Select(dropDownPhone);
+		phoneSelect.selectByIndex(1);
+		delay(1);
+	}
 	public void clickAddPhone() {
 		btnAddPhone.click();
-		delay(2);
+		delay(1);
 	}
-	
 	public void inputRequestPhone(String requestPhone) {
 		this.requestPhone.sendKeys(requestPhone);
-		delay(2);
+		delay(1);
 	}
-	
 	public void clickSavePhone() {
 		btnSavePhone.click();
-		delay(2);
+		delay(1);
 	}
-	
 	public void clickKonfirmasiOk() {
 		btnKonfirmasiOk.click();
-		delay(2);
+		delay(1);
 	}
-	
-	public void clickSearchData(String fieldSearch) {
-		this.fieldSearch.sendKeys(fieldSearch);
-		this.fieldSearch.sendKeys(Keys.ENTER);
-		delay(2);
+	public String popUpKonfirmasiPhone() {
+		return this.popUpKonfirmasiPhone.getText();
 	}
-	
-	
-	
-	
-	public void inputDataValid() {
-		Select statusSelect = new Select(dropDownStatus);
-		statusSelect.selectByValue("Tersambung");
-		delay(2);
-		
-		Select statuscallSelect = new Select(dropDownStatusCall);
-		statuscallSelect.selectByValue("Diangkat");
-		delay(2);
-		
-		Select statusresultSelect = new Select(dropDownStatusResult);
-		statusresultSelect.selectByValue("Setuju");
-		delay(2);
-		
-		Select reasonSelect = new Select(dropDownReason);
-		reasonSelect.selectByValue("Berhasil Download");
-		delay(2);
-		
-	}
-
 	
 
-	public void inputDataInvalid() {
-		Select statusSelect = new Select(dropDownStatus);
-		statusSelect.selectByValue("Tersambung");
+	//-------------------------PHONE WA---------------------------
+	public void phoneWaValid(String phoneWA, String msgWA) {
 		delay(2);
+		this.fieldPhoneWA.sendKeys(phoneWA);
+		delay(1);
+		this.fieldMsgWa.sendKeys(msgWA);
+		delay(1);
 	}
-	
-	
-	
-	
+	public void phoneWaInvalid(String phoneWA, String msgWA) {
+		this.fieldPhoneWA.sendKeys(phoneWA);
+		delay(1);
+		this.fieldMsgWa.sendKeys(msgWA);
+		delay(1);
+	}
+	public void clickBtnSendWA() {
+		btnSendWA.click();
+		delay(1);
+	}
+	public void deleteFieldWa() {
+		fieldPhoneWA.sendKeys(Keys.CONTROL+"A");
+		fieldPhoneWA.sendKeys(Keys.BACK_SPACE);
+		fieldMsgWa.sendKeys(Keys.CONTROL+"A");
+		fieldMsgWa.sendKeys(Keys.BACK_SPACE);
+		delay(1);
+	}
+
+	//-------------------------STATUS ACITIVITY---------------------------
+	public void clickData() {
+		navigateToData.click();
+		delay(1);
+	}
 	public void clickSubmit() {
 		btnSubmit.click();
+		delay(1);
 	}
+	public void clickKonfirmasiSubmit() {
+		btnKonfirmasiYES.click();
+		delay(1);
+	}
+	public void clickClose() {
+		btnClose.click();
+		delay(1);
+	}
+	public String pageActivity() {
+		return this.pageActivity.getText();
+	}
+	
+	//------------------------------PAGE------------------------------------
+	public void clickNextPage() {
+		nextPage.click();
+		delay(1);
+	}
+	public void clickPrevPage() {
+		prevPage.click();
+		delay(1);
+	}
+	public void clickLastPage() {
+		lastPage.click();
+		delay(1);
+	}
+	public void clickFirstPage() {
+		firstPage.click();
+		delay(1);
+	}
+	
+	
+	public void clickShowPage() {
+		Select pageSelect1 = new Select(showPage);
+		pageSelect1.selectByValue("25");
+		delay(1);
+		
+		Select pageSelect2 = new Select(showPage);
+		pageSelect2.selectByValue("50");
+		delay(1);
+		
+		Select pageSelect3 = new Select(showPage);
+		pageSelect3.selectByValue("100");
+		delay(1);
+		
+		Select pageSelect4 = new Select(showPage);
+		pageSelect4.selectByValue("500");
+		delay(1);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(-700,0)");
+	}
+
+
+	
+	//------------------------------SCROLL UP & DOWN------------------------------------
+	public void scrollUp() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(-300,0)");
+	}
+	
+	
+	
+	
+	
 	
 	static void delay(int detik) {
 		try {

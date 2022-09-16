@@ -33,6 +33,13 @@ public class TestLogin {
 		extentTest.log(LogStatus.PASS, "User go to Web Telemarketing");
 	}
 	
+	@When("User go to Web Telemarketing invalid")
+	public void user_go_to_web_telemarketing_invalid() {
+		driver.get(Constants.URL_INVALID);
+		extentTest.log(LogStatus.PASS, "User go to Web Telemarketing invalid");
+	}
+	
+	
 	@And("User enter username invalid")
 	public void user_enter_username_invalid() {
 		loginAgent.login("agent001", "1");
@@ -76,20 +83,17 @@ public class TestLogin {
 	}
 	
 	
-//	@Then("User invalid credentials")
-//	public void user_invalid_credentilas() {
-////		String actual = loginAgent.msgError();
-////		assertTrue(actual.contains("Username atau password tidak ditemukan atau akun anda tidak aktif"));
-//		delay(2);
-//		loginAgent.clickBtnClose();
-//		delay(2);
-//		
-//		extentTest.log(LogStatus.PASS, "User invalid credentials");
-//	}
-//	
+	@Then("User invalid credentials")
+	public void user_invalid_credentilas() {
+	String actual = loginAgent.popUp();
+	assertTrue(actual.contains("Username atau password tidak ditemukan atau akun anda tidak aktif"));
+	extentTest.log(LogStatus.PASS, "User invalid credentials");
+	delay(2);
+	}
+	
 	@Then("User valid credentials")
 	public void user_valid_credentilas() {
-		String actual = loginAgent.msgSuccess();
+		String actual = loginAgent.popUp();
 		assertTrue(actual.contains("Welcome"));
 		extentTest.log(LogStatus.PASS, "User valid credentials");
 		delay(2);

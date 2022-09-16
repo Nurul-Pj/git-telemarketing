@@ -40,12 +40,9 @@ public class LoginAgent {
 	
 	@FindBy(xpath = "//div[@class='ui-dialog-buttonset']")
 	private WebElement btnOkInvalid;
-	
-	@FindBy(css = "#nikita-form-dialog")
-	private WebElement popupPeringatan;
-	
+
 	@FindBy(xpath = "//*[@id=\"nikita-form-dialog\"]")
-	private WebElement popupDashboard;
+	private WebElement popUp;
 	
 
 	
@@ -62,12 +59,8 @@ public class LoginAgent {
 		btnOkInvalid.click();
 	}
 	
-	public String msgError() {
-		return this.popupPeringatan.getText();
-	}
-	
-	public String msgSuccess() {
-		return this.popupDashboard.getText();
+	public String popUp() {
+		return this.popUp.getText();
 	}
 	
 	public void deleteLogin() {
