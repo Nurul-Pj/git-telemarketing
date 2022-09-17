@@ -132,7 +132,6 @@ public class user {
 	@FindBy(id="//td[@id='tl_user_management--51688-cell-6-2']")
 	private WebElement table;
 	
-	//*[@id="tl_user_management--51688_table"]/tbody/tr[7]
 	
 	
 //	open dashboard
