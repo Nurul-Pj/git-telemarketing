@@ -5,8 +5,6 @@ package com.juaracoding.telemarketing.step_definitions;
 import org.openqa.selenium.WebDriver;
 
 import com.juaracoding.telemarketing.pages.LoginDev;
-//import com.juaracoding.telemarketing.pages.TaskAgree;
-import com.juaracoding.telemarketing.pages.UploadData;
 import com.juaracoding.telemarketing.utils.Constants;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;

@@ -10,7 +10,10 @@ public enum TestScenarios {
 	T6("Upload data invalid"),
 	T7("Upload data valid"),
 	T8("User task agree"),
-	T9("Logout user");
+	T9("User task final"),
+	T10("Report Agree"),
+	T11("Report Activity"),
+	T12("Logout user");
 
 	private String testName;
 	

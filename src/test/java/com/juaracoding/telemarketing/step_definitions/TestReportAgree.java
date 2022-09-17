@@ -39,9 +39,9 @@ public class TestReportAgree {
 	public void user_choose_date_agree_invalid() {
 		delay(2);
 		reportAgree.tableDateAgree1();
-		delay(2);
+		delay(1);
 		reportAgree.tableDateAgree2();
-		delay(2);
+		delay(1);
 		reportAgree.btnView();
 		extentTest.log(LogStatus.PASS, "User choose date agree invalid");
 	}
@@ -50,12 +50,12 @@ public class TestReportAgree {
 	public void user_choose_date_agree() {
 		delay(2);
 		reportAgree.tableDateAgree1();
-		delay(2);
-		reportAgree.pilihTanggal1();
-		delay(2);
+		delay(1);
+		reportAgree.pilihTanggalAgree1();
+		delay(1);
 		reportAgree.tableDateAgree2();
-		delay(2);
-		reportAgree.pilihTanggal2();
+		delay(1);
+		reportAgree.pilihTanggalAgree2();
 		extentTest.log(LogStatus.PASS, "User choose date agree");
 	}
 	
@@ -63,32 +63,40 @@ public class TestReportAgree {
 	public void user_click_button_view_agree() {
 		delay(2);
 		reportAgree.btnView();
+		delay(2);
 		extentTest.log(LogStatus.PASS, "User click button view");
 	}
 	
-//	@And("User click button show page agree")
-//	public void user_click_button_show_page_agree() {
-//		delay(2);
-//		scroll(200);
-//		delay(2);
-//		reportAgree.btnShowPage();
-//		scroll(-200);
-//		delay(2);
-//		scroll(200);
-//		delay(2);
-//		reportAgree.btnShowPage10();
-//		scroll(-200);
-//		delay(2);
-//		scroll(200);
-//		delay(2);
-//		reportAgree.btnShowPage25();
-//		scroll(-500);
-//		delay(2);
-//		scroll(200);
-//		scroll(200);
-//		
-//		extentTest.log(LogStatus.PASS, "User click show page agree");
-//	}
+	@And("User click next page")
+	public void user_click_next_page() {		
+		reportAgree.clickNextPage();
+		extentTest.log(LogStatus.PASS, "User click next page");
+	}
+	
+	@And("User click previous page")
+	public void user_click_previous_page() {		
+		reportAgree.clickPrevPage();
+		extentTest.log(LogStatus.PASS, "User click previous page");
+	}
+	
+	@And("User click last page")
+	public void user_click_last_page() {		
+		reportAgree.clickLastPage();
+		extentTest.log(LogStatus.PASS, "User click last page");
+	}
+	
+	@And("User click first page")
+	public void user_click_first_page() {		
+		reportAgree.clickFirstPage();
+		extentTest.log(LogStatus.PASS, "User click first page");
+	}
+	
+	@And("User click button show page agree")
+	public void user_click_button_show_page_agree() {		
+		reportAgree.clickShowPage();
+		extentTest.log(LogStatus.PASS, "User click show page");
+	}
+	
 	
 //	@And("User click button export agree")
 //	public void user_click_button_export_agree() {

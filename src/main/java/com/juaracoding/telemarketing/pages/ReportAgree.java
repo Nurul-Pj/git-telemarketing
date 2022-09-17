@@ -1,10 +1,11 @@
 package com.juaracoding.telemarketing.pages;
 
-import org.openqa.selenium.Keys;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 import com.juaracoding.telemarketing.drivers.DriverSingleton;
 
@@ -24,16 +25,16 @@ public class ReportAgree {
 	private WebElement clickReportAgree;
 
 	@FindBy(xpath = "//*[@id=\"tl_report_setuju--51772_text\"]")
-	private WebElement tablekDate1;
+	private WebElement tablekDateAgree1;
 	
 	@FindBy(xpath = "//*[@id=\"ui-datepicker-div\"]/table/tbody/tr[3]/td[2]/a")
-	private WebElement clickDateFirst; //Tanggal 11
+	private WebElement clickDateFirstAgree; //Tanggal 11
 	
 	@FindBy(xpath = "//*[@id=\"tl_report_setuju--51780_text\"]")
-	private WebElement tablekDate2;
+	private WebElement tablekDateAgree2;
 	
 	@FindBy(xpath = "//*[@id=\"ui-datepicker-div\"]/table/tbody/tr[3]/td[6]/a")
-	private WebElement clickDateSecond; //Tanggal 16
+	private WebElement clickDateSecondAgree; //Tanggal 16
 	
 	@FindBy(xpath = "//*[@id=\"51778_query\"]")
 	private WebElement clickView;
@@ -41,14 +42,20 @@ public class ReportAgree {
 	@FindBy(xpath = "//*[@id=\"51797_query\"]")
 	private WebElement clickExport;
 	
-//	@FindBy(xpath = "//*[@id=\"tl_report_setuju--51776_show_text\"]")
-//	private WebElement showPage;
-//	
-//	@FindBy(xpath = "//*[@id=\"tl_report_setuju--51776_show_text\"]/option[1]")
-//	private WebElement showPage10;
-//	
-//	@FindBy(xpath = "//*[@id=\"tl_report_setuju--51776_show_text\"]/option[2]")
-//	private WebElement showPage25;
+	@FindBy(xpath = "//*[@id=\"tl_report_setuju--51776_show_text\"]")
+	private WebElement showPage;
+	
+	@FindBy(xpath = "//*[@id=\"tl_report_setuju--51776\"]/div[4]/ul/li[3]/a")
+	private WebElement nextPage;
+	
+	@FindBy(xpath = "//*[@id=\"tl_report_setuju--51776\"]/div[4]/ul/li[2]/a")
+	private WebElement prevPage;
+	
+	@FindBy(xpath = "//*[@id=\"tl_report_setuju--51776\"]/div[4]/ul/li[5]/a")
+	private WebElement lastPage;
+
+	@FindBy(xpath = "//*[@id=\"tl_report_setuju--51776_page\"]")
+	private WebElement firstPage;
 	
 	public void btnReport() {
 		btnReport.click();
@@ -59,40 +66,68 @@ public class ReportAgree {
 	}
 	
 	public void tableDateAgree1() {
-		tablekDate1.click();
+		tablekDateAgree1.click();
 	}
 	
 	public void tableDateAgree2() {
-		tablekDate2.click();
+		tablekDateAgree2.click();
 	}
 	
-	public void pilihTanggal1() {
-		clickDateFirst.click();
+	public void pilihTanggalAgree1() {
+		clickDateFirstAgree.click();
 	}
 	
-	public void pilihTanggal2() {
-		clickDateSecond.click();
+	public void pilihTanggalAgree2() {
+		clickDateSecondAgree.click();
 	}
 	
 	public void btnView() {
 		clickView.click();
+		delay(1);
 	}
 	
 	public void btnExport() {
 		clickExport.click();
 	}
 	
-//	public void btnShowPage() {
-//		showPage.click();
-//	}
-//	
-//	public void btnShowPage10() {
-//		showPage10.click();
-//	}
-//	
-//	public void btnShowPage25() {
-//		showPage25.click();
-//	}
+	public void btnShowPage() {
+		showPage.click();
+	}
+	
+	public void clickNextPage() {
+		nextPage.click();
+		delay(2);
+	}
+	public void clickPrevPage() {
+		prevPage.click();
+		delay(2);
+	}
+	public void clickLastPage() {
+		lastPage.click();
+		delay(2);
+	}
+	public void clickFirstPage() {
+		firstPage.click();
+		delay(2);
+	}
+	
+	public void clickShowPage() {
+		Select btnShowPage10 = new Select(showPage);
+		btnShowPage10.selectByValue("10");
+		delay(2);
+		
+		Select btnShowPage25 = new Select(showPage);
+		btnShowPage25.selectByValue("25");
+		delay(2);
+		
+		Select btnShowPage50 = new Select(showPage);
+		btnShowPage50.selectByValue("50");
+		delay(2);
+		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,-500)");
+	}
+	
 	
 	static void delay(int detik) {
 		try {
