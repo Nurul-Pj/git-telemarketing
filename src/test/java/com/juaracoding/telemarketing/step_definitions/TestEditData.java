@@ -51,7 +51,7 @@ public class TestEditData {
 	public void table_open() {
 		delay(1);
 		assertEquals(editData.getValidate(), "1");
-		extentTest.log(LogStatus.PASS, "table data entries");
+		extentTest.log(LogStatus.PASS, "table open");
 	}
 	
 //	table click

@@ -72,13 +72,6 @@ public class TestUser {
 		extentTest.log(LogStatus.PASS, "save user");	
 	}
 	
-//	@Then("added table")
-//	public void added_table() {
-//		assertTrue(userPage.validateUser());
-//		delay(1);
-////		extentTest.log(LogStatus.PASS, "added table");	
-//	}
-	
 	
 //	search user
 	@When("input user")

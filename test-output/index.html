@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\HP.DESKTOP-IER1J9F\AppData\Local\Temp\testng-eclipse--1956951791\testng-customsuite.xml</span>
+                    <span>C:\Users\HP.DESKTOP-IER1J9F\AppData\Local\Temp\testng-eclipse--833117067\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">8 methods,   8 passed</span>
+                    <span class="method-stats">42 methods, 1 failed,   41 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Default_suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.juaracoding.telemarketing.step_definitions.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;URL Invalid&quot;, &quot;Login Developer&quot;)">runScenario("URL Invalid", "Login Developer")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,22 +118,17 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.juaracoding.telemarketing.step_definitions.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Dashboard Data&quot;, &quot;Edit Data&quot;)">runScenario("Dashboard Data", "Edit Data")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.juaracoding.telemarketing.step_definitions.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User valid login&quot;, &quot;Login Developer&quot;)">runScenario("User valid login", "Login Developer")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.juaracoding.telemarketing.step_definitions.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Show page data&quot;, &quot;Edit Data&quot;)">runScenario("Show page data", "Edit Data")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.juaracoding.telemarketing.step_definitions.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Status Tolak Null&quot;, &quot;Distribute Data&quot;)">runScenario("Status Tolak Null", "Distribute Data")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.juaracoding.telemarketing.step_definitions.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Update data detail&quot;, &quot;Edit Data&quot;)">runScenario("Update data detail", "Edit Data")</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.juaracoding.telemarketing.step_definitions.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Search user&quot;, &quot;Edit Data&quot;)">runScenario("Search user", "Edit Data")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.juaracoding.telemarketing.step_definitions.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Approve Phone&quot;, &quot;Approve Phone&quot;)">runScenario("Approve Phone", "Approve Phone")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -129,17 +138,187 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.juaracoding.telemarketing.step_definitions.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Update status activity&quot;, &quot;Edit Data&quot;)">runScenario("Update status activity", "Edit Data")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.juaracoding.telemarketing.step_definitions.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Update Password&quot;, &quot;User Management&quot;)">runScenario("Update Password", "User Management")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.juaracoding.telemarketing.step_definitions.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User valid login&quot;, &quot;Edit Data&quot;)">runScenario("User valid login", "Edit Data")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.juaracoding.telemarketing.step_definitions.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Update data detail&quot;, &quot;Edit Data&quot;)">runScenario("Update data detail", "Edit Data")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.juaracoding.telemarketing.step_definitions.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Status Setuju Null&quot;, &quot;Distribute Data&quot;)">runScenario("Status Setuju Null", "Distribute Data")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.juaracoding.telemarketing.step_definitions.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Input username password null&quot;, &quot;Login Developer&quot;)">runScenario("Input username password null", "Login Developer")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.juaracoding.telemarketing.step_definitions.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Status Tidak Berhasil Null&quot;, &quot;Distribute Data&quot;)">runScenario("Status Tidak Berhasil Null", "Distribute Data")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.juaracoding.telemarketing.step_definitions.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Status New Null&quot;, &quot;Distribute Data&quot;)">runScenario("Status New Null", "Distribute Data")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.juaracoding.telemarketing.step_definitions.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Logout user&quot;, &quot;Login Developer&quot;)">runScenario("Logout user", "Login Developer")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.juaracoding.telemarketing.step_definitions.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;search name user&quot;, &quot;Approve Phone&quot;)">runScenario("search name user", "Approve Phone")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.juaracoding.telemarketing.step_definitions.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Add user supervisior&quot;, &quot;User Management&quot;)">runScenario("Add user supervisior", "User Management")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.juaracoding.telemarketing.step_definitions.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Input valid login ignore lettercase&quot;, &quot;Login Developer&quot;)">runScenario("Input valid login ignore lettercase", "Login Developer")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.juaracoding.telemarketing.step_definitions.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Dashboard user management&quot;, &quot;Approve Phone&quot;)">runScenario("Dashboard user management", "Approve Phone")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="com.juaracoding.telemarketing.step_definitions.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;table click&quot;, &quot;Edit Data&quot;)">runScenario("table click", "Edit Data")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.juaracoding.telemarketing.step_definitions.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Input username password invalid&quot;, &quot;Login Developer&quot;)">runScenario("Input username password invalid", "Login Developer")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.juaracoding.telemarketing.step_definitions.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Dashboard data&quot;, &quot;Distribute Data&quot;)">runScenario("Dashboard data", "Distribute Data")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.juaracoding.telemarketing.step_definitions.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Search user&quot;, &quot;User Management&quot;)">runScenario("Search user", "User Management")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.juaracoding.telemarketing.step_definitions.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Status Follow Up Null&quot;, &quot;Distribute Data&quot;)">runScenario("Status Follow Up Null", "Distribute Data")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.juaracoding.telemarketing.step_definitions.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Distribusi form null&quot;, &quot;Distribute Data&quot;)">runScenario("Distribusi form null", "Distribute Data")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.juaracoding.telemarketing.step_definitions.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Status Berhasil Null&quot;, &quot;Distribute Data&quot;)">runScenario("Status Berhasil Null", "Distribute Data")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.juaracoding.telemarketing.step_definitions.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Add user agent&quot;, &quot;User Management&quot;)">runScenario("Add user agent", "User Management")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.juaracoding.telemarketing.step_definitions.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;URL valid&quot;, &quot;Login Developer&quot;)">runScenario("URL valid", "Login Developer")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.juaracoding.telemarketing.step_definitions.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Update form&quot;, &quot;User Management&quot;)">runScenario("Update form", "User Management")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.juaracoding.telemarketing.step_definitions.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Status Salah Sambung Null&quot;, &quot;Distribute Data&quot;)">runScenario("Status Salah Sambung Null", "Distribute Data")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.juaracoding.telemarketing.step_definitions.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Distribusi form developer input&quot;, &quot;Distribute Data&quot;)">runScenario("Distribusi form developer input", "Distribute Data")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.juaracoding.telemarketing.step_definitions.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;show page&quot;, &quot;Approve Phone&quot;)">runScenario("show page", "Approve Phone")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.juaracoding.telemarketing.step_definitions.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Search user&quot;, &quot;Edit Data&quot;)">runScenario("Search user", "Edit Data")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.juaracoding.telemarketing.step_definitions.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Status New Agent&quot;, &quot;Distribute Data&quot;)">runScenario("Status New Agent", "Distribute Data")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.juaracoding.telemarketing.step_definitions.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Reject Phone&quot;, &quot;Approve Phone&quot;)">runScenario("Reject Phone", "Approve Phone")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.juaracoding.telemarketing.step_definitions.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Add user admin&quot;, &quot;User Management&quot;)">runScenario("Add user admin", "User Management")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.juaracoding.telemarketing.step_definitions.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Dashboard user management&quot;, &quot;User Management&quot;)">runScenario("Dashboard user management", "User Management")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.juaracoding.telemarketing.step_definitions.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Show page data&quot;, &quot;Edit Data&quot;)">runScenario("Show page data", "Edit Data")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.juaracoding.telemarketing.step_definitions.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Update status activity&quot;, &quot;Edit Data&quot;)">runScenario("Update status activity", "Edit Data")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.juaracoding.telemarketing.step_definitions.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Dashboard Data&quot;, &quot;Edit Data&quot;)">runScenario("Dashboard Data", "Edit Data")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.juaracoding.telemarketing.step_definitions.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Reset Password&quot;, &quot;User Management&quot;)">runScenario("Reset Password", "User Management")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.juaracoding.telemarketing.step_definitions.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Add user null&quot;, &quot;User Management&quot;)">runScenario("Add user null", "User Management")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.juaracoding.telemarketing.step_definitions.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Distribusi form agent input&quot;, &quot;Distribute Data&quot;)">runScenario("Distribusi form agent input", "Distribute Data")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.juaracoding.telemarketing.step_definitions.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Remove User&quot;, &quot;User Management&quot;)">runScenario("Remove User", "User Management")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.juaracoding.telemarketing.step_definitions.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Input valid login uppercase&quot;, &quot;Login Developer&quot;)">runScenario("Input valid login uppercase", "Login Developer")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -154,6 +333,35 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
+          <div class="suite-Default_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.juaracoding.telemarketing.step_definitions.TestRunner</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;URL Invalid&quot;, &quot;Login Developer&quot;)">
+                  </a> <!-- runScenario("URL Invalid", "Login Developer") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("URL Invalid", "Login Developer")</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [https://sqa.peluangkerjaku.com/tele/] but found [https://google.com/]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at com.juaracoding.telemarketing.step_definitions.TestLogin.user_go_to_invalid_web_telemarketing(TestLogin.java:34)
+	at ✽.User go to invalid Web Telemarketing(file:///C:/Users/HP.DESKTOP-IER1J9F/eclipse-workspace/git-telemarketing/src/test/resources/features/1.LoginDev.feature:4)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -162,40 +370,30 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Dashboard Data&quot;, &quot;Edit Data&quot;)">
-                  </a> <!-- runScenario("Dashboard Data", "Edit Data") -->
+                  <a name="runScenario(&quot;User valid login&quot;, &quot;Login Developer&quot;)">
+                  </a> <!-- runScenario("User valid login", "Login Developer") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Dashboard Data", "Edit Data")</span>
+                  <span class="parameters">("User valid login", "Login Developer")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Show page data&quot;, &quot;Edit Data&quot;)">
-                  </a> <!-- runScenario("Show page data", "Edit Data") -->
+                  <a name="runScenario(&quot;Status Tolak Null&quot;, &quot;Distribute Data&quot;)">
+                  </a> <!-- runScenario("Status Tolak Null", "Distribute Data") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Show page data", "Edit Data")</span>
+                  <span class="parameters">("Status Tolak Null", "Distribute Data")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Update data detail&quot;, &quot;Edit Data&quot;)">
-                  </a> <!-- runScenario("Update data detail", "Edit Data") -->
+                  <a name="runScenario(&quot;Approve Phone&quot;, &quot;Approve Phone&quot;)">
+                  </a> <!-- runScenario("Approve Phone", "Approve Phone") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Update data detail", "Edit Data")</span>
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="runScenario(&quot;Search user&quot;, &quot;Edit Data&quot;)">
-                  </a> <!-- runScenario("Search user", "Edit Data") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("Search user", "Edit Data")</span>
+                  <span class="parameters">("Approve Phone", "Approve Phone")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -212,20 +410,110 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Update status activity&quot;, &quot;Edit Data&quot;)">
-                  </a> <!-- runScenario("Update status activity", "Edit Data") -->
+                  <a name="runScenario(&quot;Update Password&quot;, &quot;User Management&quot;)">
+                  </a> <!-- runScenario("Update Password", "User Management") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Update status activity", "Edit Data")</span>
+                  <span class="parameters">("Update Password", "User Management")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;User valid login&quot;, &quot;Edit Data&quot;)">
-                  </a> <!-- runScenario("User valid login", "Edit Data") -->
+                  <a name="runScenario(&quot;Update data detail&quot;, &quot;Edit Data&quot;)">
+                  </a> <!-- runScenario("Update data detail", "Edit Data") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("User valid login", "Edit Data")</span>
+                  <span class="parameters">("Update data detail", "Edit Data")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Status Setuju Null&quot;, &quot;Distribute Data&quot;)">
+                  </a> <!-- runScenario("Status Setuju Null", "Distribute Data") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Status Setuju Null", "Distribute Data")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Input username password null&quot;, &quot;Login Developer&quot;)">
+                  </a> <!-- runScenario("Input username password null", "Login Developer") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Input username password null", "Login Developer")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Status Tidak Berhasil Null&quot;, &quot;Distribute Data&quot;)">
+                  </a> <!-- runScenario("Status Tidak Berhasil Null", "Distribute Data") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Status Tidak Berhasil Null", "Distribute Data")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Status New Null&quot;, &quot;Distribute Data&quot;)">
+                  </a> <!-- runScenario("Status New Null", "Distribute Data") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Status New Null", "Distribute Data")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Logout user&quot;, &quot;Login Developer&quot;)">
+                  </a> <!-- runScenario("Logout user", "Login Developer") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Logout user", "Login Developer")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;search name user&quot;, &quot;Approve Phone&quot;)">
+                  </a> <!-- runScenario("search name user", "Approve Phone") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("search name user", "Approve Phone")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Add user supervisior&quot;, &quot;User Management&quot;)">
+                  </a> <!-- runScenario("Add user supervisior", "User Management") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Add user supervisior", "User Management")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Input valid login ignore lettercase&quot;, &quot;Login Developer&quot;)">
+                  </a> <!-- runScenario("Input valid login ignore lettercase", "Login Developer") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Input valid login ignore lettercase", "Login Developer")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Dashboard user management&quot;, &quot;Approve Phone&quot;)">
+                  </a> <!-- runScenario("Dashboard user management", "Approve Phone") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Dashboard user management", "Approve Phone")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -240,12 +528,262 @@
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Input username password invalid&quot;, &quot;Login Developer&quot;)">
+                  </a> <!-- runScenario("Input username password invalid", "Login Developer") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Input username password invalid", "Login Developer")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Dashboard data&quot;, &quot;Distribute Data&quot;)">
+                  </a> <!-- runScenario("Dashboard data", "Distribute Data") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Dashboard data", "Distribute Data")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Search user&quot;, &quot;User Management&quot;)">
+                  </a> <!-- runScenario("Search user", "User Management") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Search user", "User Management")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Status Follow Up Null&quot;, &quot;Distribute Data&quot;)">
+                  </a> <!-- runScenario("Status Follow Up Null", "Distribute Data") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Status Follow Up Null", "Distribute Data")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Distribusi form null&quot;, &quot;Distribute Data&quot;)">
+                  </a> <!-- runScenario("Distribusi form null", "Distribute Data") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Distribusi form null", "Distribute Data")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Status Berhasil Null&quot;, &quot;Distribute Data&quot;)">
+                  </a> <!-- runScenario("Status Berhasil Null", "Distribute Data") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Status Berhasil Null", "Distribute Data")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Add user agent&quot;, &quot;User Management&quot;)">
+                  </a> <!-- runScenario("Add user agent", "User Management") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Add user agent", "User Management")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;URL valid&quot;, &quot;Login Developer&quot;)">
+                  </a> <!-- runScenario("URL valid", "Login Developer") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("URL valid", "Login Developer")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Update form&quot;, &quot;User Management&quot;)">
+                  </a> <!-- runScenario("Update form", "User Management") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Update form", "User Management")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Status Salah Sambung Null&quot;, &quot;Distribute Data&quot;)">
+                  </a> <!-- runScenario("Status Salah Sambung Null", "Distribute Data") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Status Salah Sambung Null", "Distribute Data")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Distribusi form developer input&quot;, &quot;Distribute Data&quot;)">
+                  </a> <!-- runScenario("Distribusi form developer input", "Distribute Data") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Distribusi form developer input", "Distribute Data")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;show page&quot;, &quot;Approve Phone&quot;)">
+                  </a> <!-- runScenario("show page", "Approve Phone") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("show page", "Approve Phone")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Search user&quot;, &quot;Edit Data&quot;)">
+                  </a> <!-- runScenario("Search user", "Edit Data") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Search user", "Edit Data")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Status New Agent&quot;, &quot;Distribute Data&quot;)">
+                  </a> <!-- runScenario("Status New Agent", "Distribute Data") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Status New Agent", "Distribute Data")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Reject Phone&quot;, &quot;Approve Phone&quot;)">
+                  </a> <!-- runScenario("Reject Phone", "Approve Phone") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Reject Phone", "Approve Phone")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Add user admin&quot;, &quot;User Management&quot;)">
+                  </a> <!-- runScenario("Add user admin", "User Management") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Add user admin", "User Management")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Dashboard user management&quot;, &quot;User Management&quot;)">
+                  </a> <!-- runScenario("Dashboard user management", "User Management") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Dashboard user management", "User Management")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Show page data&quot;, &quot;Edit Data&quot;)">
+                  </a> <!-- runScenario("Show page data", "Edit Data") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Show page data", "Edit Data")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Update status activity&quot;, &quot;Edit Data&quot;)">
+                  </a> <!-- runScenario("Update status activity", "Edit Data") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Update status activity", "Edit Data")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Dashboard Data&quot;, &quot;Edit Data&quot;)">
+                  </a> <!-- runScenario("Dashboard Data", "Edit Data") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Dashboard Data", "Edit Data")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Reset Password&quot;, &quot;User Management&quot;)">
+                  </a> <!-- runScenario("Reset Password", "User Management") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Reset Password", "User Management")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Add user null&quot;, &quot;User Management&quot;)">
+                  </a> <!-- runScenario("Add user null", "User Management") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Add user null", "User Management")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Distribusi form agent input&quot;, &quot;Distribute Data&quot;)">
+                  </a> <!-- runScenario("Distribusi form agent input", "Distribute Data") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Distribusi form agent input", "Distribute Data")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Remove User&quot;, &quot;User Management&quot;)">
+                  </a> <!-- runScenario("Remove User", "User Management") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Remove User", "User Management")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Input valid login uppercase&quot;, &quot;Login Developer&quot;)">
+                  </a> <!-- runScenario("Input valid login uppercase", "Login Developer") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Input valid login uppercase", "Login Developer")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Default_suite-class-passed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\HP.DESKTOP-IER1J9F\AppData\Local\Temp\testng-eclipse--1956951791\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\HP.DESKTOP-IER1J9F\AppData\Local\Temp\testng-eclipse--833117067\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -302,44 +840,180 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(8);
+data.addRows(42);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'com.juaracoding.telemarketing.step_definitions.TestRunner')
-data.setCell(0, 3, 6809);
+data.setCell(0, 3, 17641);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'runScenario')
 data.setCell(1, 2, 'com.juaracoding.telemarketing.step_definitions.TestRunner')
-data.setCell(1, 3, 6730);
+data.setCell(1, 3, 7793);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'runScenario')
 data.setCell(2, 2, 'com.juaracoding.telemarketing.step_definitions.TestRunner')
-data.setCell(2, 3, 5888);
+data.setCell(2, 3, 6711);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'runScenario')
 data.setCell(3, 2, 'com.juaracoding.telemarketing.step_definitions.TestRunner')
-data.setCell(3, 3, 3299);
+data.setCell(3, 3, 6557);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'runScenario')
 data.setCell(4, 2, 'com.juaracoding.telemarketing.step_definitions.TestRunner')
-data.setCell(4, 3, 2193);
+data.setCell(4, 3, 6516);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'runScenario')
 data.setCell(5, 2, 'com.juaracoding.telemarketing.step_definitions.TestRunner')
-data.setCell(5, 3, 1330);
+data.setCell(5, 3, 5784);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'runScenario')
 data.setCell(6, 2, 'com.juaracoding.telemarketing.step_definitions.TestRunner')
-data.setCell(6, 3, 1232);
+data.setCell(6, 3, 5771);
 data.setCell(7, 0, 7)
 data.setCell(7, 1, 'runScenario')
 data.setCell(7, 2, 'com.juaracoding.telemarketing.step_definitions.TestRunner')
-data.setCell(7, 3, 421);
+data.setCell(7, 3, 5668);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'runScenario')
+data.setCell(8, 2, 'com.juaracoding.telemarketing.step_definitions.TestRunner')
+data.setCell(8, 3, 5495);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'runScenario')
+data.setCell(9, 2, 'com.juaracoding.telemarketing.step_definitions.TestRunner')
+data.setCell(9, 3, 5295);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'runScenario')
+data.setCell(10, 2, 'com.juaracoding.telemarketing.step_definitions.TestRunner')
+data.setCell(10, 3, 5239);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'runScenario')
+data.setCell(11, 2, 'com.juaracoding.telemarketing.step_definitions.TestRunner')
+data.setCell(11, 3, 5235);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'runScenario')
+data.setCell(12, 2, 'com.juaracoding.telemarketing.step_definitions.TestRunner')
+data.setCell(12, 3, 4652);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'runScenario')
+data.setCell(13, 2, 'com.juaracoding.telemarketing.step_definitions.TestRunner')
+data.setCell(13, 3, 4366);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'runScenario')
+data.setCell(14, 2, 'com.juaracoding.telemarketing.step_definitions.TestRunner')
+data.setCell(14, 3, 4245);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'runScenario')
+data.setCell(15, 2, 'com.juaracoding.telemarketing.step_definitions.TestRunner')
+data.setCell(15, 3, 3975);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'runScenario')
+data.setCell(16, 2, 'com.juaracoding.telemarketing.step_definitions.TestRunner')
+data.setCell(16, 3, 3709);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'runScenario')
+data.setCell(17, 2, 'com.juaracoding.telemarketing.step_definitions.TestRunner')
+data.setCell(17, 3, 3650);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'runScenario')
+data.setCell(18, 2, 'com.juaracoding.telemarketing.step_definitions.TestRunner')
+data.setCell(18, 3, 3348);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'runScenario')
+data.setCell(19, 2, 'com.juaracoding.telemarketing.step_definitions.TestRunner')
+data.setCell(19, 3, 3212);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'runScenario')
+data.setCell(20, 2, 'com.juaracoding.telemarketing.step_definitions.TestRunner')
+data.setCell(20, 3, 3167);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'runScenario')
+data.setCell(21, 2, 'com.juaracoding.telemarketing.step_definitions.TestRunner')
+data.setCell(21, 3, 2799);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'runScenario')
+data.setCell(22, 2, 'com.juaracoding.telemarketing.step_definitions.TestRunner')
+data.setCell(22, 3, 2572);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'runScenario')
+data.setCell(23, 2, 'com.juaracoding.telemarketing.step_definitions.TestRunner')
+data.setCell(23, 3, 2436);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'runScenario')
+data.setCell(24, 2, 'com.juaracoding.telemarketing.step_definitions.TestRunner')
+data.setCell(24, 3, 2358);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'runScenario')
+data.setCell(25, 2, 'com.juaracoding.telemarketing.step_definitions.TestRunner')
+data.setCell(25, 3, 2341);
+data.setCell(26, 0, 26)
+data.setCell(26, 1, 'runScenario')
+data.setCell(26, 2, 'com.juaracoding.telemarketing.step_definitions.TestRunner')
+data.setCell(26, 3, 2296);
+data.setCell(27, 0, 27)
+data.setCell(27, 1, 'runScenario')
+data.setCell(27, 2, 'com.juaracoding.telemarketing.step_definitions.TestRunner')
+data.setCell(27, 3, 2283);
+data.setCell(28, 0, 28)
+data.setCell(28, 1, 'runScenario')
+data.setCell(28, 2, 'com.juaracoding.telemarketing.step_definitions.TestRunner')
+data.setCell(28, 3, 2283);
+data.setCell(29, 0, 29)
+data.setCell(29, 1, 'runScenario')
+data.setCell(29, 2, 'com.juaracoding.telemarketing.step_definitions.TestRunner')
+data.setCell(29, 3, 2281);
+data.setCell(30, 0, 30)
+data.setCell(30, 1, 'runScenario')
+data.setCell(30, 2, 'com.juaracoding.telemarketing.step_definitions.TestRunner')
+data.setCell(30, 3, 2271);
+data.setCell(31, 0, 31)
+data.setCell(31, 1, 'runScenario')
+data.setCell(31, 2, 'com.juaracoding.telemarketing.step_definitions.TestRunner')
+data.setCell(31, 3, 2133);
+data.setCell(32, 0, 32)
+data.setCell(32, 1, 'runScenario')
+data.setCell(32, 2, 'com.juaracoding.telemarketing.step_definitions.TestRunner')
+data.setCell(32, 3, 2127);
+data.setCell(33, 0, 33)
+data.setCell(33, 1, 'runScenario')
+data.setCell(33, 2, 'com.juaracoding.telemarketing.step_definitions.TestRunner')
+data.setCell(33, 3, 1230);
+data.setCell(34, 0, 34)
+data.setCell(34, 1, 'runScenario')
+data.setCell(34, 2, 'com.juaracoding.telemarketing.step_definitions.TestRunner')
+data.setCell(34, 3, 1195);
+data.setCell(35, 0, 35)
+data.setCell(35, 1, 'runScenario')
+data.setCell(35, 2, 'com.juaracoding.telemarketing.step_definitions.TestRunner')
+data.setCell(35, 3, 1115);
+data.setCell(36, 0, 36)
+data.setCell(36, 1, 'runScenario')
+data.setCell(36, 2, 'com.juaracoding.telemarketing.step_definitions.TestRunner')
+data.setCell(36, 3, 886);
+data.setCell(37, 0, 37)
+data.setCell(37, 1, 'runScenario')
+data.setCell(37, 2, 'com.juaracoding.telemarketing.step_definitions.TestRunner')
+data.setCell(37, 3, 284);
+data.setCell(38, 0, 38)
+data.setCell(38, 1, 'runScenario')
+data.setCell(38, 2, 'com.juaracoding.telemarketing.step_definitions.TestRunner')
+data.setCell(38, 3, 178);
+data.setCell(39, 0, 39)
+data.setCell(39, 1, 'runScenario')
+data.setCell(39, 2, 'com.juaracoding.telemarketing.step_definitions.TestRunner')
+data.setCell(39, 3, 139);
+data.setCell(40, 0, 40)
+data.setCell(40, 1, 'runScenario')
+data.setCell(40, 2, 'com.juaracoding.telemarketing.step_definitions.TestRunner')
+data.setCell(40, 3, 136);
+data.setCell(41, 0, 41)
+data.setCell(41, 1, 'runScenario')
+data.setCell(41, 2, 'com.juaracoding.telemarketing.step_definitions.TestRunner')
+data.setCell(41, 3, 0);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 27 seconds</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -367,44 +1041,182 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.juaracoding.telemarketing.step_definitions.TestRunner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@668625f5)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@7884f722)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">runScenario("User valid login", "Edit Data")</span>
-                <span class="method-start">416 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("URL Invalid", "Login Developer")</span>
+                <span class="method-start">448 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("URL valid", "Login Developer")</span>
+                <span class="method-start">3022 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Input username password invalid", "Login Developer")</span>
+                <span class="method-start">3910 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Input username password null", "Login Developer")</span>
+                <span class="method-start">8276 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Input valid login ignore lettercase", "Login Developer")</span>
+                <span class="method-start">12928 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Input valid login uppercase", "Login Developer")</span>
+                <span class="method-start">19639 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Logout user", "Login Developer")</span>
+                <span class="method-start">23348 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("User valid login", "Login Developer")</span>
+                <span class="method-start">26515 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Dashboard data", "Distribute Data")</span>
+                <span class="method-start">30165 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Status New Null", "Distribute Data")</span>
+                <span class="method-start">30451 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Status Berhasil Null", "Distribute Data")</span>
+                <span class="method-start">31681 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Status Follow Up Null", "Distribute Data")</span>
+                <span class="method-start">34022 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Status Salah Sambung Null", "Distribute Data")</span>
+                <span class="method-start">36318 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Status Setuju Null", "Distribute Data")</span>
+                <span class="method-start">38590 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Status Tidak Berhasil Null", "Distribute Data")</span>
+                <span class="method-start">40873 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Status Tolak Null", "Distribute Data")</span>
+                <span class="method-start">43156 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Status New Agent", "Distribute Data")</span>
+                <span class="method-start">45437 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Distribusi form developer input", "Distribute Data")</span>
+                <span class="method-start">48785 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Distribusi form agent input", "Distribute Data")</span>
+                <span class="method-start">51221 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Distribusi form null", "Distribute Data")</span>
+                <span class="method-start">54021 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Dashboard Data", "Edit Data")</span>
-                <span class="method-start">6306 ms</span>
+                <span class="method-start">57997 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Search user", "Edit Data")</span>
-                <span class="method-start">6727 ms</span>
+                <span class="method-start">58176 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("table click", "Edit Data")</span>
-                <span class="method-start">10042 ms</span>
+                <span class="method-start">61388 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Update data detail", "Edit Data")</span>
-                <span class="method-start">12235 ms</span>
+                <span class="method-start">63521 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Update status activity", "Edit Data")</span>
-                <span class="method-start">13467 ms</span>
+                <span class="method-start">64636 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Update data", "Edit Data")</span>
-                <span class="method-start">14802 ms</span>
+                <span class="method-start">65831 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Show page data", "Edit Data")</span>
-                <span class="method-start">21532 ms</span>
+                <span class="method-start">71326 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Dashboard user management", "User Management")</span>
+                <span class="method-start">77883 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Add user supervisior", "User Management")</span>
+                <span class="method-start">78023 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Search user", "User Management")</span>
+                <span class="method-start">83795 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Add user agent", "User Management")</span>
+                <span class="method-start">89091 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Add user admin", "User Management")</span>
+                <span class="method-start">96886 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Remove User", "User Management")</span>
+                <span class="method-start">102671 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Add user null", "User Management")</span>
+                <span class="method-start">104798 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Reset Password", "User Management")</span>
+                <span class="method-start">110466 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Update Password", "User Management")</span>
+                <span class="method-start">114712 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Update form", "User Management")</span>
+                <span class="method-start">121229 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Dashboard user management", "Approve Phone")</span>
+                <span class="method-start">138870 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("show page", "Approve Phone")</span>
+                <span class="method-start">139007 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Approve Phone", "Approve Phone")</span>
+                <span class="method-start">141380 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("search name user", "Approve Phone")</span>
+                <span class="method-start">141380 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Reject Phone", "Approve Phone")</span>
+                <span class="method-start">146620 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">28341 ms</span>
+                <span class="method-start">151856 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

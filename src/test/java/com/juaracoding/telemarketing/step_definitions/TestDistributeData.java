@@ -1,13 +1,12 @@
 package com.juaracoding.telemarketing.step_definitions;
 
 import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertTrue;
+//import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.WebDriver;
 
 import com.juaracoding.telemarketing.pages.DistributeData;
 import com.relevantcodes.extentreports.ExtentTest;
-//import com.relevantcodes.extentreports.LogStatus;
 import com.relevantcodes.extentreports.LogStatus;
 
 import io.cucumber.java.en.And;
@@ -39,57 +38,153 @@ public class TestDistributeData {
 		extentTest.log(LogStatus.PASS, "click menu distribute data");
 	}
 	
-	@When("click field status")
-	public void click_field_status() {
-		dataDistribusi.clickStatus();
+//	status new, null
+	@And("click button view")
+	public void click_button_view() {
+		dataDistribusi.clickBtnBiew();
+		extentTest.log(LogStatus.PASS, "click button view");
+	}
+	
+	@Then("validasi table")
+	public void validasi_table() {
 		delay(1);
+		assertEquals(dataDistribusi.getValidate(), "1");
+		extentTest.log(LogStatus.PASS, "validasi table");
+	}
+
+//	status 
+	@When("click list status")
+	public void click_list_status() {
+		dataDistribusi.selectStatusOne();
+		extentTest.log(LogStatus.PASS, "click list status");
 	}
 	
-	@And("select field {string} as status")
-	public void select_field_as_status(String pilihStatus) {
-		dataDistribusi.listStatus(pilihStatus);
-	}
-	
-	@And("click field buket data")
-	public void click_field_buket_data() {
-		dataDistribusi.clickStatus();
+	@And("choose field status berhasil")
+	public void choose_field_status_berhasil() {
+		dataDistribusi.chooseBerhasil();
 		delay(1);
-		dataDistribusi.clickBuketData();
+		extentTest.log(LogStatus.PASS, "choose field status berhasil");
 	}
 	
-	@And("select field {string} as buket data")
-	public void select_field_as_buket_data(String pilihBuketData) {
+	@And("choose field status follow up")
+	public void choose_field_status_follow_up() {
+		dataDistribusi.chooseFollowUp();
 		delay(1);
-		dataDistribusi.listBuketData(pilihBuketData);
+		extentTest.log(LogStatus.PASS, "choose field status follow up");
 	}
 	
-	@And("click view")
-	public void click_view() {
-		dataDistribusi.clickBtnView();
-		extentTest.log(LogStatus.PASS, "click view");
-	}
-	
-	@Then("table data")
-	public void table_date() {
+	@And("choose field status salah sambung")
+	public void choose_field_status_salah_sambung() {
+		dataDistribusi.chooseSalahSambung();
 		delay(1);
-//		assertTrue(dataDistribusi.validateUser());
-		assertEquals(dataDistribusi.getTxtValidate(), "1");
-		extentTest.log(LogStatus.PASS, "table data");
+		extentTest.log(LogStatus.PASS, "choose field status salah sambung");
 	}
 	
-	@Then("table data entries")
-	public void table_date_entries() {
+	@And("choose field status setuju")
+	public void choose_field_status_setuju() {
+		dataDistribusi.chooseSetuju();
 		delay(1);
-//		assertTrue(dataDistribusi.validateUser());
-		assertEquals(dataDistribusi.getTxtEntries(), " no entries");
-		extentTest.log(LogStatus.PASS, "table data entries");
+		extentTest.log(LogStatus.PASS, "choose field status setuju");
 	}
 	
-	@And("alert greeting")
-	public void alert_greeting() {
-		String actual = dataDistribusi.appearGreeting();
-		assertTrue(actual.contains("Status"));
-		extentTest.log(LogStatus.PASS, "alert greeting");
+	@And("choose field status tidak berhasil")
+	public void choose_field_status_tidak_berhasil() {
+		dataDistribusi.chooseTidakBerhasil();
+		delay(1);
+		extentTest.log(LogStatus.PASS, "choose field status tidak berhasil");
+	}
+	
+	@And("choose field status tolak")
+	public void choose_field_status_tolak() {
+		dataDistribusi.chooseTolak();
+		delay(1);
+		extentTest.log(LogStatus.PASS, "choose field status tolak");
+	}
+	
+	@And("choose field status new")
+	public void choose_field_status_new() {
+		dataDistribusi.chooseNew();
+		delay(1);
+		extentTest.log(LogStatus.PASS, "choose field status new");
+	}
+	
+	@And("click list buket data")
+	public void click_list_buket_data() {
+		dataDistribusi.selectStatusOne();
+		dataDistribusi.selectBuketData();
+		extentTest.log(LogStatus.PASS, "click list buket data");
+	}
+	
+	@And("choose field buket data agent01")
+	public void choose_field_status_agent01() {
+		dataDistribusi.chooseAgent();
+		delay(1);
+		extentTest.log(LogStatus.PASS, "choose field status agent01");
+	}
+	
+	@And("choose field status null")
+	public void choose_field_status_null() {
+		extentTest.log(LogStatus.PASS, "choose field status null");
+	}
+	
+	@Then("validate no entries")
+	public void validate_no_entries() {
+		delay(1);
+		assertEquals(dataDistribusi.getNoEntries(), " no entries");
+		extentTest.log(LogStatus.PASS, "validate no entries");
+	}
+	
+//	distribusi form
+	@When("choose distribusi ke agent")
+	public void choose_distribusi_ke_agent() {
+		dataDistribusi.clickDistribusiKe();
+		dataDistribusi.chooseDisDeveloper();
+		dataDistribusi.chooseDisAgent();
+		dataDistribusi.clickDistribusiKe();
+		extentTest.log(LogStatus.PASS, "choose distribusi ke agent");
+	}
+	
+	@When("choose distribusi ke developer")
+	public void choose_distribusi_ke_developer() {
+		dataDistribusi.clickDistribusiKe();
+		dataDistribusi.chooseDisDeveloper();
+		dataDistribusi.clickDistribusiKe();
+		extentTest.log(LogStatus.PASS, "choose distribusi ke developer");
+	}
+	
+	@When("choose distribusi ke null")
+	public void choose_distribusi_ke_null() {
+		dataDistribusi.clickDistribusiKe();
+		dataDistribusi.chooseDisAgent();
+		dataDistribusi.clickDistribusiKe();
+		extentTest.log(LogStatus.PASS, "choose distribusi ke null");
+	}
+	
+	@And("input jumlah agent")
+	public void input_jumlah_agent() {
+		dataDistribusi.inputJumlahAgent("1");
+		extentTest.log(LogStatus.PASS, "input jumlah agent");
+	}
+	
+	@And("input jumlah agent null")
+	public void input_jumlah_agent_null() {
+		dataDistribusi.deleteJumlahAgent();
+		delay(1);
+		dataDistribusi.inputJumlahAgent("");
+		extentTest.log(LogStatus.PASS, "input jumlah agent null");
+	}
+	
+	@And("select status")
+	public void select_status() {
+		dataDistribusi.pilihStatus();
+		extentTest.log(LogStatus.PASS, "select status");
+	}
+	
+	@And("click button distribusi")
+	public void click_button_distribusi() {
+		delay(1);
+		dataDistribusi.clickBtnDistribusi();
+		extentTest.log(LogStatus.PASS, "click button distribusi");
 	}
 	
 	@Then("click oke")
@@ -99,27 +194,13 @@ public class TestDistributeData {
 		extentTest.log(LogStatus.PASS, "click oke");
 	}
 	
-	@When("select field {string} as distribusi")
-	public void select_field_as_distribusi(String pilihAgent) {
-		dataDistribusi.fieldStatus(pilihAgent);
-	}
-	
-	@And("input jumlah agent")
-	public void input_jumlah_agent() {
-		dataDistribusi.inputAgent("1");
+	@Then("click ya")
+	public void click_ya() {
 		delay(1);
-		extentTest.log(LogStatus.PASS, "input jumlah agent");
+		dataDistribusi.clickBtnYa();
+		extentTest.log(LogStatus.PASS, "click ya");
 	}
 	
-	@And("select field {string} as status distribusi")
-	public void select_field_as_status_distribusi(String distribusiStat) {
-		dataDistribusi.fieldDistribusiStatus(distribusiStat);
-	}
-	
-	@Then("click button distribusi")
-	public void click_button_distribusi() {
-		dataDistribusi.clickDistribusi();
-	}
 	
 	static void delay(int detik) {
 		try {

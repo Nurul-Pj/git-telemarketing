@@ -1,16 +1,9 @@
 Feature: User Management
 
-	Scenario: User valid login
-  		When User go to Web Telemarketing
-  		And User enter username and password valid login
-    	And click button sign in
-    	And open appear greeting
-    	Then click button ok
-
 	Scenario: Dashboard user management
     	When click list user management
     	Then click menu user
- 
+
   
   Scenario: Add user supervisior
     	When click button add

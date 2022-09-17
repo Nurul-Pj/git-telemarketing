@@ -1,12 +1,5 @@
 Feature: Edit Data
 
-	Scenario: User valid login
-  		When User go to Web Telemarketing
-  		And User enter username and password valid login
-    	And click button sign in
-    	And open appear greeting
-    	Then click button ok
-
 	Scenario: Dashboard Data
     	When click list data
     	Then click menu edit data

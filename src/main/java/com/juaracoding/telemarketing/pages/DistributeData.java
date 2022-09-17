@@ -1,9 +1,7 @@
 package com.juaracoding.telemarketing.pages;
 
-import java.util.List;
-
-//import com.juaracoding.telemarketing.step_definitions.Hooks;
-import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -20,44 +18,34 @@ private WebDriver driver;
 		this.driver = DriverSingleton.getDriver();
 		PageFactory.initElements(driver, this);
 	}
-
-//	open dashboard
+	
+//	open dashboard data
 	@FindBy(xpath = "//h3[@id='ui-id-11']")
 	private WebElement listData;
 	
 	@FindBy(xpath = "//span[normalize-space()='Distribute Data']")
 	private WebElement distributeData;
-
-//	search field
+	
+//	pilih list for distribute data
 	
 	@FindBy(xpath = "//*[@id=\"ddcl-tl_distribute--52075_select\"]/span/div")
-	private WebElement fieldStatus;
+	private WebElement selectStatusOne;
 	
-	@FindBy(xpath = "//*[@id=\"tl_distribute--52078_verr\"]")
-	private WebElement bucketData;
+	@FindBy(xpath = "//*[@id=\"ddcl-tl_distribute--52078_select\"]/span")
+	private WebElement selectBuketData;
 	
-	@FindBy(xpath = "//*[@id=\"ddcl-tl_distribute--52066_select\"]/span/div")
-	private WebElement distribusiKe;
+	@FindBy(xpath = "//span[normalize-space()='View']")
+	private WebElement btnView;
 	
-	@FindBy(xpath = "//*[@id=\"tl_distribute--52070_text\"]")
-	private WebElement inputAgent;
-	
-	@FindBy(xpath = "//*[@id=\"tl_distribute--52079_text\"]")
-	private WebElement selectStatus;
-	
-	
-	
-	//*[@id="ddcl-tl_distribute--52066_select"]/span
-	
-//	checkbox status
-	@FindBy(xpath = "//*[@id=\"ddcl-tl_distribute--52075_select-ddw\"]/div/div[1]")
+//	list status
+	@FindBy(xpath = "//*[@id=\"ddcl-tl_distribute--52075_select-i0\"]")
 	private WebElement checkboxNew;
 	
 	@FindBy(xpath = "//*[@id=\"ddcl-tl_distribute--52075_select-ddw\"]/div/div[2]")
 	private WebElement checkboxBerhasil;
 	
 	@FindBy(xpath = "//*[@id=\"ddcl-tl_distribute--52075_select-ddw\"]/div/div[3]")
-	private WebElement checkboxFollowup;
+	private WebElement checkboxFollowUp;
 	
 	@FindBy(xpath = "//*[@id=\"ddcl-tl_distribute--52075_select-ddw\"]/div/div[4]")
 	private WebElement checkboxSalahSambung;
@@ -71,55 +59,103 @@ private WebDriver driver;
 	@FindBy(xpath = "//*[@id=\"ddcl-tl_distribute--52075_select-ddw\"]/div/div[7]")
 	private WebElement checkboxTolak;
 	
-//	checkbox buket data
-	@FindBy(xpath = "//*[@id=\"ddcl-tl_distribute--52078_select-ddw\"]/div/div[2]")
-	private WebElement checkboxAgent01;
+//	list buket data
+	@FindBy(xpath = "//*[@id=\"ddcl-tl_distribute--52078_select-ddw\"]/div/div[1]")
+	private WebElement checkboxNull;
 	
-	//*[@id="ddcl-tl_distribute--52066_select-ddw"]/div/div[2]
+	@FindBy(xpath = "//*[@id=\"ddcl-tl_distribute--52078_select-ddw\"]/div/div[2]")
+	private WebElement checkboxAgent;
 	
 	@FindBy(xpath = "//*[@id=\"ddcl-tl_distribute--52078_select-ddw\"]/div/div[3]")
 	private WebElement checkboxDeveloper;
 	
-	@FindBy(xpath = "//*[@id=\"ddcl-tl_distribute--52078_select-ddw\"]/div/div[4]")
-	private WebElement checkboxUhuy;
+//	distribusi
+	@FindBy(xpath = "//*[@id=\"ddcl-tl_distribute--52066_select\"]/span/div")
+	private WebElement selectDistribusiKe;
 	
-	@FindBy(xpath = "//*[@id=\"ddcl-tl_distribute--52078_select-ddw\"]/div/div[1]")
-	private WebElement checkboxNull;
+	@FindBy(xpath = "//*[@id=\"tl_distribute--52070_text\"]")
+	private WebElement jumlahAgent;
 	
-//	button
-	@FindBy(xpath = "//span[normalize-space()='View']")
-	private WebElement btnView;
+	@FindBy(xpath = "//*[@id=\"tl_distribute--52079_text\"]")
+	private WebElement selectStatusTwo;
 	
-	@FindBy(xpath = "//span[normalize-space()='Distribusi']")
+	@FindBy(xpath = "//*[@id=\"52065_query\"]/span")
 	private WebElement btnDistribusi;
 	
+	@FindBy(xpath = "/html/body/div[8]/div[3]/div/button[2]/span")
+	private WebElement btnYa;
 	
-	@FindBy(xpath = "//*[@id=\"ddcl-tl_distribute--52066_select\"]/span")
-	private WebElement distribusi;
-	
-	
-	@FindBy(xpath = "//input[@id='tl_distribute--52070_text']")
-	private WebElement jumlahDistribute;
-	
-	@FindBy(xpath = "//*[@id=\"ddcl-tl_distribute--52075_select\"]")
-	private WebElement status;
-	
-	@FindBy(xpath = "//*[@id=\"tl_distribute--52062_table\"]")
-	private WebElement tableUser;
-	
-	@FindBy(xpath = "//*[@id=\"tl_distribute--52062\"]/div[8]")
-	private WebElement entries;
-	
-	@FindBy(xpath = "//*[@id=\"tl_distribute--52062_table\"]/tbody/tr[1]/td[1]/table/tbody/tr/td")
-	private WebElement tableAdded;
-	
-	@FindBy(xpath = "//*[@id=\"nikita-form-dialog\"]")
-	private WebElement popUp;
-	
-	@FindBy(xpath = "//span[normalize-space()='OK']")
+	@FindBy(xpath = "/html/body/div[8]/div[3]/div/button/span")
 	private WebElement btnOke;
 	
 
+	@FindBy(xpath = "//*[@id=\"ddcl-tl_distribute--52066_select-i1\"]")
+	private WebElement checkboxDisAgent01;
+	
+	@FindBy(xpath = "//*[@id=\"ddcl-tl_distribute--52066_select-i0\"]")
+	private WebElement checkboxDisDeveloper;
+
+	
+//	validasi
+	@FindBy(xpath = "//*[@id=\"tl_distribute--52062_table\"]/tbody/tr[1]/td[1]/table/tbody/tr/td")
+	private WebElement validasiTable;
+	
+	@FindBy(xpath = "//*[@id=\"tl_distribute--52062\"]/div[8]")
+	private WebElement noEntries;
+	
+//	choose list new, null
+	public void chooseNew() {
+		checkboxTolak.click();
+		checkboxNew.click();
+	}
+	
+//	choose list berhasil, null	
+	public void chooseBerhasil() {
+		checkboxNew.click();
+		checkboxBerhasil.click();
+	}
+	
+//	choose list followup, null
+	public void chooseFollowUp() {
+		checkboxBerhasil.click();
+		checkboxFollowUp.click();
+	}
+	
+//	choose list salah sambung, null
+	public void chooseSalahSambung() {
+		checkboxFollowUp.click();
+		checkboxSalahSambung.click();
+	}
+	
+//	choose list setuju, null
+	public void chooseSetuju() {
+		checkboxSalahSambung.click();
+		checkboxSetuju.click();
+	}
+	
+//	choose list tidak berhasil, null
+	public void chooseTidakBerhasil() {
+		checkboxSetuju.click();
+		checkboxTidakBerhasil.click();
+	}
+	
+//	choose list tolak, null
+	public void chooseTolak() {
+		checkboxTidakBerhasil.click();
+		checkboxTolak.click();
+	}
+	
+//	choose list new, agent
+	public void chooseNull() {
+		checkboxNull.click();
+	}
+	
+	public void chooseAgent() {
+		checkboxNull.click();
+		checkboxAgent.click();
+	}
+	
+	
 	
 //	open dashboard
 	public void listData() {
@@ -130,199 +166,67 @@ private WebDriver driver;
 		distributeData.click();
 	}
 	
-	public void clickStatus() {
-		fieldStatus.click();
+//	pilih list for distribute data
+	public void selectStatusOne() {
+		selectStatusOne.click();
 	}
 	
-	public void clickBuketData() {
-		bucketData.click();
+	public void selectBuketData() {
+		selectBuketData.click();
 	}
 	
-	public void clickDistribusi() {
-		distribusiKe.click();
-	}
-	
-	public void inputAgent(String jumlahAgent) {
-		this.inputAgent.sendKeys(jumlahAgent);
-	}
-	
-	public void chooseDistribusiKe(String pilihAgent) {
-		if(pilihAgent.equalsIgnoreCase("agent01")) {
-			checkboxAgent01.click();
-			delay(1);
-		}
-	}
-	
-	public void NewAgent() {
-		checkboxNew.click();
-		delay(1);
-		checkboxAgent01.click();
-	}
-	
-	public void chooseStatus(String pilihStatus) {
-		if(pilihStatus.equalsIgnoreCase("Berhasil")) {
-			checkboxNew.click();
-			checkboxBerhasil.click();
-			delay(1);
-		}
-		else if (pilihStatus.equalsIgnoreCase("Follow up")) {
-			checkboxBerhasil.click();
-			checkboxFollowup.click();
-			delay(1);
-		}
-		else if (pilihStatus.equalsIgnoreCase("Salah sambung")) {
-			checkboxFollowup.click();
-			checkboxSalahSambung.click();
-			delay(1);
-		}
-		else if (pilihStatus.equalsIgnoreCase("Setuju")) {
-			checkboxSalahSambung.click();
-			checkboxSetuju.click();
-			delay(1);
-		}
-		else if (pilihStatus.equalsIgnoreCase("Tidak berhasil")) {
-			checkboxSetuju.click();
-			checkboxTidakBerhasil.click();
-			delay(1);
-		}
-		else if (pilihStatus.equalsIgnoreCase("Tolak")) {
-			checkboxTidakBerhasil.click();
-			checkboxTolak.click();
-			delay(1);
-		}
-		else if (pilihStatus.equalsIgnoreCase("null")) {
-			checkboxTolak.click();
-			delay(1);
-		}
-	}
-	
-	public void chooseStatusDua(String pilihStatusDua) {
-		if(pilihStatusDua.equalsIgnoreCase("New")) {
-			checkboxTolak.click();
-			checkboxNew.click();
-			delay(1);
-		}
-		else if (pilihStatusDua.equalsIgnoreCase("Berhasil")) {
-			checkboxNew.click();
-			checkboxBerhasil.click();
-			delay(1);
-		}
-		else if (pilihStatusDua.equalsIgnoreCase("Follow up")) {
-			checkboxBerhasil.click();
-			checkboxFollowup.click();
-			delay(1);
-		}
-		else if (pilihStatusDua.equalsIgnoreCase("Salah sambung")) {
-			checkboxFollowup.click();
-			checkboxSalahSambung.click();
-			delay(1);
-		}
-		else if (pilihStatusDua.equalsIgnoreCase("Setuju")) {
-			checkboxSalahSambung.click();
-			checkboxSetuju.click();
-			delay(1);
-		}
-		else if (pilihStatusDua.equalsIgnoreCase("Tidak berhasil")) {
-			checkboxSetuju.click();
-			checkboxTidakBerhasil.click();
-			delay(1);
-		}
-		else if (pilihStatusDua.equalsIgnoreCase("Tolak")) {
-			checkboxTidakBerhasil.click();
-			checkboxTolak.click();
-			delay(1);
-		}
-	}
-		
-	
-	public void chooseBuketData(String pilihBuketData) {
-		if(pilihBuketData.equalsIgnoreCase("Agent01")) {
-			checkboxNull.click();
-			checkboxAgent01.click();
-		}
-
-	}
-	
-	public void chooseStatusDistribusi(String distribusiStat) {
-		Select distribusiField = new Select(status);
-		if(distribusiStat.equalsIgnoreCase("New")){
-			distribusiField.selectByIndex(1);
-		}
-		else if(distribusiStat.equalsIgnoreCase("Existing")){
-			distribusiField.selectByIndex(0);
-		}
-	}
-	
-	public void fieldDistribusiStatus(String distribusiStat) {
-		chooseStatusDistribusi(distribusiStat);
-	}
-	
-	public void fieldStatus(String pilihAgent) {
-		chooseDistribusiKe(pilihAgent);
-	}
-	
-	public void listStatus(String pilihStatus) {
-		chooseStatus(pilihStatus);
-	}
-	
-	public void listBuketData(String pilihBuketData) {
-		chooseBuketData(pilihBuketData);
-	}
-
-	
-	public void clickBtnView() {
+	public void clickBtnBiew() {
 		btnView.click();
+	}
+	
+//	distribusi ke
+	public void clickDistribusiKe() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,-300)");
+		selectDistribusiKe.click();
+	}
+	
+	public void chooseDisDeveloper() {
+		checkboxDisDeveloper.click();
+	}
+	
+	public void chooseDisAgent() {
+		checkboxDisAgent01.click();
+	}
+	
+	public void inputJumlahAgent(String jumlahAgent) {
+		this.jumlahAgent.sendKeys(jumlahAgent);
+	}
+	
+	public void deleteJumlahAgent() {
+		jumlahAgent.sendKeys(Keys.CONTROL+"A");
+		jumlahAgent.sendKeys(Keys.BACK_SPACE+"A");
+	}
+	
+	
+	public void pilihStatus() {
+		Select statusOpt = new Select (selectStatusTwo);
+		statusOpt.selectByValue("NEW");
 	}
 	
 	public void clickBtnDistribusi() {
 		btnDistribusi.click();
 	}
 	
-	public String getTxtValidate() {
-		return tableAdded.getText();
-	}
-	
-	public String getTxtEntries() {
-		return entries.getText();
-	}
-	
-	public String appearGreeting() {
-		return popUp.getText();
+	public void clickBtnYa() {
+		btnYa.click();
 	}
 	
 	public void clickBtnOke() {
 		btnOke.click();
-		delay(1);
 	}
 	
-	public boolean validateUser() {
-		int temp = 0;
-		
-		List<WebElement> totalRows =tableUser.findElements(By.tagName("tr"));
-		int rowsCount = totalRows.size();
-		
-		for (int row=0; row<rowsCount;row++) {
-			List<WebElement> columns_row = totalRows.get(row).findElements(By.tagName("td"));
-			int columns_count = columns_row.size();
-             
-			for (int column=0; column<columns_count; column++){
-       
-             }
-		}
-		
-		if (temp>0) {
-			return true;
-		} else {return false;}
-		
+//	validasi
+	public String getValidate() {
+		return validasiTable.getText();
 	}
 	
-	static void delay(int detik) {
-		try {
-			Thread.sleep(1000*detik);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
+	public String getNoEntries() {
+		return noEntries.getText();	}
 	
 }
