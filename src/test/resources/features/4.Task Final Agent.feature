@@ -2,10 +2,6 @@ Feature: Task New Agent
 
 
   Scenario: Halaman dashboard telemarketing
-  	When User go to Web Telemarketing
-  	And User enter username ignore letter case and password valid
-    And User click button sign in
-    And User click button ok
     And User click task
     And User click final
     Then Page final

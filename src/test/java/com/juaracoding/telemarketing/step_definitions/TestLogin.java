@@ -116,7 +116,7 @@ public class TestLogin {
 	
 	@And("User enter username ignore letter case and password valid" )
 	public void user_enter_username_ignorelettercase_and_password_valid() {	
-		loginAgent.login("developer", "23");
+		loginAgent.login("AgeNt01", "1");
 		delay(2);
 		extentTest.log(LogStatus.PASS, "User enter username password valid");
 	}
