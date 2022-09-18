@@ -11,6 +11,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
 
 public class TestReportAgree {
+	
 	public static WebDriver driver;
 	public static ExtentTest extentTest;
 	private ReportAgree reportAgree = new ReportAgree();
@@ -92,18 +93,19 @@ public class TestReportAgree {
 	}
 	
 	@And("User click button show page agree")
-	public void user_click_button_show_page_agree() {		
+	public void user_click_button_show_page_agree() {
+		scroll(300);
 		reportAgree.clickShowPage();
 		extentTest.log(LogStatus.PASS, "User click show page");
 	}
 	
 	
-//	@And("User click button export agree")
-//	public void user_click_button_export_agree() {
-//		delay(2);
-//		reportAgree.btnExport();
-//		extentTest.log(LogStatus.PASS, "User click button export");
-//	}
+	@And("User click button export agree")
+	public void user_click_button_export_agree() {
+		delay(2);
+		reportAgree.btnExport();
+		extentTest.log(LogStatus.PASS, "User click button export");
+	}
 	
 
 	static void delay(int detik) {

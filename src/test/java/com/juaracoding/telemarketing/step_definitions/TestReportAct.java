@@ -49,18 +49,8 @@ public class TestReportAct {
 	public void user_choose_agent() {
 		delay(2);
 		reportAct.btnView();
-		extentTest.log(LogStatus.PASS, "User choose agent");
-	}
-	
-	@And("User choose date act invalid")
-	public void user_choose_date_act_invalid() {
 		delay(2);
-		reportAct.tableDateAct1();
-		delay(1);
-		reportAct.tableDateAct2();
-		delay(1);
-		reportAct.btnView();
-		extentTest.log(LogStatus.PASS, "User choose date act invalid");
+		extentTest.log(LogStatus.PASS, "User choose agent");
 	}
 	
 	@And("User choose date act")
@@ -83,12 +73,12 @@ public class TestReportAct {
 		extentTest.log(LogStatus.PASS, "User click button view act");
 	}
 	
-//	@And("User click button export act")
-//	public void user_click_button_export_act() {
-//		delay(2);
-//		reportAct.btnExport();
-//		extentTest.log(LogStatus.PASS, "User click button export");
-//	}
+	@And("User click button export act")
+	public void user_click_button_export_act() {
+		delay(2);
+		reportAct.btnExport();
+		extentTest.log(LogStatus.PASS, "User click button export");
+	}
 	
 	@And("User click button show page act")
 	public void user_click_button_show_page_act() {		

@@ -38,7 +38,7 @@ public class TestTaskAgree {
 		@And("User click search")
 		public void user_click_search() {
 			delay(2);
-			taskAgree.search("outfit.bekasan");
+			taskAgree.search();
 			extentTest.log(LogStatus.PASS, "User click search");
 		}
 				
@@ -59,7 +59,7 @@ public class TestTaskAgree {
 		@And("User isi link")
 		public void user_isi_link() {
 			delay(2);
-			taskAgree.isiLink("outfit.bekasan");
+			taskAgree.isiLink();
 			extentTest.log(LogStatus.PASS, "User isi link");
 		}
 		

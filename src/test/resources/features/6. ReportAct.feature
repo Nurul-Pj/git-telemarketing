@@ -6,9 +6,8 @@ Feature: Report Activity
   	And User click report activity
   	And User click button agent
   	And User choose agent
-  	And User choose date act invalid
   	And User choose date act
   	And User click button view act
   	And User click show page act
-  #	And User click button export act
+  	And User click button export act
   	Then User click profile

@@ -35,6 +35,7 @@ public class TestTaskFinal {
 				extentTest.log(LogStatus.PASS, "User click final");
 			}
 			
+			
 			@And("User click next page final")
 			public void user_click_next_page_final() {		
 				taskFinal.clickNextPage();
@@ -73,8 +74,6 @@ public class TestTaskFinal {
 				delay(3);
 				extentTest.log(LogStatus.PASS, "User click button search");
 			}
-			
-			
 			
 			@And("User click button show page final")
 			public void user_click_button_show_page_final() {		

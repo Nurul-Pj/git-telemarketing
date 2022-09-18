@@ -11,6 +11,6 @@ Feature: Report Agree
   	And User click previous page
   	And User click last page
   	And User click first page
-  	And User click button show page agree
+  	And User click button show page agree	
   	And User click button export agree
   	Then User click profile

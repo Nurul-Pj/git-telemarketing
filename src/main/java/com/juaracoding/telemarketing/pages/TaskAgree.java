@@ -10,6 +10,7 @@ import com.juaracoding.telemarketing.drivers.DriverSingleton;
 public class TaskAgree {
 
 	private WebDriver driver;
+	String idName = "somaybohay";
 	
 	public TaskAgree() {
 		this.driver = DriverSingleton.getDriver();
@@ -48,10 +49,8 @@ public class TaskAgree {
 		btnTaskAgree.click();
 	}
 	
-	public void search(String id) {
-//		inputSearch.click();
-
-		this.inputSearch.sendKeys(id);
+	public void search() {
+		this.inputSearch.sendKeys(idName);
 	}
 	
 	public void btnSearch() {
@@ -62,9 +61,8 @@ public class TaskAgree {
 		btnChooseFile.click();
 	}
 	
-	public void isiLink(String id) {
-//		isiLink.click();
-		this.isiLink.sendKeys(id);
+	public void isiLink() {
+		this.isiLink.sendKeys("www."+idName+".com");
 	}
 	
 	public void btnSimpan() {

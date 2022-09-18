@@ -61,7 +61,6 @@ private WebDriver driver;
 	
 	public void btnAgent() {
 		btnChooseAgent.click();
-		delay(2);
 		btnAgent01.click();
 	}
 	

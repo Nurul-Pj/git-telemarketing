@@ -25,7 +25,6 @@ private WebDriver driver;
 	private WebElement btnUploadData;
 	//input[@id='tl_upload_new--52043_text']
 	//input[@id='tl_upload_new--52043']
-	//input[@id='52043']
 	@FindBy(xpath = "//input[@type='file']")
 	private WebElement btnChooseFile;
 	
@@ -50,22 +49,16 @@ private WebDriver driver;
 	}
 	
 	public void btnChooseFileInvalid() {
-//		btnChooseFile.click();
 		File file = new File("Ujicoba invalid.docx");
-		//this.btnChooseFile.sendKeys("C:\\Users\\HP\\Downloads\\Uji coba invalid.docx");
-		System.out.println("HOIIIII"+file.getAbsolutePath());
+		System.out.println("InvalidData"+file.getAbsolutePath());
 		btnChooseFile.sendKeys(file.getAbsolutePath());
-//		btnChooseFile.click();
 	}
 	
 	
 	public void btnChooseFileValid() {
-//		btnChooseFile.click();
 		File file = new File("contoh data KP.xlsx");
-		//this.btnChooseFile.sendKeys("C:\\Users\\HP\\Downloads\\Uji coba invalid.docx");
-		System.out.println("HOIIIII"+file.getAbsolutePath());
+		System.out.println("ValidData"+file.getAbsolutePath());
 		btnChooseFile.sendKeys(file.getAbsolutePath());
-//		this.btnChooseFile.sendKeys("C:\\Users\\HP\\Downloads\\contoh data KP.xlsx");
 	}
 	
 	public void btnUploadFile() {
