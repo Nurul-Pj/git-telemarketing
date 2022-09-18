@@ -14,12 +14,15 @@ Feature: Task New Agent
    	Then Page search in follow up
    	
    	And User click follow up
+   	
+  Scenario: Show page (Follow Up)
+  	When User click show page in follow up
    
-  Scenario: Next page (Follow Up)
-  	When User click next page in follow up
-  	When User click previous page in follow up
-  	When User click last page in follow up
-  	When User click first page in follow up 
+  #Scenario: Next page (Follow Up)
+  #	When User click next page in follow up
+  #	When User click previous page in follow up
+  #	When User click last page in follow up
+  #	When User click first page in follow up 
     
   Scenario: Click activity (Follow Up) 	
     When User click data in follow up
@@ -245,9 +248,9 @@ Feature: Task New Agent
   Scenario: Input field wa invalid (number phone wa input by alphabet) (Follow Up) 	
   	And User input WA invalid
   	And User click send wa
+    And User click close acitivity
     
-  Scenario: Show page (Follow Up)
-  	When User click show page in follow up
+  
     
     
   

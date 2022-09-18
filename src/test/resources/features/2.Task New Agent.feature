@@ -15,11 +15,15 @@ Feature: Task New Agent
    	
    	And User click new
    
-  Scenario: Next page (Task New) 
-  	When User click next page
-  	When User click previous page
-  	When User click last page
-  	When User click first page  
+   
+  Scenario: Show page (Task New)
+  	When User click show page
+  
+  #Scenario: Next page (Task New) 
+  #	When User click next page
+  #	When User click previous page
+  #	When User click last page
+  #	When User click first page  
     
   Scenario: Click activity (Task New)	
     When User click data
@@ -246,9 +250,9 @@ Feature: Task New Agent
   Scenario: Input field wa invalid (number phone wa input by alphabet) (Task New)	
   	And User input WA invalid
   	And User click send wa
+  	And User click close acitivity
     
-  Scenario: Show page (Task New)
-  	When User click show page
+
     
     
     

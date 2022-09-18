@@ -15,11 +15,11 @@ Feature: Task New Agent
    	
    	And User click final
    
-  Scenario: Next page (Final)
-  	When User click next page in final
-  	When User click previous page in final
-  	When User click last page in final
-  	When User click first page in final
+  #Scenario: Next page (Final)
+  #	When User click next page in final
+  #	When User click previous page in final
+  #	When User click last page in final
+  #	When User click first page in final
     
   Scenario: Click activity (Final)	
     When User click data in final

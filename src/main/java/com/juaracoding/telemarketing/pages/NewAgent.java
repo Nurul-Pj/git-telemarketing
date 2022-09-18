@@ -47,7 +47,7 @@ public class NewAgent {
 	@FindBy(xpath = "//*[@id=\"tl_data_new--52967\"]/div[4]/ul/li[2]/a")
 	private WebElement prevPage;
 
-	@FindBy(xpath = "//*[@id=\"tl_data_new--52967\"]/div[4]/ul/li[7]/a")
+	@FindBy(xpath = "//*[@id=\"tl_data_new--52967\"]/div[4]/ul/li[5]/a")
 	private WebElement lastPage;
 
 	@FindBy(xpath = "//*[@id=\"tl_data_new--52967_page\"]")
@@ -132,7 +132,7 @@ public class NewAgent {
 		pageSelect4.selectByValue("500");
 		delay(1);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(-700,0)");
+		js.executeScript("window.scrollBy(0,-700)");
 	}
 
 	

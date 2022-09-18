@@ -122,6 +122,8 @@ public class FinalAgent {
 		Select pageSelect4 = new Select(showPage);
 		pageSelect4.selectByValue("500");
 		delay(1);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,-700)");
 	}
 
 	

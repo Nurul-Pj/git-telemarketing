@@ -3,6 +3,7 @@ package com.juaracoding.telemarketing.step_definitions;
 
 import static org.testng.Assert.assertTrue;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
 import com.juaracoding.telemarketing.pages.Activity;
@@ -77,6 +78,14 @@ public class TestNewAgent{
 		activityAgent.deleteFieldWa();
 		activityAgent.phoneWaInvalid("aoskwosw", "Hallo");
 		extentTest.log(LogStatus.PASS, "User input WA");
+	}
+	
+	@And("User click close acitivity")
+	public void user_click_close_acitivty() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,-700)");
+		activityAgent.clickBtnCloseActivity();
+		extentTest.log(LogStatus.PASS, "User click close activity");
 	}
 	
 	@And("User click send wa")

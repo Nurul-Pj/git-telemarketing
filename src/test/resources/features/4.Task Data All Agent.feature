@@ -12,8 +12,14 @@ Feature: Task New Agent
  	Scenario: Click search (Data All)  
    	And User click search in data all
    	Then Page search in data all
-   	
+
    	And User click data all
+   	
+ #Scenario: Next page (Data All)
+  #	When User click next page in data all
+  #	When User click previous page in data all
+  #	When User click last page in data all
+  #	When User click first page in data all
    	
   Scenario: Filter search null (Data All)  
   	And Choose filter form with "AGENT01" as agent and "null" as status
@@ -367,11 +373,10 @@ Feature: Task New Agent
   Scenario: Input field wa invalid (number phone wa input by alphabet) (Data All)   	
   	And User input WA invalid
   	And User click send wa
+  	 And User click close acitivity
     
   Scenario: Show page (Data All)  
   	When User click show page in data all
-  
-    
 
     
  

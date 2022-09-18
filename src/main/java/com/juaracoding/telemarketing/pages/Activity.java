@@ -80,6 +80,15 @@ public class Activity{
 	@FindBy(xpath = "//*[@id=\"nikita-form-dialog\"]/p")
 	private WebElement popUpKonfirmasiPhone;
 
+	@FindBy(xpath = "/html/body/div[9]/div[1]/div/button/span[1]")
+	private WebElement btnCloseActivity;
+	
+	
+	
+	public void clickBtnCloseActivity() {
+		btnCloseActivity.click();
+		delay(1);
+	}
 	
 	// -------------------------DASHBOARD DEV--------------------------------
 	public void clickBtnTaskDev() {

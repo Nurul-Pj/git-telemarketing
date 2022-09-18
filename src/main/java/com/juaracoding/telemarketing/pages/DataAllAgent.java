@@ -183,7 +183,7 @@ public class DataAllAgent {
 		pageSelect4.selectByValue("500");
 		delay(1);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,-300)");
+		js.executeScript("window.scrollBy(0,-700)");
 	}
 
 	
