@@ -1,12 +1,16 @@
 Feature: Task Agree Dev
 
-Scenario: User task agree
+Scenario: Dashboard Task
   	When Pilih menu task
   	And User click agree
-  	And User click search
+  	
+ Scenario: Search data agree
+  	When User click search
   	And User click button search
-  	And User click file
+  	
+ Scenario: Isi field link
+  	When User click file
   	And User isi link
   	And User click simpan
-  	And User click button oke
+  	Then User click button oke
     

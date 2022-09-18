@@ -8,6 +8,7 @@ import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class TestReportAgree {
@@ -36,7 +37,7 @@ public class TestReportAgree {
 		extentTest.log(LogStatus.PASS, "User click report agree");
 	}
 	
-	@And("User choose date agree invalid")
+	@When("User choose date agree invalid")
 	public void user_choose_date_agree_invalid() {
 		delay(2);
 		reportAgree.tableDateAgree1();
@@ -47,7 +48,7 @@ public class TestReportAgree {
 		extentTest.log(LogStatus.PASS, "User choose date agree invalid");
 	}
 	
-	@And("User choose date agree")
+	@When("User choose date agree")
 	public void user_choose_date_agree() {
 		delay(2);
 		reportAgree.tableDateAgree1();
@@ -60,7 +61,7 @@ public class TestReportAgree {
 		extentTest.log(LogStatus.PASS, "User choose date agree");
 	}
 	
-	@And("User click button view agree")
+	@Then("User click button view agree")
 	public void user_click_button_view_agree() {
 		delay(2);
 		reportAgree.btnView();
@@ -68,7 +69,7 @@ public class TestReportAgree {
 		extentTest.log(LogStatus.PASS, "User click button view");
 	}
 	
-	@And("User click next page")
+	@When("User click next page")
 	public void user_click_next_page() {		
 		reportAgree.clickNextPage();
 		extentTest.log(LogStatus.PASS, "User click next page");
@@ -92,7 +93,7 @@ public class TestReportAgree {
 		extentTest.log(LogStatus.PASS, "User click first page");
 	}
 	
-	@And("User click button show page agree")
+	@When("User click button show page agree")
 	public void user_click_button_show_page_agree() {
 		scroll(300);
 		reportAgree.clickShowPage();
@@ -100,7 +101,7 @@ public class TestReportAgree {
 	}
 	
 	
-	@And("User click button export agree")
+	@When("User click button export agree")
 	public void user_click_button_export_agree() {
 		delay(2);
 		reportAgree.btnExport();

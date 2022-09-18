@@ -10,7 +10,7 @@ import com.juaracoding.telemarketing.drivers.DriverSingleton;
 public class TaskAgree {
 
 	private WebDriver driver;
-	String idName = "somaybohay";
+	String idName = "AyamBakarIpul";
 	
 	public TaskAgree() {
 		this.driver = DriverSingleton.getDriver();

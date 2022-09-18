@@ -39,7 +39,7 @@ public class TaskFinal {
 	@FindBy(xpath = "//*[@id=\"tl_final--52231\"]/div[4]/ul/li[2]/a")
 	private WebElement prevPage;
 	
-	@FindBy(xpath = "//*[@id=\"tl_final--52231\"]/div[4]/ul/li[5]/a")
+	@FindBy(xpath = "//*[@id=\"tl_final--52231\"]/div[4]/ul/li[6]/a")
 	private WebElement lastPage;
 
 	@FindBy(xpath = "//*[@id=\"tl_final--52231_page\"]")

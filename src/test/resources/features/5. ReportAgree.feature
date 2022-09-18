@@ -1,16 +1,25 @@
 Feature: Report Agree
 
   @tag1
-  Scenario: Report Agree
+  Scenario: Dashboard Report
     When Pilih menu report1
   	And User click report agree
-  	And User choose date agree invalid
-  	And User choose date agree
-  	And User click button view agree
-  	And User click next page
+  	
+  Scenario: Choose date agree invalid
+  	When User choose date agree invalid
+  	
+  Scenario: Choose date agree valid
+  	When User choose date agree
+  	Then User click button view agree
+  	
+  Scenario: Pindah halaman agree
+  	When User click next page
   	And User click previous page
   	And User click last page
   	And User click first page
-  	And User click button show page agree	
-  	And User click button export agree
-  	Then User click profile
+  	
+  Scenario: Show page agree
+  	When User click button show page agree
+  	
+  Scenario: Export agree	
+  	When User click button export agree

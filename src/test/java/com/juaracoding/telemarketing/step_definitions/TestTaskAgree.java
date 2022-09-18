@@ -7,6 +7,7 @@ import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class TestTaskAgree {
@@ -35,7 +36,7 @@ public class TestTaskAgree {
 			extentTest.log(LogStatus.PASS, "User click agree");
 		}
 				
-		@And("User click search")
+		@When("User click search")
 		public void user_click_search() {
 			delay(2);
 			taskAgree.search();
@@ -49,7 +50,7 @@ public class TestTaskAgree {
 			extentTest.log(LogStatus.PASS, "User click button search");
 		}
 		
-		@And("User click file")
+		@When("User click file")
 		public void user_click_file() {
 			delay(2);
 			taskAgree.btnChooseFile();
@@ -70,7 +71,7 @@ public class TestTaskAgree {
 			extentTest.log(LogStatus.PASS, "User click simpan");
 		}
 		
-		@And("User click button oke")
+		@Then("User click button oke")
 		public void user_click_button_oke() {
 			delay(2);
 			taskAgree.clickBtnClose();

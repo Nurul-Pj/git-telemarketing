@@ -7,6 +7,7 @@ import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class TestTaskFinal {
@@ -19,16 +20,8 @@ public class TestTaskFinal {
 		driver = Hooks.driver;
 		extentTest = Hooks.extentTest;
 	}
-	
-	//Task Final Dev
-			@When("Pilih menu final")
-			public void pilih_menu_final() {
-				delay(2);
-				taskFinal.btnTask();
-				extentTest.log(LogStatus.PASS, "Pilih menu final");
-			}
 					
-			@And("User click final")
+			@When("User click final")
 			public void user_click_final() {
 				delay(2);
 				taskFinal.btnTaskFinal();
@@ -36,7 +29,7 @@ public class TestTaskFinal {
 			}
 			
 			
-			@And("User click next page final")
+			@When("User click next page final")
 			public void user_click_next_page_final() {		
 				taskFinal.clickNextPage();
 				extentTest.log(LogStatus.PASS, "User click next page final");
@@ -60,14 +53,14 @@ public class TestTaskFinal {
 				extentTest.log(LogStatus.PASS, "User click first page final");
 			}
 					
-			@And("User click search final")
+			@When("User click search final")
 			public void user_click_search_final() {
 				delay(2);
 				taskFinal.search("cocabakes_husain2");
 				extentTest.log(LogStatus.PASS, "User click search_final");
 			}
 					
-			@And("User click button search final")
+			@Then("User click button search final")
 			public void user_click_button_search_final() {
 				delay(2);
 				taskFinal.btnSearch();
@@ -75,7 +68,7 @@ public class TestTaskFinal {
 				extentTest.log(LogStatus.PASS, "User click button search");
 			}
 			
-			@And("User click button show page final")
+			@When("User click button show page final")
 			public void user_click_button_show_page_final() {		
 				taskFinal.clickShowPage();
 				extentTest.log(LogStatus.PASS, "User click show page final");

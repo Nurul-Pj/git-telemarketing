@@ -27,7 +27,7 @@ private WebDriver driver;
 	@FindBy(xpath = "//*[@id=\"ddcl-tl_perform_report--51789_select\"]/span")
 	private WebElement btnChooseAgent;
 	
-	@FindBy(xpath = "//label[@for='ddcl-tl_perform_report--51789_select-i1']")
+	@FindBy(xpath = "//label[@for='ddcl-tl_perform_report--51789_select-i2']")
 	private WebElement btnAgent01;
 	
 	@FindBy(xpath = "//*[@id=\"tl_perform_report--51781_text\"]")

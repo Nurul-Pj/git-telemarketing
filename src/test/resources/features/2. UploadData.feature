@@ -1,12 +1,16 @@
- Feature: Login Developer
+ Feature: Upload Data Developer
     
- Scenario: Upload data invalid
+ Scenario: Dashboard Data
   	When Pilih menu data
   	And User click upload data invalid
-  	And User click choose file invalid
-  	And User click button upload invalid
+  	
+  Scenario: Choose data invalid
+  	When User click choose file invalid
+  	
+  Scenario: Upload data button invalid
+  	When User click button upload invalid
   
-  Scenario: Upload data valid
-  	And User click choose file valid
+  Scenario: Choose data valid
+  	When User click choose file valid
   	And User click button upload valid
-  	And User click Simpan valid
+  	Then User click Simpan valid

@@ -22,23 +22,15 @@ public class TestReportAct {
 		driver = Hooks.driver;
 		extentTest = Hooks.extentTest;
 	}
-	
-	//Task Report
-	@When("Pilih menu report2")
-	public void pilih_menu_report2() {
-		delay(2);
-		reportAct.btnReport();
-		extentTest.log(LogStatus.PASS, "Pilih menu report");
-	}
 			
-	@And("User click report activity")
+	@When("User click report activity")
 	public void user_click_report_activity() {
 		delay(2);
 		reportAct.btnReportAct();
 		extentTest.log(LogStatus.PASS, "User click report activity");
 	}
 	
-	@And("User click button agent")
+	@When("User click button agent")
 	public void user_click_button_agent() {
 		delay(2);
 		reportAct.btnAgent();
@@ -53,7 +45,7 @@ public class TestReportAct {
 		extentTest.log(LogStatus.PASS, "User choose agent");
 	}
 	
-	@And("User choose date act")
+	@When("User choose date act")
 	public void user_choose_date_act() {
 		delay(2);
 		reportAct.tableDateAct1();
@@ -73,18 +65,19 @@ public class TestReportAct {
 		extentTest.log(LogStatus.PASS, "User click button view act");
 	}
 	
-	@And("User click button export act")
+	@When("User click show page act")
+	public void user_click_show_page_act() {		
+		reportAct.clickShowPage();
+		extentTest.log(LogStatus.PASS, "User click show page act");
+	}
+	
+	@When("User click button export act")
 	public void user_click_button_export_act() {
 		delay(2);
 		reportAct.btnExport();
 		extentTest.log(LogStatus.PASS, "User click button export");
 	}
 	
-	@And("User click button show page act")
-	public void user_click_button_show_page_act() {		
-		reportAct.clickShowPage();
-		extentTest.log(LogStatus.PASS, "User click show page act");
-	}
 	
 //	Logout
 	@Then("User click profile")

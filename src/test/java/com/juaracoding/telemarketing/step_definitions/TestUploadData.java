@@ -36,7 +36,7 @@ public class TestUploadData {
 		extentTest.log(LogStatus.PASS, "User click upload data invalid");
 	}
 			
-	@And("User click choose file invalid")
+	@When("User click choose file invalid")
 	public void user_click_choose_file_invalid() {
 		delay(2);
 		uploadData.btnChooseFileInvalid();
@@ -44,7 +44,7 @@ public class TestUploadData {
 		extentTest.log(LogStatus.PASS, "User click choose file invalid");
 	}
 			
-	@And("User click button upload invalid")
+	@When("User click button upload invalid")
 	public void user_click_button_upload_invalid() {
 		delay(2);
 		uploadData.btnUploadFile();
@@ -54,7 +54,7 @@ public class TestUploadData {
 	}
 			
 	//UploadData valid
-	@And("User click choose file valid")
+	@When("User click choose file valid")
 	public void user_click_choose_file_valid() {
 		delay(2);
 		uploadData.btnChooseFileValid();
