@@ -15,12 +15,6 @@ Feature: Task New Agent
 
    	And User click data all
    	
- #Scenario: Next page (Data All)
-  #	When User click next page in data all
-  #	When User click previous page in data all
-  #	When User click last page in data all
-  #	When User click first page in data all
-   	
   Scenario: Filter search null (Data All)  
   	And Choose filter form with "AGENT01" as agent and "null" as status
    	And User click search in data all
@@ -140,11 +134,11 @@ Feature: Task New Agent
    	And User click search in data all
    	Then Page data all
    
-  Scenario: Next page (Data All)
-  	When User click next page in data all
-  	When User click previous page in data all
-  	When User click last page in data all
-  	When User click first page in data all
+  #Scenario: Next page (Data All)
+  #	When User click next page in data all
+  #	When User click previous page in data all
+  #	When User click last page in data all
+  #	When User click first page in data all
     
   Scenario: Click activity (Data All)	
     When User click data in final
@@ -366,14 +360,14 @@ Feature: Task New Agent
     Then Popup konfirmasi
     And User click konfirmasi Ok
     
-  Scenario: Input field wa (Data All)  
-  	When User input WA valid
-  	And User click send wa
-  	
-  Scenario: Input field wa invalid (number phone wa input by alphabet) (Data All)   	
-  	And User input WA invalid
-  	And User click send wa
-  	 And User click close acitivity
+  #Scenario: Input field wa (Data All)  
+  #	When User input WA valid
+  #	And User click send wa
+  #	
+  #Scenario: Input field wa invalid (number phone wa input by alphabet) (Data All)   	
+  #	And User input WA invalid
+  #	And User click send wa
+  #	 And User click close acitivity
     
   Scenario: Show page (Data All)  
   	When User click show page in data all

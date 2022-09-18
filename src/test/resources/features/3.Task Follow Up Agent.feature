@@ -241,14 +241,14 @@ Feature: Task New Agent
     Then Popup konfirmasi
     And User click konfirmasi Ok
     
-  Scenario: Input field wa (Follow Up)
-  	When User input WA valid
-  	And User click send wa
-  	
-  Scenario: Input field wa invalid (number phone wa input by alphabet) (Follow Up) 	
-  	And User input WA invalid
-  	And User click send wa
-    And User click close acitivity
+  #Scenario: Input field wa (Follow Up)
+  #	When User input WA valid
+  #	And User click send wa
+  #	
+  #Scenario: Input field wa invalid (number phone wa input by alphabet) (Follow Up) 	
+  #	And User input WA invalid
+  #	And User click send wa
+    #And User click close acitivity
     
   
     

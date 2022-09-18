@@ -139,8 +139,8 @@ public class TestNewAgent{
 	
 	
 	//-------------------------STATUS ACITIVITY--------------------------------
-	@When("User click data" )
-	public void user_click_data() {		
+	@When("User click data in new" )
+	public void user_click_data_in_new() {		
 		newAgent.clickData();
 		extentTest.log(LogStatus.PASS, "User click data");
 	}

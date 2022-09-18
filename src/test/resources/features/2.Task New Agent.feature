@@ -26,7 +26,7 @@ Feature: Task New Agent
   #	When User click first page  
     
   Scenario: Click activity (Task New)	
-    When User click data
+    When User click data in new
     Then Page activity
 
   Scenario: Input status acitivity invalid (Task New)
@@ -243,14 +243,14 @@ Feature: Task New Agent
     Then Popup konfirmasi
     And User click konfirmasi Ok
     
-  Scenario: Input field wa (Task New) 
-  	When User input WA valid
-  	And User click send wa
-  	
-  Scenario: Input field wa invalid (number phone wa input by alphabet) (Task New)	
-  	And User input WA invalid
-  	And User click send wa
-  	And User click close acitivity
+  #Scenario: Input field wa (Task New) 
+  #	When User input WA valid
+  #	And User click send wa
+  #	
+  #Scenario: Input field wa invalid (number phone wa input by alphabet) (Task New)	
+  #	And User input WA invalid
+  #	And User click send wa
+  #	And User click close acitivity
     
 
     

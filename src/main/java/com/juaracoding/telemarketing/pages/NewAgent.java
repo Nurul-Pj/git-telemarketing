@@ -62,8 +62,6 @@ public class NewAgent {
 		delay(1);
 	}
 
-	
-	
 	public void clickBtnNew() {
 		btnNew.click();
 		delay(1);
