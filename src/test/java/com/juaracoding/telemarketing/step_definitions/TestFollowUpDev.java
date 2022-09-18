@@ -25,6 +25,12 @@ public class TestFollowUpDev{
 		extentTest = Hooks.extentTest;
 	}
 
+	@And("User click export follow up" )
+	public void user_click_export_followup() {		
+		followUpDev.clickBtnExport();
+		extentTest.log(LogStatus.PASS, "User click export follow up");
+	}
+	
 	//-------------------------DASHBOARD---------------------------
 	@And("User click follow up developer" )
 	public void user_click_followup_dev() {		

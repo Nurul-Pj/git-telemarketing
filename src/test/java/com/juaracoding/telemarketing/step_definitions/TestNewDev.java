@@ -26,7 +26,12 @@ public class TestNewDev{
 		driver = Hooks.driver;
 		extentTest = Hooks.extentTest;
 	}
-
+	
+	@And("User click export new" )
+	public void user_click_export_new() {		
+		newDeveloper.clickBtnExport();
+		extentTest.log(LogStatus.PASS, "User click export new");
+	}
 	//-------------------------DASHBOARD---------------------------
 	@And("User click task developer")
 	public void user_click_task_dev() {		

@@ -33,6 +33,9 @@ public class NewDev {
 	@FindBy(xpath = "//*[@id=\"tl_data_new--52967-cell-0-1\"]")
 	private WebElement navigateToData;
 	
+	@FindBy(xpath = "//*[@id=\"52971_query\"]")
+	private WebElement btnExport;
+	
 	@FindBy(xpath = "//*[@id=\"tl_data_new--52967-header\"]/th[3]")
 	private WebElement pageNew;
 	
@@ -55,7 +58,10 @@ public class NewDev {
 	private WebElement firstPage;
 
 	
-	
+	public void clickBtnExport() {
+		btnExport.click();
+		delay(1);
+	}
 	//-------------------------DASHBOARD---------------------------
 	public void clickBtnNew() {
 		btnNew.click();

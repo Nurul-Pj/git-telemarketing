@@ -11,6 +11,9 @@ Feature: Task New Developer
     Then Page new developer
     
     
+  Scenario: Click export (Task New Dev)  
+   	And User click export new
+    
   Scenario: Input field search developer (Task New Developer)  
    	When User input search valid new developer
    	

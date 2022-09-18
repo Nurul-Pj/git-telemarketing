@@ -31,6 +31,12 @@ public class TestDataAllDev{
 	
 
 	
+	@And("User click export data all" )
+	public void user_click_export_data_all() {		
+		dataAllDev.clickBtnExport();
+		extentTest.log(LogStatus.PASS, "User click export data all");
+	}
+	
 	//-------------------------DASHBOARD---------------------------
 	@And("User click data all developer" )
 	public void user_click_data_all_dev() {		

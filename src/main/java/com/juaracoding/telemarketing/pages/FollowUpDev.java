@@ -18,6 +18,9 @@ public class FollowUpDev {
 		PageFactory.initElements(driver, this);
 	}
 	
+	@FindBy(xpath = "//*[@id=\"52769_query\"]")
+	private WebElement btnExport;
+	
 	@FindBy(xpath = "//*[@id=\"52834_query\"]")
 	private WebElement btnFollowUp;
 	
@@ -53,6 +56,10 @@ public class FollowUpDev {
 	private WebElement showPage;
 	
 
+	public void clickBtnExport() {
+		btnExport.click();
+		delay(1);
+	}
 	//-------------------------DASHBOARD---------------------------
 	public void clickBtnFollowUp() {
 		btnFollowUp.click();

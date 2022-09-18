@@ -19,6 +19,9 @@ public class DataAllDev{
 		PageFactory.initElements(driver, this);
 	}
 	
+	@FindBy(xpath = "//*[@id=\"53030_query\"]")
+	private WebElement btnExport;
+	
 	@FindBy(xpath = "//*[@id=\"52858_query\"]")
 	private WebElement btnDataAll;
 	
@@ -59,7 +62,11 @@ public class DataAllDev{
 	@FindBy(xpath = "//*[@id=\"tl_all_data--53027_show_text\"]")
 	private WebElement showPage;
 	
-
+	
+	public void clickBtnExport() {
+		btnExport.click();
+		delay(1);
+	}
 	//-------------------------DASHBOARD---------------------------
 	public void clickBtnDataAll() {
 		btnDataAll.click();

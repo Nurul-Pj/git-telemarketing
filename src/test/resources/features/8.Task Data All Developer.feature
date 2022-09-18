@@ -10,6 +10,11 @@ Feature: Task New Agent
     And User click data all developer
     Then Page data all developer
     
+    
+    
+  Scenario: Click export (Data All Dev)  
+   	And User click export data all 
+    
   Scenario: Input field search (Data All Dev)  
    	When User input search in data all valid
    	

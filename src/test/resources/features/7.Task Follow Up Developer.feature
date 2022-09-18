@@ -10,6 +10,10 @@ Feature: Task New Agent
     And User click follow up developer
     Then Page follow up developer
     
+    
+ 	Scenario: Click export (Task Follow Up Dev)  
+   	And User click export follow up 
+    
   Scenario: Input field search developer (Task Follow Up Dev)  
    	When User input search valid follow up developer
    	
