@@ -1,4 +1,4 @@
-package com.juaracoding.telemarketing.step_definitions.agent;
+package com.juaracoding.telemarketing.step_definitions;
 
 
 import static org.testng.Assert.assertEquals;
@@ -7,7 +7,7 @@ import static org.testng.Assert.assertTrue;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
-import com.juaracoding.telemarketing.pages.ActivityAgent;
+import com.juaracoding.telemarketing.pages.Activity;
 import com.juaracoding.telemarketing.pages.DataAllAgent;
 import com.juaracoding.telemarketing.pages.FinalAgent;
 import com.juaracoding.telemarketing.pages.FollowUpAgent;
@@ -20,7 +20,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 
-public class TestDataAll {
+public class TestDataAllAgent{
 	
 	public static WebDriver driver;
 	public static ExtentTest extentTest;
@@ -28,7 +28,7 @@ public class TestDataAll {
 	private DataAllAgent dataAllAgent = new DataAllAgent();
 	
 	
-	public TestDataAll() {
+	public TestDataAllAgent() {
 		driver = Hooks.driver;
 		extentTest = Hooks.extentTest;
 	}

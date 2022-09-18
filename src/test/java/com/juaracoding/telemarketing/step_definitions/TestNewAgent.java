@@ -1,14 +1,11 @@
-package com.juaracoding.telemarketing.step_definitions.agent;
+package com.juaracoding.telemarketing.step_definitions;
 
 
-import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
-import com.juaracoding.telemarketing.pages.ActivityAgent;
-import com.juaracoding.telemarketing.pages.LoginAgent;
+import com.juaracoding.telemarketing.pages.Activity;
 import com.juaracoding.telemarketing.pages.NewAgent;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
@@ -17,54 +14,51 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 
-public class TestNew {
+public class TestNewAgent{
 	
 	public static WebDriver driver;
 	public static ExtentTest extentTest;
 	private NewAgent newAgent = new NewAgent();
-	private LoginAgent loginAgent = new LoginAgent();
-	private ActivityAgent activityAgent = new ActivityAgent();
+	private Activity activityAgent = new Activity();
 	
 	
-	public TestNew() {
+	public TestNewAgent() {
 		driver = Hooks.driver;
 		extentTest = Hooks.extentTest;
 	}
 	
-	
-	
 	//-------------------------PHONE---------------------------
 	@And("User click list phone")
 	public void user_click_list_phone() {		
-		newAgent.clickListPhone();
+		activityAgent.clickListPhone();
 		extentTest.log(LogStatus.PASS, "User click list phone");
 	}
 	@When("User click add phone")
 	public void user_click_add_phone() {		
-		newAgent.clickAddPhone();
+		activityAgent.clickAddPhone();
 		extentTest.log(LogStatus.PASS, "User click add phone");
 	}
 	
 	@And("User input request phone")
 	public void user_input_request_phone() {		
-		newAgent.inputRequestPhone("089636391169");
+		activityAgent.inputRequestPhone("089636391169");
 		extentTest.log(LogStatus.PASS, "User input request phone");
 	}
 	
 	@And("User click save phone")
 	public void user_click_save_phone() {		
-		newAgent.clickSavePhone();
+		activityAgent.clickSavePhone();
 		extentTest.log(LogStatus.PASS, "User click save phone");
 	}
 	
 	@And("User click konfirmasi Ok")
 	public void user_click_konfirmasi_ok() {		
-		newAgent.clickKonfirmasiOk();
+		activityAgent.clickKonfirmasiOk();
 		extentTest.log(LogStatus.PASS, "User click konfirmasi ok");
 	}
 	@Then("Popup konfirmasi")
 	public void popup_konfirmasi() {
-		String actual = newAgent.popUpKonfirmasiPhone();
+		String actual = activityAgent.popUpKonfirmasiPhone();
 		assertTrue(actual.contains("Data"));
 		extentTest.log(LogStatus.PASS, "Popup konfirmasi");
 	}
@@ -74,20 +68,20 @@ public class TestNew {
 	//-------------------------PHONE WA---------------------------
 	@When("User input WA valid")
 	public void user_input_wa_valid() {		
-		newAgent.phoneWaValid("089636391172", "Hallo");
+		activityAgent.phoneWaValid("089636391172", "Hallo");
 		extentTest.log(LogStatus.PASS, "User input WA");
 	}
 	
 	@And("User input WA invalid")
 	public void user_input_wa_invalid() {	
-		newAgent.deleteFieldWa();
-		newAgent.phoneWaInvalid("aoskwosw", "Hallo");
+		activityAgent.deleteFieldWa();
+		activityAgent.phoneWaInvalid("aoskwosw", "Hallo");
 		extentTest.log(LogStatus.PASS, "User input WA");
 	}
 	
 	@And("User click send wa")
 	public void user_click_send_wa() {		
-		newAgent.clickBtnSendWA();
+		activityAgent.clickBtnSendWA();
 		extentTest.log(LogStatus.PASS, "User click send wa");
 	}
 	
@@ -155,22 +149,22 @@ public class TestNew {
 	}
 	@And("User click konfirmasi YES" )
 	public void user_click_konfirmasi_yes() {		
-		newAgent.clickKonfirmasiSubmit();
+		activityAgent.clickKonfirmasiSubmit();
 		extentTest.log(LogStatus.PASS, "User click confirmation yes");
 	}
 	@And("User click submit" )
 	public void user_click_submit() {		
-		newAgent.clickSubmit();
+		activityAgent.clickSubmit();
 		extentTest.log(LogStatus.PASS, "User click submit");
 	}
 	@And("User click close" )
 	public void user_click_close() {		
-		newAgent.clickClose();
+		activityAgent.clickClose();
 		extentTest.log(LogStatus.PASS, "User click close");
 	}
 	@Then("Page activity")
 	public void page_activity() {
-		String actual = newAgent.pageActivity();
+		String actual = activityAgent.pageActivity();
 		assertTrue(actual.contains("Link"));
 		extentTest.log(LogStatus.PASS, "Page Activity");
 	}
@@ -204,15 +198,6 @@ public class TestNew {
 	public void user_click_showpage() {		
 		newAgent.clickShowPage();
 		extentTest.log(LogStatus.PASS, "User click show page");
-	}
-	
-	
-	//------------------------------SCROLL UP & DOWN------------------------------------
-	@When("User scroll up" )
-	public void user_scroll_up() {		
-		newAgent.scrollUp();
-		extentTest.log(LogStatus.PASS, "User scroll up");
-		delay(2);
 	}
 	
 	

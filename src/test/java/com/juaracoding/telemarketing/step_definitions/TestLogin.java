@@ -1,4 +1,4 @@
-package com.juaracoding.telemarketing.step_definitions.agent;
+package com.juaracoding.telemarketing.step_definitions;
 
 import static org.testng.Assert.assertTrue;
 
@@ -116,7 +116,7 @@ public class TestLogin {
 	
 	@And("User enter username ignore letter case and password valid" )
 	public void user_enter_username_ignorelettercase_and_password_valid() {	
-		loginAgent.login("aGeNT01", "1");
+		loginAgent.login("developer", "23");
 		delay(2);
 		extentTest.log(LogStatus.PASS, "User enter username password valid");
 	}

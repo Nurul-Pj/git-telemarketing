@@ -1,4 +1,4 @@
-package com.juaracoding.telemarketing.step_definitions.agent;
+package com.juaracoding.telemarketing.step_definitions;
 
 import java.io.IOException;
 
