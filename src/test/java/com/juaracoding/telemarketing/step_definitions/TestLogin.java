@@ -135,8 +135,6 @@ public class TestLogin {
 	}
 	
 	
-	
-
 	static void delay(int detik) {
 		try {
 			Thread.sleep(1000*detik);

@@ -1,6 +1,8 @@
 package com.juaracoding.telemarketing.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -9,17 +11,14 @@ import org.openqa.selenium.support.ui.Select;
 
 import com.juaracoding.telemarketing.drivers.DriverSingleton;
 
-public class FollowUpDev {
-
+public class FollowUpAgent {
+	
 	private WebDriver driver;
 	
-	public FollowUpDev() {
+	public FollowUpAgent() {
 		this.driver = DriverSingleton.getDriver();
 		PageFactory.initElements(driver, this);
 	}
-	
-	@FindBy(xpath = "//*[@id=\"52769_query\"]")
-	private WebElement btnExport;
 	
 	@FindBy(xpath = "//*[@id=\"52834_query\"]")
 	private WebElement btnFollowUp;
@@ -56,10 +55,6 @@ public class FollowUpDev {
 	private WebElement showPage;
 	
 
-	public void clickBtnExport() {
-		btnExport.click();
-		delay(1);
-	}
 	//-------------------------DASHBOARD---------------------------
 	public void clickBtnFollowUp() {
 		btnFollowUp.click();
@@ -127,7 +122,7 @@ public class FollowUpDev {
 		pageSelect4.selectByValue("500");
 		delay(1);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,-300)");
+		js.executeScript("window.scrollBy(0,-700)");
 	}
 
 	

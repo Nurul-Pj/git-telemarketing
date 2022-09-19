@@ -48,13 +48,16 @@ public class Hooks {
 	public void closeObject() {
 		reports.endTest(extentTest);
 		reports.flush();
+		
+//		delay(3);
+//		DriverSingleton.closeObjectInstance();
 	}
 	
 	@AfterAll
 	public static void closeBrowser() {
-		delay(2);
-		DriverSingleton.closeObjectInstance();
-	}
+	delay(2);
+	DriverSingleton.closeObjectInstance();
+}
 		
 
 static void delay(int detik) {

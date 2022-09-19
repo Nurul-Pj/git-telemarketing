@@ -6,7 +6,11 @@
       <class name="com.juaracoding.telemarketing.step_definitions.TestRunner">
         <methods>
           <include name="setUpClass"/>
+<<<<<<< HEAD
           <include name="runScenario" invocation-numbers="0 4 5 6 7 8 9 10 11 23 48 64"/>
+=======
+          <include name="runScenario" invocation-numbers="0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20"/>
+>>>>>>> refs/heads/Faiz
           <include name="tearDownClass"/>
         </methods>
       </class> <!-- com.juaracoding.telemarketing.step_definitions.TestRunner -->
