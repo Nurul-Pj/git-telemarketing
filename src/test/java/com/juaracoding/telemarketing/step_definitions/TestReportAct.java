@@ -82,7 +82,7 @@ public class TestReportAct {
 //	Logout
 	@Then("User click profile")
 	public void user_click_profile() {
-		loginDeveloper.developerProfile();
+		loginDeveloper.logout();
 		delay(3);
 		extentTest.log(LogStatus.PASS, "User click profile");
 	}
