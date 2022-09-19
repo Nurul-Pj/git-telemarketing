@@ -2,7 +2,7 @@ package com.juaracoding.telemarketing.step_definitions;
 
 import org.openqa.selenium.WebDriver;
 
-import com.juaracoding.telemarketing.pages.TaskAgree;
+import com.juaracoding.telemarketing.pages.TaskAgreeDev;
 import com.juaracoding.telemarketing.pages.TaskAgreeAgent;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;

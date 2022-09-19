@@ -33,7 +33,7 @@ public class ReportAgree {
 	@FindBy(xpath = "//*[@id=\"tl_report_setuju--51780_text\"]")
 	private WebElement tablekDateAgree2;
 	
-	@FindBy(xpath = "//*[@id=\"ui-datepicker-div\"]/table/tbody/tr[3]/td[6]/a")
+	@FindBy(xpath = "//*[@id=\"ui-datepicker-div\"]/table/tbody/tr[4]/td[2]/a")
 	private WebElement clickDateSecondAgree; //Tanggal 16
 	
 	@FindBy(xpath = "//*[@id=\"51778_query\"]")

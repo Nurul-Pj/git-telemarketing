@@ -2,7 +2,7 @@ package com.juaracoding.telemarketing.step_definitions;
 
 import org.openqa.selenium.WebDriver;
 
-import com.juaracoding.telemarketing.pages.TaskAgree;
+import com.juaracoding.telemarketing.pages.TaskAgreeDev;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
@@ -10,13 +10,13 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class TestTaskAgree {
+public class TestTaskAgreeDev {
 
 	public static WebDriver driver;
 	public static ExtentTest extentTest;
-	private TaskAgree taskAgree = new TaskAgree();
+	private TaskAgreeDev taskAgree = new TaskAgreeDev();
 	
-	public TestTaskAgree() {
+	public TestTaskAgreeDev() {
 		driver = Hooks.driver;
 		extentTest = Hooks.extentTest;
 	}
