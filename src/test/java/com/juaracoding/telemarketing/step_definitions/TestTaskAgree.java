@@ -23,59 +23,59 @@ public class TestTaskAgree {
 	
 	//Task Agree Dev
 		@When("Pilih menu task")
-		public void pilih_menu_task() {
+		public void pilih_menu_task_agree() {
 			delay(2);
 			taskAgree.btnTask();
 			extentTest.log(LogStatus.PASS, "Pilih menu data");
 		}
 				
 		@And("User click agree")
-		public void user_click_agree() {
+		public void user_click_agree_agree() {
 			delay(2);
 			taskAgree.btnTaskAgree();
 			extentTest.log(LogStatus.PASS, "User click agree");
 		}
 				
-		@When("User click search")
-		public void user_click_search() {
+		@When("User click search agree")
+		public void user_click_search_agree() {
 			delay(2);
 			taskAgree.search();
-			extentTest.log(LogStatus.PASS, "User click search");
+			extentTest.log(LogStatus.PASS, "User click search agree");
 		}
 				
-		@And("User click button search")
-		public void user_click_button_search() {
+		@And("User click button search agree")
+		public void user_click_button_search_agree() {
 			delay(2);
 			taskAgree.btnSearch();
-			extentTest.log(LogStatus.PASS, "User click button search");
+			extentTest.log(LogStatus.PASS, "User click button search agree");
 		}
 		
-		@When("User click file")
-		public void user_click_file() {
+		@When("User click file agree")
+		public void user_click_file_agree() {
 			delay(2);
 			taskAgree.btnChooseFile();
-			extentTest.log(LogStatus.PASS, "User click file");
+			extentTest.log(LogStatus.PASS, "User click file agree");
 		}
 		
-		@And("User isi link")
-		public void user_isi_link() {
+		@And("User isi link agree")
+		public void user_isi_link_agree() {
 			delay(2);
 			taskAgree.isiLink();
-			extentTest.log(LogStatus.PASS, "User isi link");
+			extentTest.log(LogStatus.PASS, "User isi link agree");
 		}
 		
-		@And("User click simpan")
-		public void user_click_simpan() {
+		@And("User click simpan agree")
+		public void user_click_simpan_agree() {
 			delay(2);
 			taskAgree.btnSimpan();
-			extentTest.log(LogStatus.PASS, "User click simpan");
+			extentTest.log(LogStatus.PASS, "User click simpan agree");
 		}
 		
-		@Then("User click button oke")
-		public void user_click_button_oke() {
+		@Then("User click button oke agree")
+		public void user_click_button_oke_agree() {
 			delay(2);
 			taskAgree.clickBtnClose();
-			extentTest.log(LogStatus.PASS, "User click button oke");
+			extentTest.log(LogStatus.PASS, "User click button oke agree");
 		}
 	
 

@@ -35,77 +35,77 @@ public class TestFinalAgent{
 
 	
 	//-------------------------DASHBOARD---------------------------
-	@And("User click final" )
-	public void user_click_final() {		
+	@And("User click final agent" )
+	public void user_click_final_agent() {		
 		finalAgent.clickBtnFinal();
-		extentTest.log(LogStatus.PASS, "User click final");
+		extentTest.log(LogStatus.PASS, "User click final agent");
 	}
-	@Then("Page final")
-	public void page_final() {
+	@Then("Page final agent")
+	public void page_final_agent() {
 		String actual = finalAgent.pageFinal();
 		assertTrue(actual.contains("Nama"));
-		extentTest.log(LogStatus.PASS, "Page final");
+		extentTest.log(LogStatus.PASS, "Page final agent");
 	}
 	
 	
 	
 	
 	//-------------------------SEARCH------------------------------------------
-	@When("User input search in final valid" )
-	public void user_input_search_in_final() {		
+	@When("User input search in final valid agent" )
+	public void user_input_search_in_final_agent() {		
 		finalAgent.inputSearchData("TEA");
-		extentTest.log(LogStatus.PASS, "User input search in final valid");
+		extentTest.log(LogStatus.PASS, "User input search in final valid agent");
 	}
-	@And("User click search in final")
-	public void user_click_search_in_final() {
+	@And("User click search in final agent")
+	public void user_click_search_in_final_agent() {
 		finalAgent.clickBtnSearch();
-		extentTest.log(LogStatus.PASS, "User click search in final");
+		extentTest.log(LogStatus.PASS, "User click search in final agent");
 	}
-	@Then("Page search in final")
-	public void page_search_in_final() {
+	@Then("Page search in final agent")
+	public void page_search_in_final_agent() {
 		String actual = finalAgent.pageSearch();
 		assertTrue(actual.contains("Nama"));
-		extentTest.log(LogStatus.PASS, "Page search in final");
+		extentTest.log(LogStatus.PASS, "Page search in final agent");
 		delay(2);
 	}
 	
 	
 	
 	//-------------------------STATUS ACITIVITY--------------------------------
-	@When("User click data in final" )
-	public void user_click_data_in_final() {		
+	@When("User click data in final agent" )
+	public void user_click_data_in_final_agent() {		
 		finalAgent.clickData();
-		extentTest.log(LogStatus.PASS, "User click data");
+		extentTest.log(LogStatus.PASS, "User click data agent");
 	}
 	
 	
 	//------------------------------NEXT & SHOW PAGE------------------------------------
-	@When("User click next page in final" )
-	public void user_click_next_page_in_final() {		
+	@When("User click next page in final agent" )
+	public void user_click_next_page_in_final_agent() {		
 		finalAgent.clickNextPage();
-		extentTest.log(LogStatus.PASS, "User click next page in final");
+		extentTest.log(LogStatus.PASS, "User click next page in final agent");
 	}
-	@When("User click previous page in final" )
-	public void user_click_previous_page_in_final() {		
+	@When("User click previous page in final agent" )
+	public void user_click_previous_page_in_final_agent() {		
 		finalAgent.clickPrevPage();
-		extentTest.log(LogStatus.PASS, "User click previous page in final");
+		extentTest.log(LogStatus.PASS, "User click previous page in final agent");
 	}
-	@When("User click last page in final" )
-	public void user_click_last_page_in_final() {		
+	@When("User click last page in final agent" )
+	public void user_click_last_page_in_final_agent() {		
 		finalAgent.clickLastPage();
-		extentTest.log(LogStatus.PASS, "User click last page in final");
+		extentTest.log(LogStatus.PASS, "User click last page in final agent");
 	}
-	@When("User click first page in final" )
-	public void user_click_first_page_in_final() {		
+	@When("User click first page in final agent" )
+	public void user_click_first_page_in_final_agent() {		
 		finalAgent.clickFirstPage();
-		extentTest.log(LogStatus.PASS, "User click first page in final");
+		extentTest.log(LogStatus.PASS, "User click first page in final agent");
 	}
 	
 
-	@When("User click show page in final" )
-	public void user_click_showpage_in_final() {		
+	@When("User click show page in final agent" )
+	public void user_click_showpage_in_final_agent() {		
 		finalAgent.clickShowPage();
-		extentTest.log(LogStatus.PASS, "User click show page in final");
+		extentTest.log(LogStatus.PASS, "User click show page in final agent");
 	}
 	
 	

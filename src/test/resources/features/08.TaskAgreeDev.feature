@@ -5,12 +5,12 @@ Scenario: Dashboard Task
   	And User click agree
   	
  Scenario: Search data agree
-  	When User click search
-  	And User click button search
+  	When User click search agree
+  	And User click button search agree
   	
  Scenario: Isi field link
-  	When User click file
-  	And User isi link
-  	And User click simpan
-  	Then User click button oke
+  	When User click file agree
+  	And User isi link agree
+  	And User click simpan agree
+  	Then User click button oke agree
     

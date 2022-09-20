@@ -30,23 +30,23 @@ public class TestReportAct {
 		extentTest.log(LogStatus.PASS, "User click report activity");
 	}
 	
-	@When("User click button agent")
-	public void user_click_button_agent() {
+	@When("User click button activity")
+	public void user_click_button_activity() {
 		delay(2);
 		reportAct.btnAgent();
-		extentTest.log(LogStatus.PASS, "User click button agent");
+		extentTest.log(LogStatus.PASS, "User click button activity");
 	}
 	
-	@And("User choose agent")
-	public void user_choose_agent() {
+	@And("User choose activity")
+	public void user_choose_activity() {
 		delay(2);
 		reportAct.btnView();
 		delay(2);
-		extentTest.log(LogStatus.PASS, "User choose agent");
+		extentTest.log(LogStatus.PASS, "User choose activity");
 	}
 	
-	@When("User choose date act")
-	public void user_choose_date_act() {
+	@When("User choose date activity")
+	public void user_choose_date_activity() {
 		delay(2);
 		reportAct.tableDateAct1();
 		delay(1);
@@ -55,36 +55,36 @@ public class TestReportAct {
 		reportAct.tableDateAct2();
 		delay(1);
 		reportAct.pilihTanggalAct2();
-		extentTest.log(LogStatus.PASS, "User choose date act");
+		extentTest.log(LogStatus.PASS, "User choose date activity");
 	}
 	
-	@And("User click button view act")
-	public void user_click_button_view_act() {
+	@And("User click button view activity")
+	public void user_click_button_view_activity() {
 		delay(2);
 		reportAct.btnView();
-		extentTest.log(LogStatus.PASS, "User click button view act");
+		extentTest.log(LogStatus.PASS, "User click button view activity");
 	}
 	
-	@When("User click show page act")
-	public void user_click_show_page_act() {		
+	@When("User click show page activity")
+	public void user_click_show_page_activity() {		
 		reportAct.clickShowPage();
-		extentTest.log(LogStatus.PASS, "User click show page act");
+		extentTest.log(LogStatus.PASS, "User click show page activity");
 	}
 	
-	@When("User click button export act")
-	public void user_click_button_export_act() {
+	@When("User click button export activity")
+	public void user_click_button_export_activity() {
 		delay(2);
 		reportAct.btnExport();
-		extentTest.log(LogStatus.PASS, "User click button export");
+		extentTest.log(LogStatus.PASS, "User click button export activity");
 	}
 	
 	
 //	Logout
-	@Then("User click profile")
+	@Then("User click profile activity")
 	public void user_click_profile() {
 		loginDeveloper.logout();
 		delay(3);
-		extentTest.log(LogStatus.PASS, "User click profile");
+		extentTest.log(LogStatus.PASS, "User click profile activity");
 	}
 	
 	static void delay(int detik) {

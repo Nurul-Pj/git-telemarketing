@@ -1,17 +1,11 @@
 Feature: Task New Agent
-
-
-  Scenario: Halaman dashboard telemarketing
-  	When User go to Web Telemarketing
-  	And User enter username ignore letter case and password valid
-    And User click button sign in
-    And User click button ok
+   
+ 	
+ 	Scenario: Click export (Task Follow Up Dev)
     And User click task developer
     And User click follow up developer
     Then Page follow up developer
     
-    
- 	Scenario: Click export (Task Follow Up Dev)  
    	And User click export follow up 
     
   Scenario: Input field search developer (Task Follow Up Dev)  
@@ -23,15 +17,24 @@ Feature: Task New Agent
    	
    	And User click follow up developer
    
-  Scenario: Next page developer (Task Follow Up Dev)   
-  	When User click next page follow up developer
-  	When User click previous page follow up developer
-  	When User click last page follow up developer
-  	When User click first page follow up developer   
+  #Scenario: Next page developer (Task Follow Up Dev)   
+  #	When User click next page follow up developer
+  #	When User click previous page follow up developer
+  #	When User click last page follow up developer
+  #	When User click first page follow up developer   
     
   Scenario: Click activity (Task Follow Up Dev)  	
     When User click data follow up developer
     Then Page activity
+    
+  Scenario: Input field request phone (Task Follow Up Dev)  
+  #	When User click data follow up developer
+    And User click list phone
+    When User click add phone
+    And User input request phone
+    And User click save phone
+    Then Popup konfirmasi
+    And User click konfirmasi Ok
 
   Scenario: Input status acitivity invalid (Task Follow Up Dev)   
  		And Input activity data form with "null" as status and "null" as statuscall 
@@ -228,15 +231,6 @@ Feature: Task New Agent
     And Input activity data2 form with "Telepon Not Register" as statusresult and "Telepon Not Register" as reason
     And User click submit
     And User click konfirmasi YES
-    
-  Scenario: Input field request phone (Task Follow Up Dev)  
-  	When User click data follow up developer
-    And User click list phone
-    When User click add phone
-    And User input request phone
-    And User click save phone
-    Then Popup konfirmasi
-    And User click konfirmasi Ok
     
   Scenario: Input field wa (Task Follow Up Dev)   
   	When User input WA valid

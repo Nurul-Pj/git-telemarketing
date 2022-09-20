@@ -26,25 +26,26 @@ public class LoginAgent {
 	@FindBy(xpath = "//*[@id=\"51552_query\"]")
 	private WebElement btnSignin;
 	
-	@FindBy(xpath = "//span[normalize-space()='Dian monica oktavia']")
-	private WebElement profile;
-	
-	@FindBy(xpath = "//*[@id=\"nikita-form-dialog\"]")
-	private WebElement logout;
-	
-	@FindBy(xpath = "//span[normalize-space()='YA']")
-	private WebElement btnYa;
-
-	@FindBy(xpath = "/html/body/div[8]/div[3]/div/button")
-	private WebElement btnOkeValid;
-	
-	@FindBy(xpath = "//div[@class='ui-dialog-buttonset']")
-	private WebElement btnOkInvalid;
-
 	@FindBy(xpath = "//*[@id=\"nikita-form-dialog\"]")
 	private WebElement popUp;
-	
 
+	@FindBy(xpath = "//div[@class='ui-dialog-buttonset']")
+	private WebElement btnOke;
+
+//	Logout
+	@FindBy(xpath = "/html/body/div[8]/div[1]")
+	private WebElement logout;
+	
+	//*[@id="nikita-form-dialog"]/p
+	@FindBy(xpath = "//span[normalize-space()='Dian monica oktavia']")
+	private WebElement agentProfile;
+	
+	@FindBy(xpath = "/html/body/div[8]/div[3]/div/button[2]")
+	private WebElement btnYa;
+	
+	@FindBy(xpath = "/html/body/div[8]/div[3]/div/button[1]")
+	private WebElement btnTidak;
+	
 	
 	public void login(String username,String password) {
 		this.username.sendKeys(username);
@@ -55,12 +56,9 @@ public class LoginAgent {
 		btnSignin.click();
 	}
 	
-	public void clickBtnClose() {
-		btnOkInvalid.click();
-	}
 	
-	public String popUp() {
-		return this.popUp.getText();
+	public String appearGreeting() {
+		return popUp.getText();
 	}
 	
 	public void deleteLogin() {
@@ -70,17 +68,38 @@ public class LoginAgent {
 		password.sendKeys(Keys.BACK_SPACE);
 	}
 	
-	public void clickBtnOkeValid() {
-		btnOkeValid.click();
+	public void clickBtnOke() {
+		btnOke.click();
+		delay(1);
 	}
 	
-	public void clickProfile() {
-		profile.click();
+//	Logout
+	public void logout() {
+		agentProfile.click();
+	}
+	
+	public String appearLogout() {
+		return logout.getText();
+	}
+	
+	public void clickBtnYa() {
 		btnYa.click();
 	}
 	
-//	public String msgError() {
-//		return msgError.getText();
-//	}
+	public void clickBtnTidak() {
+		btnTidak.click();
+		
+	}
+
+	
+	static void delay(int seconds) {
+		try {
+			Thread.sleep(seconds*1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
 
 }

@@ -1,17 +1,13 @@
 Feature: Task New Developer
-
-
-  Scenario: Halaman dashboard telemarketing
-  	When User go to Web Telemarketing
-  	And User enter username ignore letter case and password valid
-    And User click button sign in
-    And User click button ok
-    And User click task developer
+    
+    
+  Scenario: Click export (Task New Dev)
+  And User click task developer
     And User click new developer
     Then Page new developer
-    
-    
-  Scenario: Click export (Task New Dev)  
+  #	And User click task developer
+    #And User click new developer
+    #Then Page new developer
    	And User click export new
     
   Scenario: Input field search developer (Task New Developer)  
@@ -23,15 +19,24 @@ Feature: Task New Developer
    	
    	And User click new developer
    
-  Scenario: Next page developer (Task New Developer)  
-  	When User click next page new developer
-  	When User click previous page new developer
-  	When User click last page new developer
-  	When User click first page new developer   
+  #Scenario: Next page developer (Task New Developer)  
+  #	When User click next page new developer
+  #	When User click previous page new developer
+  #	When User click last page new developer
+  #	When User click first page new developer   
     
   Scenario: Click activity (Task New Developer) 	
     When User click data new developer
     Then Page activity
+
+	Scenario: Input field request phone (Task New Developer)
+  #	When User click data new developer
+    And User click list phone
+    When User click add phone
+    And User input request phone
+    And User click save phone
+    Then Popup konfirmasi
+    And User click konfirmasi Ok
 
   Scenario: Input status acitivity invalid (Task New Developer) 
  		And Input activity data form with "null" as status and "null" as statuscall 
@@ -229,14 +234,14 @@ Feature: Task New Developer
     And User click submit
     And User click konfirmasi YES
     
-  Scenario: Input field request phone (Task New Developer)
-  	When User click data new developer
-    And User click list phone
-    When User click add phone
-    And User input request phone
-    And User click save phone
-    Then Popup konfirmasi
-    And User click konfirmasi Ok
+  #Scenario: Input field request phone (Task New Developer)
+  #	When User click data new developer
+    #And User click list phone
+    #When User click add phone
+    #And User input request phone
+    #And User click save phone
+    #Then Popup konfirmasi
+    #And User click konfirmasi Ok
     
   Scenario: Input field wa (Task New Developer) 
   	When User input WA valid

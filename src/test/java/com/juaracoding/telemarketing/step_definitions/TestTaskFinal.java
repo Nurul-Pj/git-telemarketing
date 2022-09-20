@@ -21,57 +21,57 @@ public class TestTaskFinal {
 		extentTest = Hooks.extentTest;
 	}
 					
-			@When("User click final")
-			public void user_click_final() {
+			@When("User click final dev")
+			public void user_click_final_dev() {
 				delay(2);
 				taskFinal.btnTaskFinal();
-				extentTest.log(LogStatus.PASS, "User click final");
+				extentTest.log(LogStatus.PASS, "User click final dev");
 			}
 			
 			
-			@When("User click next page final")
-			public void user_click_next_page_final() {		
+			@When("User click next page final dev")
+			public void user_click_next_page_final_dev() {		
 				taskFinal.clickNextPage();
-				extentTest.log(LogStatus.PASS, "User click next page final");
+				extentTest.log(LogStatus.PASS, "User click next page final dev");
 			}
 			
-			@And("User click previous page final")
-			public void user_click_previous_page_final() {		
+			@And("User click previous page final dev")
+			public void user_click_previous_page_final_dev() {		
 				taskFinal.clickPrevPage();
-				extentTest.log(LogStatus.PASS, "User click previous page final");
+				extentTest.log(LogStatus.PASS, "User click previous page final dev");
 			}
 			
-			@And("User click last page final")
-			public void user_click_last_page_final() {		
+			@And("User click last page final dev")
+			public void user_click_last_page_final_dev() {		
 				taskFinal.clickLastPage();
-				extentTest.log(LogStatus.PASS, "User click last page final");
+				extentTest.log(LogStatus.PASS, "User click last page final dev");
 			}
 			
-			@And("User click first page final")
-			public void user_click_first_page_final() {		
+			@And("User click first page final dev")
+			public void user_click_first_page_final_dev() {		
 				taskFinal.clickFirstPage();
-				extentTest.log(LogStatus.PASS, "User click first page final");
+				extentTest.log(LogStatus.PASS, "User click first page final dev");
 			}
 					
-			@When("User click search final")
-			public void user_click_search_final() {
+			@When("User click search final dev")
+			public void user_click_search_final_dev() {
 				delay(2);
 				taskFinal.search("cocabakes_husain2");
-				extentTest.log(LogStatus.PASS, "User click search_final");
+				extentTest.log(LogStatus.PASS, "User click search_final dev");
 			}
 					
-			@Then("User click button search final")
-			public void user_click_button_search_final() {
+			@Then("User click button search final dev")
+			public void user_click_button_search_final_dev() {
 				delay(2);
 				taskFinal.btnSearch();
 				delay(3);
-				extentTest.log(LogStatus.PASS, "User click button search");
+				extentTest.log(LogStatus.PASS, "User click button search final dev");
 			}
 			
-			@When("User click button show page final")
-			public void user_click_button_show_page_final() {		
+			@When("User click button show page final dev")
+			public void user_click_button_show_page_final_dev() {		
 				taskFinal.clickShowPage();
-				extentTest.log(LogStatus.PASS, "User click show page final");
+				extentTest.log(LogStatus.PASS, "User click show page final dev");
 			}
 			
 			static void delay(int detik) {

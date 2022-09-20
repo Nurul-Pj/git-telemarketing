@@ -1,15 +1,15 @@
 Feature: Task New Agent
 
-
-  Scenario: Halaman dashboard telemarketing
-  	When User go to Web Telemarketing
-  	And User enter username ignore letter case and password valid
-    And User click button sign in
-    And User click button ok
+Scenario: User valid login
+  		When User go to Web Telemarketing
+  		And User enter username and password valid login
+    	And click button sign in
+    	And open appear greeting
+    	Then click button ok
+    	
     And User click task developer
     And User click data all developer
     Then Page data all developer
-    
     
     
   Scenario: Click export (Data All Dev)  
@@ -23,7 +23,7 @@ Feature: Task New Agent
    	Then Page search in data all
    	
    	And User click data all
-   	
+   	  	
   Scenario: Filter search null (Data All Dev)  
   	And Choose filter form with "AGENT01" as agent and "null" as status
    	And User click search in data all
@@ -143,14 +143,23 @@ Feature: Task New Agent
    	And User click search in data all
    	Then Page data all
    
-  Scenario: Next page (Data All Dev)
-  	When User click next page in data all
-  	When User click previous page in data all
-  	When User click last page in data all
-  	When User click first page in data all
+  #Scenario: Next page (Data All Dev)
+  #	When User click next page in data all
+  #	When User click previous page in data all
+  #	When User click last page in data all
+  #	When User click first page in data all
     
   Scenario: Click activity (Data All Dev)	
     When User click data in final
+    
+  Scenario: Input field request phone (Data All Dev)  
+  #	When User click data in follow up
+    And User click list phone
+    When User click add phone
+    And User input request phone
+    And User click save phone
+    Then Popup konfirmasi
+    And User click konfirmasi Ok
     
   Scenario: Click activity (Data All Dev)   	
     When User click data in data all
@@ -359,15 +368,7 @@ Feature: Task New Agent
     And Input activity data2 form with "Telepon Not Register" as statusresult and "Telepon Not Register" as reason
     And User click submit
     And User click konfirmasi YES
-    
-  Scenario: Input field request phone (Data All Dev)  
-  	When User click data in follow up
-    And User click list phone
-    When User click add phone
-    And User input request phone
-    And User click save phone
-    Then Popup konfirmasi
-    And User click konfirmasi Ok
+
     
   Scenario: Input field wa (Data All Dev) 
   	When User input WA valid

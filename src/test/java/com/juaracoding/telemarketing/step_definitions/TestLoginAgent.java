@@ -1,18 +1,18 @@
 package com.juaracoding.telemarketing.step_definitions;
 
-import static org.testng.Assert.assertTrue;
+//import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.WebDriver;
-import org.w3c.dom.UserDataHandler;
+//import org.w3c.dom.UserDataHandler;
 
 import com.juaracoding.telemarketing.pages.LoginAgent;
-import com.juaracoding.telemarketing.utils.Constants;
+//import com.juaracoding.telemarketing.utils.Constants;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.Then.Thens;
+//import io.cucumber.java.en.Then;
+//import io.cucumber.java.en.Then.Thens;
 import io.cucumber.java.en.When;
 
 public class TestLoginAgent {
@@ -27,115 +27,112 @@ public class TestLoginAgent {
 	}
 	
 //	Invalid Login
-	@When("User go to Web Telemarketing")
-	public void user_go_to_web_telemarketing() {
-		driver.get(Constants.URL);
-		extentTest.log(LogStatus.PASS, "User go to Web Telemarketing");
-	}
+//	@When("User go to invalid Web Telemarketing")
+//	public void user_go_to_web_telemarketing() {
+//		driver.get(Constants.URL);
+//		extentTest.log(LogStatus.PASS, "User go to invalid Web Telemarketing");
+//	}
 	
-	@When("User go to Web Telemarketing invalid")
-	public void user_go_to_web_telemarketing_invalid() {
-		driver.get(Constants.URL_INVALID);
-		extentTest.log(LogStatus.PASS, "User go to Web Telemarketing invalid");
-	}
+//	@When("User go to Web Telemarketing")
+//	public void user_go_to_web_telemarketing_invalid() {
+//		driver.get(Constants.URL_INVALID);
+//		extentTest.log(LogStatus.PASS, "User go to Web Telemarketing");
+//	}
 	
 	
-	@And("User enter username invalid")
-	public void user_enter_username_invalid() {
+	@And("User enter username invalid agent")
+	public void user_enter_username_invalid_agent() {
+		loginAgent.deleteLogin();
+		delay(1);
 		loginAgent.login("agent001", "1");
-		delay(2);
-		extentTest.log(LogStatus.PASS, "User enter username password invalid");
+		delay(1);
+		extentTest.log(LogStatus.PASS, "User enter username invalid agent");
 	}
 	
-	@And("User enter password invalid")
-	public void user_enter_password_invalid() {
-		loginAgent.clickBtnClose();
+	@And("User enter username null agent")
+	public void user_enter_username_null_agent() {
 		loginAgent.deleteLogin();
-		loginAgent.login("agent1", "23");
-		delay(2);
-		extentTest.log(LogStatus.PASS, "User enter username password invalid");
+		delay(1);
+		loginAgent.login("", "");
+		delay(1);
+		extentTest.log(LogStatus.PASS, "User enter username null agent");
 	}
 	
-	@And("User enter username null")
-	public void user_enter_username_null() {
-		loginAgent.clickBtnClose();
-		loginAgent.deleteLogin();
-		loginAgent.login("", "23");
-		delay(2);
-		extentTest.log(LogStatus.PASS, "User enter username password invalid");
-	}
-	
-	@And("User enter password null")
-	public void user_enter_password_null() {
-		loginAgent.clickBtnClose();
-		loginAgent.deleteLogin();
-		loginAgent.login("agent1", "");
-		delay(2);
-		extentTest.log(LogStatus.PASS, "User enter username password invalid");
-	}
-	
-	
-	@And("User click button sign in")
-	public void user_click_button_sign_in() {
-		loginAgent.clickBtnSignin();
-		extentTest.log(LogStatus.PASS, "User click button sign in");
-		delay(2);
-	}
-	
-	
-	@Then("User invalid credentials")
-	public void user_invalid_credentilas() {
-	String actual = loginAgent.popUp();
-	assertTrue(actual.contains("Username atau password tidak ditemukan atau akun anda tidak aktif"));
-	extentTest.log(LogStatus.PASS, "User invalid credentials");
-	delay(2);
-	}
-	
-	@Then("User valid credentials")
-	public void user_valid_credentilas() {
-		String actual = loginAgent.popUp();
-		assertTrue(actual.contains("Welcome"));
-		extentTest.log(LogStatus.PASS, "User valid credentials");
-		delay(2);
-	}
-		
-	@And("User enter username and password valid" )
-	public void user_enter_username_and_password_valid() {
-		loginAgent.clickBtnClose();
-		loginAgent.deleteLogin();		
-		loginAgent.login("agent01", "1");
-		extentTest.log(LogStatus.PASS, "User enter username password valid");
-		delay(2);
-	}
-	
-	@And("User enter username ignore letter case and password valid" )
-	public void user_enter_username_ignorelettercase_and_password_valid() {	
-		loginAgent.login("AgeNt01", "1");
-		delay(2);
-		extentTest.log(LogStatus.PASS, "User enter username password valid");
-	}
-	
-	@And("User enter username uppercase and password valid" )
-	public void user_enter_username_uppercase_and_password_valid() {		
-		loginAgent.login("AGENT01", "1");
-		delay(2);
-		extentTest.log(LogStatus.PASS, "User enter username password valid");
-	}
-	
+//	@And("open appear greeting invalid")
+//	public void open_appear_greeting_invalid() {
+//		String actual = loginAgent.appearGreeting();
+//		assertTrue(actual.contains("Username atau password"));
+//		extentTest.log(LogStatus.PASS, "open appear greeting invalid");
+//	}
 
-	@And("User click button ok")
-	public void user_click_button_ok() {
-		delay(2);
-		loginAgent.clickBtnOkeValid();
-		extentTest.log(LogStatus.PASS, "User click button ok");
+	
+//	Valid
+	@And("User enter username and password valid login ignore lettercase agent" )
+	public void user_enter_username_and_password_valid_login_ignore_lettercase_agent() {		
+		loginAgent.deleteLogin();
+		delay(1);
+		loginAgent.login("AgeNt01", "1");
+		extentTest.log(LogStatus.PASS, "User enter username and password valid login ignore lettercase_agent");
 	}
 	
-	@And("User click profile")
-	public void user_click_profile() {
-		loginAgent.clickProfile();
-		delay(2);
-		extentTest.log(LogStatus.PASS, "User click profile");
+	@And("User enter username and password valid login uppercase agent" )
+	public void user_enter_username_and_password_valid_login_uppercase_agent() {
+		loginAgent.deleteLogin();
+		delay(1);
+		loginAgent.login("AGENT01", "1");
+		extentTest.log(LogStatus.PASS, "User enter username and password valid login uppercase agent");
 	}
+	
+	@And("User enter username and password valid login agent" )
+	public void user_enter_username_and_password_valid_login_agent() {
+		loginAgent.deleteLogin();
+		delay(1);
+		loginAgent.login("agent01", "1");
+		extentTest.log(LogStatus.PASS, "User enter username and password valid login agent");
+	}
+	
+//	@And("click button sign in")
+//	public void click_button_sign_in() {
+//		loginAgent.clickBtnSignin();
+//		delay(1);
+//		extentTest.log(LogStatus.PASS, "click button sign in");
+//	}
+//
+//	@And("open appear greeting")
+//	public void open_appear_greeting() {
+//		String actual = loginAgent.appearGreeting();
+//		assertTrue(actual.contains("Welcome"));
+//		extentTest.log(LogStatus.PASS, "open appear greeting");
+//	}
+////	
+//	@And("click button ok")
+//	public void click_button_ok() {
+//		loginAgent.clickBtnOke();
+//		extentTest.log(LogStatus.PASS, "click button ok");
+//	}
+	
+//	Logout
+	@When("click profile agent")
+	public void click_profile_agent() {
+		delay(2);
+		loginAgent.logout();
+		delay(1);
+		extentTest.log(LogStatus.PASS, "User click profile agent");
+	}
+	
+//	@And("open appear greeting logout")
+//	public void open_appear_greeting_logout() {
+//		String actual = loginAgent.appearGreeting();
+//		assertTrue(actual.contains("Apa"));
+//		extentTest.log(LogStatus.PASS, "open appear greeting");
+//	}
+	
+//	@Then("click button ya" )
+//	public void click_button_ya() {		
+//		loginAgent.clickBtnYa();
+//		extentTest.log(LogStatus.PASS, "click button ya");
+//	}
+//	
 	
 	static void delay(int detik) {
 		try {
@@ -145,4 +142,5 @@ public class TestLoginAgent {
 			e.printStackTrace();
 		}
 	}
+
 }

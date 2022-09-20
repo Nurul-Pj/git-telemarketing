@@ -62,42 +62,42 @@ public class TestReportAgree {
 	}
 	
 	@Then("User click button view agree")
-	public void user_click_button_view_agree() {
+	public void user_click_button_view_agree_agree() {
 		delay(2);
 		reportAgree.btnView();
 		delay(2);
-		extentTest.log(LogStatus.PASS, "User click button view");
+		extentTest.log(LogStatus.PASS, "User click button view agree");
 	}
 	
-	@When("User click next page")
-	public void user_click_next_page() {		
+	@When("User click next page agree")
+	public void user_click_next_page_agree() {		
 		reportAgree.clickNextPage();
-		extentTest.log(LogStatus.PASS, "User click next page");
+		extentTest.log(LogStatus.PASS, "User click next page agree");
 	}
 	
-	@And("User click previous page")
-	public void user_click_previous_page() {		
+	@And("User click previous page agree")
+	public void user_click_previous_page_agree() {		
 		reportAgree.clickPrevPage();
-		extentTest.log(LogStatus.PASS, "User click previous page");
+		extentTest.log(LogStatus.PASS, "User click previous page agree");
 	}
 	
-	@And("User click last page")
-	public void user_click_last_page() {		
+	@And("User click last page agree")
+	public void user_click_last_page_agree() {		
 		reportAgree.clickLastPage();
-		extentTest.log(LogStatus.PASS, "User click last page");
+		extentTest.log(LogStatus.PASS, "User click last page agree");
 	}
 	
-	@And("User click first page")
-	public void user_click_first_page() {		
+	@And("User click first page agree")
+	public void user_click_first_page_agree() {		
 		reportAgree.clickFirstPage();
-		extentTest.log(LogStatus.PASS, "User click first page");
+		extentTest.log(LogStatus.PASS, "User click first page agree");
 	}
 	
 	@When("User click button show page agree")
 	public void user_click_button_show_page_agree() {
 		scroll(300);
 		reportAgree.clickShowPage();
-		extentTest.log(LogStatus.PASS, "User click show page");
+		extentTest.log(LogStatus.PASS, "User click show page agree");
 	}
 	
 	
@@ -105,7 +105,7 @@ public class TestReportAgree {
 	public void user_click_button_export_agree() {
 		delay(2);
 		reportAgree.btnExport();
-		extentTest.log(LogStatus.PASS, "User click button export");
+		extentTest.log(LogStatus.PASS, "User click button export agree");
 	}
 	
 
